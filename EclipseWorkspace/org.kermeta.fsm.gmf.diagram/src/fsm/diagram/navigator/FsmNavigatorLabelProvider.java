@@ -20,11 +20,11 @@ import fsm.InitialState;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
+import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
+import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
-import fsm.diagram.edit.parts.WrappingLabel2EditPart;
-import fsm.diagram.edit.parts.WrappingLabel4EditPart;
-import fsm.diagram.edit.parts.WrappingLabelEditPart;
+import fsm.diagram.edit.parts.TransitionInputEditPart;
 import fsm.diagram.part.FsmDiagramEditorPlugin;
 import fsm.diagram.part.FsmVisualIDRegistry;
 import fsm.diagram.providers.FsmElementTypes;
@@ -94,13 +94,13 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 					"Navigator?Diagram?http://www.kermeta.org/fsm?FSM", FsmElementTypes.FSM_1000); //$NON-NLS-1$
 		case TransientStateEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://www.kermeta.org/fsm?TransientState", FsmElementTypes.TransientState_2002); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://www.kermeta.org/fsm?TransientState", FsmElementTypes.TransientState_2001); //$NON-NLS-1$
 		case InitialStateEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://www.kermeta.org/fsm?InitialState", FsmElementTypes.InitialState_2003); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://www.kermeta.org/fsm?InitialState", FsmElementTypes.InitialState_2002); //$NON-NLS-1$
 		case SteadyStateEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://www.kermeta.org/fsm?SteadyState", FsmElementTypes.SteadyState_2004); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://www.kermeta.org/fsm?SteadyState", FsmElementTypes.SteadyState_2003); //$NON-NLS-1$
 		case TransitionEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.kermeta.org/fsm?Transition", FsmElementTypes.Transition_4001); //$NON-NLS-1$
@@ -159,11 +159,11 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 		case FSMEditPart.VISUAL_ID:
 			return getFSM_1000Text(view);
 		case TransientStateEditPart.VISUAL_ID:
-			return getTransientState_2002Text(view);
+			return getTransientState_2001Text(view);
 		case InitialStateEditPart.VISUAL_ID:
-			return getInitialState_2003Text(view);
+			return getInitialState_2002Text(view);
 		case SteadyStateEditPart.VISUAL_ID:
-			return getSteadyState_2004Text(view);
+			return getSteadyState_2003Text(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001Text(view);
 		}
@@ -180,44 +180,12 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getTransientState_2002Text(View view) {
+	private String getTransientState_2001Text(View view) {
 		IParser parser = FsmParserProvider.getParser(
-				FsmElementTypes.TransientState_2002,
+				FsmElementTypes.TransientState_2001,
 				view.getElement() != null ? view.getElement() : view,
-				FsmVisualIDRegistry.getType(WrappingLabel2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			FsmDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getInitialState_2003Text(View view) {
-		InitialState domainModelElement = (InitialState) view.getElement();
-		if (domainModelElement != null) {
-			return String.valueOf(domainModelElement.getName());
-		} else {
-			FsmDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 2003); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getSteadyState_2004Text(View view) {
-		IParser parser = FsmParserProvider.getParser(
-				FsmElementTypes.SteadyState_2004,
-				view.getElement() != null ? view.getElement() : view,
-				FsmVisualIDRegistry.getType(WrappingLabelEditPart.VISUAL_ID));
+				FsmVisualIDRegistry
+						.getType(TransientStateNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -232,11 +200,44 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
+	private String getInitialState_2002Text(View view) {
+		InitialState domainModelElement = (InitialState) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			FsmDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 2002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSteadyState_2003Text(View view) {
+		IParser parser = FsmParserProvider.getParser(
+				FsmElementTypes.SteadyState_2003,
+				view.getElement() != null ? view.getElement() : view,
+				FsmVisualIDRegistry.getType(SteadyStateNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FsmDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
 	private String getTransition_4001Text(View view) {
 		IParser parser = FsmParserProvider.getParser(
 				FsmElementTypes.Transition_4001,
 				view.getElement() != null ? view.getElement() : view,
-				FsmVisualIDRegistry.getType(WrappingLabel4EditPart.VISUAL_ID));
+				FsmVisualIDRegistry.getType(TransitionInputEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),

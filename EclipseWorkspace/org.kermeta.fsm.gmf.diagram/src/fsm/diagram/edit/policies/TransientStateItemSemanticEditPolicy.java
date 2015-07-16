@@ -29,7 +29,7 @@ public class TransientStateItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public TransientStateItemSemanticEditPolicy() {
-		super(FsmElementTypes.TransientState_2002);
+		super(FsmElementTypes.TransientState_2001);
 	}
 
 	/**

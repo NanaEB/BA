@@ -40,15 +40,6 @@ public interface FsmFactory extends EFactory {
 	State createState();
 
 	/**
-	 * Returns a new object of class '<em>Transition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transition</em>'.
-	 * @generated
-	 */
-	Transition createTransition();
-
-	/**
 	 * Returns a new object of class '<em>Initial State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +65,15 @@ public interface FsmFactory extends EFactory {
 	 * @generated
 	 */
 	TransientState createTransientState();
+
+	/**
+	 * Returns a new object of class '<em>Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transition</em>'.
+	 * @generated
+	 */
+	Transition createTransition();
 
 	/**
 	 * Returns the package supported by this factory.

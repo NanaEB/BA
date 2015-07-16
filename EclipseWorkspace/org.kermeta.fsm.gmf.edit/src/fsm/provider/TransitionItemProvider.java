@@ -60,33 +60,13 @@ public class TransitionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTargetPropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 			addOutputPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Target feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Transition_target_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_target_feature", "_UI_Transition_type"),
-				 FsmPackage.Literals.TRANSITION__TARGET,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -134,6 +114,72 @@ public class TransitionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transition_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_name_feature", "_UI_Transition_type"),
+				 FsmPackage.Literals.TRANSITION__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transition_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_target_feature", "_UI_Transition_type"),
+				 FsmPackage.Literals.TRANSITION__TARGET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Source feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSourcePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transition_source_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_source_feature", "_UI_Transition_type"),
+				 FsmPackage.Literals.TRANSITION__SOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Transition.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,7 +198,7 @@ public class TransitionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Transition)object).getInput();
+		String label = ((Transition)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Transition_type") :
 			getString("_UI_Transition_type") + " " + label;
@@ -173,6 +219,7 @@ public class TransitionItemProvider
 		switch (notification.getFeatureID(Transition.class)) {
 			case FsmPackage.TRANSITION__INPUT:
 			case FsmPackage.TRANSITION__OUTPUT:
+			case FsmPackage.TRANSITION__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

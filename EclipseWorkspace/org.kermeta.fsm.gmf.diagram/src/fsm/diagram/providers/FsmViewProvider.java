@@ -22,7 +22,6 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.FigureUtilities;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
-import org.eclipse.gmf.runtime.notation.Connector;
 import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
@@ -34,7 +33,6 @@ import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.Routing;
-import org.eclipse.gmf.runtime.notation.Shape;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -45,12 +43,12 @@ import org.eclipse.swt.graphics.FontData;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
+import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
+import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
-import fsm.diagram.edit.parts.WrappingLabel2EditPart;
-import fsm.diagram.edit.parts.WrappingLabel4EditPart;
-import fsm.diagram.edit.parts.WrappingLabel5EditPart;
-import fsm.diagram.edit.parts.WrappingLabelEditPart;
+import fsm.diagram.edit.parts.TransitionInputEditPart;
+import fsm.diagram.edit.parts.TransitionOutputEditPart;
 import fsm.diagram.part.FsmVisualIDRegistry;
 
 /**
@@ -215,13 +213,13 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 		}
 		switch (visualID) {
 		case SteadyStateEditPart.VISUAL_ID:
-			return createSteadyState_2004(domainElement, containerView, index,
+			return createSteadyState_2003(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case TransientStateEditPart.VISUAL_ID:
-			return createTransientState_2002(domainElement, containerView,
+			return createTransientState_2001(domainElement, containerView,
 					index, persisted, preferencesHint);
 		case InitialStateEditPart.VISUAL_ID:
-			return createInitialState_2003(domainElement, containerView, index,
+			return createInitialState_2002(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -248,7 +246,7 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 	/**
 	 * @generated
 	 */
-	public Node createSteadyState_2004(EObject domainElement,
+	public Node createSteadyState_2003(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -268,20 +266,21 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5001 = createLabel(node,
-				FsmVisualIDRegistry.getType(WrappingLabelEditPart.VISUAL_ID));
+		Node label5003 = createLabel(node,
+				FsmVisualIDRegistry.getType(SteadyStateNameEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createTransientState_2002(EObject domainElement,
+	public Node createTransientState_2001(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles()
 				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		node.getStyles().add(NotationFactory.eINSTANCE.createFillStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(FsmVisualIDRegistry
@@ -292,20 +291,35 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 		// initializeFromPreferences 
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
 				.getPreferenceStore();
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
 		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
 				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node,
-				FsmVisualIDRegistry.getType(WrappingLabel2EditPart.VISUAL_ID));
+		Node label5001 = createLabel(node,
+				FsmVisualIDRegistry
+						.getType(TransientStateNameEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createInitialState_2003(EObject domainElement,
+	public Node createInitialState_2002(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -383,14 +397,14 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 					routing);
 		}
 		Node label6001 = createLabel(edge,
-				FsmVisualIDRegistry.getType(WrappingLabel4EditPart.VISUAL_ID));
+				FsmVisualIDRegistry.getType(TransitionInputEditPart.VISUAL_ID));
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
 		Location location6001 = (Location) label6001.getLayoutConstraint();
 		location6001.setX(0);
 		location6001.setY(40);
 		Node label6002 = createLabel(edge,
-				FsmVisualIDRegistry.getType(WrappingLabel5EditPart.VISUAL_ID));
+				FsmVisualIDRegistry.getType(TransitionOutputEditPart.VISUAL_ID));
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
 		Location location6002 = (Location) label6002.getLayoutConstraint();

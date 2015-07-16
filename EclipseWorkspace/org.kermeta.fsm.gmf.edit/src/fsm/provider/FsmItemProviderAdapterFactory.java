@@ -118,29 +118,6 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fsm.Transition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TransitionItemProvider transitionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fsm.Transition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTransitionAdapter() {
-		if (transitionItemProvider == null) {
-			transitionItemProvider = new TransitionItemProvider(this);
-		}
-
-		return transitionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link fsm.InitialState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -207,6 +184,29 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory implements 
 		}
 
 		return transientStateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fsm.Transition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransitionItemProvider transitionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fsm.Transition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTransitionAdapter() {
+		if (transitionItemProvider == null) {
+			transitionItemProvider = new TransitionItemProvider(this);
+		}
+
+		return transitionItemProvider;
 	}
 
 	/**
@@ -310,10 +310,10 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory implements 
 	public void dispose() {
 		if (fsmItemProvider != null) fsmItemProvider.dispose();
 		if (stateItemProvider != null) stateItemProvider.dispose();
-		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (initialStateItemProvider != null) initialStateItemProvider.dispose();
 		if (steadyStateItemProvider != null) steadyStateItemProvider.dispose();
 		if (transientStateItemProvider != null) transientStateItemProvider.dispose();
+		if (transitionItemProvider != null) transitionItemProvider.dispose();
 	}
 
 }

@@ -78,12 +78,6 @@ public class FsmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FsmPackage.TRANSITION: {
-				Transition transition = (Transition)theEObject;
-				T result = caseTransition(transition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FsmPackage.INITIAL_STATE: {
 				InitialState initialState = (InitialState)theEObject;
 				T result = caseInitialState(initialState);
@@ -102,6 +96,12 @@ public class FsmSwitch<T> extends Switch<T> {
 				TransientState transientState = (TransientState)theEObject;
 				T result = caseTransientState(transientState);
 				if (result == null) result = caseState(transientState);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FsmPackage.TRANSITION: {
+				Transition transition = (Transition)theEObject;
+				T result = caseTransition(transition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -136,21 +136,6 @@ public class FsmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseState(State object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTransition(Transition object) {
 		return null;
 	}
 
@@ -196,6 +181,21 @@ public class FsmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTransientState(TransientState object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTransition(Transition object) {
 		return null;
 	}
 

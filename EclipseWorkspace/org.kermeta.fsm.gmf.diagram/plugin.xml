@@ -23,7 +23,7 @@
          icon="icons/obj16/FsmDiagramFile.gif"
          extensions="fsm_diagram"
          default="true"
-         class="fsm.diagram.part.MultiPageEditor"
+         class="fsm.diagram.part.FsmDiagramEditor"
          matchingStrategy="fsm.diagram.part.FsmMatchingStrategy"
          contributorClass="fsm.diagram.part.FsmDiagramActionBarContributor">
       </editor>
@@ -217,7 +217,7 @@
       <viewProvider class="fsm.diagram.providers.FsmViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Fsm"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2004,2002,2003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2003,2001,2002"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
       </viewProvider>
    </extension>
@@ -230,13 +230,13 @@
             <method name="getType()" value="Fsm"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2004,2002,2003"/>
+            <method name="getType()" value="2003,2001,2002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002"/>
+            <method name="getType()" value="5003,5001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -255,18 +255,18 @@
       </modelingAssistantProvider>
             <modelingAssistantProvider class="fsm.diagram.providers.assistants.FsmModelingAssistantProviderOfSteadyStateEditPart">
          <Priority name="Lowest"/>
-         <object class="fsm.diagram.edit.parts.SteadyStateEditPart" id="SteadyState_2004"/>
-         <context elements="SteadyState_2004"/>
+         <object class="fsm.diagram.edit.parts.SteadyStateEditPart" id="SteadyState_2003"/>
+         <context elements="SteadyState_2003"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="fsm.diagram.providers.assistants.FsmModelingAssistantProviderOfTransientStateEditPart">
          <Priority name="Lowest"/>
-         <object class="fsm.diagram.edit.parts.TransientStateEditPart" id="TransientState_2002"/>
-         <context elements="TransientState_2002"/>
+         <object class="fsm.diagram.edit.parts.TransientStateEditPart" id="TransientState_2001"/>
+         <context elements="TransientState_2001"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="fsm.diagram.providers.assistants.FsmModelingAssistantProviderOfInitialStateEditPart">
          <Priority name="Lowest"/>
-         <object class="fsm.diagram.edit.parts.InitialStateEditPart" id="InitialState_2003"/>
-         <context elements="InitialState_2003"/>
+         <object class="fsm.diagram.edit.parts.InitialStateEditPart" id="InitialState_2002"/>
+         <context elements="InitialState_2002"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -300,32 +300,32 @@
       </metamodel>
       <metamodel nsURI="http://www.kermeta.org/fsm">
          <metamodelType
-               id="org.kermeta.fsm.gmf.diagram.SteadyState_2004"
-               name="%metatype.name.SteadyState_2004"
+               id="org.kermeta.fsm.gmf.diagram.SteadyState_2003"
+               name="%metatype.name.SteadyState_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SteadyState"
                edithelper="fsm.diagram.edit.helpers.SteadyStateEditHelper">
-            <param name="semanticHint" value="2004"/>
+            <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.kermeta.org/fsm">
          <metamodelType
-               id="org.kermeta.fsm.gmf.diagram.TransientState_2002"
-               name="%metatype.name.TransientState_2002"
+               id="org.kermeta.fsm.gmf.diagram.TransientState_2001"
+               name="%metatype.name.TransientState_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TransientState"
                edithelper="fsm.diagram.edit.helpers.TransientStateEditHelper">
-            <param name="semanticHint" value="2002"/>
+            <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.kermeta.org/fsm">
          <metamodelType
-               id="org.kermeta.fsm.gmf.diagram.InitialState_2003"
-               name="%metatype.name.InitialState_2003"
+               id="org.kermeta.fsm.gmf.diagram.InitialState_2002"
+               name="%metatype.name.InitialState_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="InitialState"
                edithelper="fsm.diagram.edit.helpers.InitialStateEditHelper">
-            <param name="semanticHint" value="2003"/>
+            <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.kermeta.org/fsm">
@@ -351,9 +351,9 @@
       </clientContext> 
       <binding context="org.kermeta.fsm.gmf.diagram.TypeContext">
          <elementType ref="org.kermeta.fsm.gmf.diagram.FSM_1000"/>
-         <elementType ref="org.kermeta.fsm.gmf.diagram.SteadyState_2004"/>
-         <elementType ref="org.kermeta.fsm.gmf.diagram.TransientState_2002"/>
-         <elementType ref="org.kermeta.fsm.gmf.diagram.InitialState_2003"/>
+         <elementType ref="org.kermeta.fsm.gmf.diagram.SteadyState_2003"/>
+         <elementType ref="org.kermeta.fsm.gmf.diagram.TransientState_2001"/>
+         <elementType ref="org.kermeta.fsm.gmf.diagram.InitialState_2002"/>
          <elementType ref="org.kermeta.fsm.gmf.diagram.Transition_4001"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>

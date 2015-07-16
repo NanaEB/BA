@@ -26,7 +26,6 @@ public interface FSM extends EObject {
 	/**
 	 * Returns the value of the '<em><b>States</b></em>' containment reference list.
 	 * The list contents are of type {@link fsm.State}.
-	 * It is bidirectional and its opposite is '{@link fsm.State#getOwningFSM <em>Owning FSM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>States</em>' containment reference list isn't clear,
@@ -35,8 +34,7 @@ public interface FSM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>States</em>' containment reference list.
 	 * @see fsm.FsmPackage#getFSM_States()
-	 * @see fsm.State#getOwningFSM
-	 * @model opposite="owningFSM" containment="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<State> getStates();

@@ -24,26 +24,18 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getInput <em>Input</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition {
-	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTarget()
-	 * @generated
-	 * @ordered
-	 */
-	protected State target;
-
 	/**
 	 * The default value of the '{@link #getInput() <em>Input</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -85,6 +77,46 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	protected String output = OUTPUT_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected State target;
+
+	/**
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected State source;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,9 +140,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getSource() {
-		if (eContainerFeatureID() != FsmPackage.TRANSITION__SOURCE) return null;
-		return (State)eInternalContainer();
+	public String getInput() {
+		return input;
 	}
 
 	/**
@@ -118,9 +149,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSource(State newSource, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newSource, FsmPackage.TRANSITION__SOURCE, msgs);
-		return msgs;
+	public void setInput(String newInput) {
+		String oldInput = input;
+		input = newInput;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__INPUT, oldInput, input));
 	}
 
 	/**
@@ -128,20 +161,41 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(State newSource) {
-		if (newSource != eInternalContainer() || (eContainerFeatureID() != FsmPackage.TRANSITION__SOURCE && newSource != null)) {
-			if (EcoreUtil.isAncestor(this, newSource))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newSource != null)
-				msgs = ((InternalEObject)newSource).eInverseAdd(this, FsmPackage.STATE__OUTGOING_TRANSITION, State.class, msgs);
-			msgs = basicSetSource(newSource, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__SOURCE, newSource, newSource));
+	public String getOutput() {
+		return output;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutput(String newOutput) {
+		String oldOutput = output;
+		output = newOutput;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__OUTPUT, oldOutput, output));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__NAME, oldName, name));
 	}
 
 	/**
@@ -194,9 +248,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
-				msgs = ((InternalEObject)target).eInverseRemove(this, FsmPackage.STATE__INCOMING_TRANSITION, State.class, msgs);
+				msgs = ((InternalEObject)target).eInverseRemove(this, FsmPackage.STATE__INCOMING_TRANS, State.class, msgs);
 			if (newTarget != null)
-				msgs = ((InternalEObject)newTarget).eInverseAdd(this, FsmPackage.STATE__INCOMING_TRANSITION, State.class, msgs);
+				msgs = ((InternalEObject)newTarget).eInverseAdd(this, FsmPackage.STATE__INCOMING_TRANS, State.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -209,8 +263,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInput() {
-		return input;
+	public State getSrc() {
+		if (eContainerFeatureID() != FsmPackage.TRANSITION__SRC) return null;
+		return (State)eInternalContainer();
 	}
 
 	/**
@@ -218,11 +273,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInput(String newInput) {
-		String oldInput = input;
-		input = newInput;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__INPUT, oldInput, input));
+	public NotificationChain basicSetSrc(State newSrc, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newSrc, FsmPackage.TRANSITION__SRC, msgs);
+		return msgs;
 	}
 
 	/**
@@ -230,8 +283,20 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOutput() {
-		return output;
+	public void setSrc(State newSrc) {
+		if (newSrc != eInternalContainer() || (eContainerFeatureID() != FsmPackage.TRANSITION__SRC && newSrc != null)) {
+			if (EcoreUtil.isAncestor(this, newSrc))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newSrc != null)
+				msgs = ((InternalEObject)newSrc).eInverseAdd(this, FsmPackage.STATE__OUT_TRANS, State.class, msgs);
+			msgs = basicSetSrc(newSrc, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__SRC, newSrc, newSrc));
 	}
 
 	/**
@@ -239,11 +304,59 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutput(String newOutput) {
-		String oldOutput = output;
-		output = newOutput;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__OUTPUT, oldOutput, output));
+	public State getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject)source;
+			source = (State)eResolveProxy(oldSource);
+			if (source != oldSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.TRANSITION__SOURCE, oldSource, source));
+			}
+		}
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State basicGetSource() {
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSource(State newSource, NotificationChain msgs) {
+		State oldSource = source;
+		source = newSource;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__SOURCE, oldSource, newSource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSource(State newSource) {
+		if (newSource != source) {
+			NotificationChain msgs = null;
+			if (source != null)
+				msgs = ((InternalEObject)source).eInverseRemove(this, FsmPackage.STATE__OUTGOING_TRANS, State.class, msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject)newSource).eInverseAdd(this, FsmPackage.STATE__OUTGOING_TRANS, State.class, msgs);
+			msgs = basicSetSource(newSource, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__SOURCE, newSource, newSource));
 	}
 
 	/**
@@ -254,14 +367,18 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__SOURCE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSource((State)otherEnd, msgs);
 			case FsmPackage.TRANSITION__TARGET:
 				if (target != null)
-					msgs = ((InternalEObject)target).eInverseRemove(this, FsmPackage.STATE__INCOMING_TRANSITION, State.class, msgs);
+					msgs = ((InternalEObject)target).eInverseRemove(this, FsmPackage.STATE__INCOMING_TRANS, State.class, msgs);
 				return basicSetTarget((State)otherEnd, msgs);
+			case FsmPackage.TRANSITION__SRC:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetSrc((State)otherEnd, msgs);
+			case FsmPackage.TRANSITION__SOURCE:
+				if (source != null)
+					msgs = ((InternalEObject)source).eInverseRemove(this, FsmPackage.STATE__OUTGOING_TRANS, State.class, msgs);
+				return basicSetSource((State)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -274,10 +391,12 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__SOURCE:
-				return basicSetSource(null, msgs);
 			case FsmPackage.TRANSITION__TARGET:
 				return basicSetTarget(null, msgs);
+			case FsmPackage.TRANSITION__SRC:
+				return basicSetSrc(null, msgs);
+			case FsmPackage.TRANSITION__SOURCE:
+				return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -290,8 +409,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case FsmPackage.TRANSITION__SOURCE:
-				return eInternalContainer().eInverseRemove(this, FsmPackage.STATE__OUTGOING_TRANSITION, State.class, msgs);
+			case FsmPackage.TRANSITION__SRC:
+				return eInternalContainer().eInverseRemove(this, FsmPackage.STATE__OUT_TRANS, State.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -304,15 +423,20 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__SOURCE:
-				return getSource();
-			case FsmPackage.TRANSITION__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
 			case FsmPackage.TRANSITION__INPUT:
 				return getInput();
 			case FsmPackage.TRANSITION__OUTPUT:
 				return getOutput();
+			case FsmPackage.TRANSITION__NAME:
+				return getName();
+			case FsmPackage.TRANSITION__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
+			case FsmPackage.TRANSITION__SRC:
+				return getSrc();
+			case FsmPackage.TRANSITION__SOURCE:
+				if (resolve) return getSource();
+				return basicGetSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -325,17 +449,23 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__SOURCE:
-				setSource((State)newValue);
-				return;
-			case FsmPackage.TRANSITION__TARGET:
-				setTarget((State)newValue);
-				return;
 			case FsmPackage.TRANSITION__INPUT:
 				setInput((String)newValue);
 				return;
 			case FsmPackage.TRANSITION__OUTPUT:
 				setOutput((String)newValue);
+				return;
+			case FsmPackage.TRANSITION__NAME:
+				setName((String)newValue);
+				return;
+			case FsmPackage.TRANSITION__TARGET:
+				setTarget((State)newValue);
+				return;
+			case FsmPackage.TRANSITION__SRC:
+				setSrc((State)newValue);
+				return;
+			case FsmPackage.TRANSITION__SOURCE:
+				setSource((State)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -349,17 +479,23 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__SOURCE:
-				setSource((State)null);
-				return;
-			case FsmPackage.TRANSITION__TARGET:
-				setTarget((State)null);
-				return;
 			case FsmPackage.TRANSITION__INPUT:
 				setInput(INPUT_EDEFAULT);
 				return;
 			case FsmPackage.TRANSITION__OUTPUT:
 				setOutput(OUTPUT_EDEFAULT);
+				return;
+			case FsmPackage.TRANSITION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case FsmPackage.TRANSITION__TARGET:
+				setTarget((State)null);
+				return;
+			case FsmPackage.TRANSITION__SRC:
+				setSrc((State)null);
+				return;
+			case FsmPackage.TRANSITION__SOURCE:
+				setSource((State)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -373,14 +509,18 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__SOURCE:
-				return getSource() != null;
-			case FsmPackage.TRANSITION__TARGET:
-				return target != null;
 			case FsmPackage.TRANSITION__INPUT:
 				return INPUT_EDEFAULT == null ? input != null : !INPUT_EDEFAULT.equals(input);
 			case FsmPackage.TRANSITION__OUTPUT:
 				return OUTPUT_EDEFAULT == null ? output != null : !OUTPUT_EDEFAULT.equals(output);
+			case FsmPackage.TRANSITION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case FsmPackage.TRANSITION__TARGET:
+				return target != null;
+			case FsmPackage.TRANSITION__SRC:
+				return getSrc() != null;
+			case FsmPackage.TRANSITION__SOURCE:
+				return source != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -399,6 +539,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		result.append(input);
 		result.append(", output: ");
 		result.append(output);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

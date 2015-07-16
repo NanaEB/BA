@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -70,24 +70,9 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 */
 	public EList<State> getStates() {
 		if (states == null) {
-			states = new EObjectContainmentWithInverseEList<State>(State.class, this, FsmPackage.FSM__STATES, FsmPackage.STATE__OWNING_FSM);
+			states = new EObjectContainmentEList<State>(State.class, this, FsmPackage.FSM__STATES);
 		}
 		return states;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case FsmPackage.FSM__STATES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

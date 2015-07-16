@@ -74,8 +74,8 @@ public class TransitionCreateCommand extends EditElementCommand {
 		}
 
 		Transition newElement = FsmFactory.eINSTANCE.createTransition();
-		getSource().getOutgoingTransition().add(newElement);
-		newElement.setSource(getTarget());
+		getSource().getOutTrans().add(newElement);
+		newElement.setTarget(getTarget());
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
 		return CommandResult.newOKCommandResult(newElement);

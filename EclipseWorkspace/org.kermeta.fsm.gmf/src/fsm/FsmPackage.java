@@ -105,40 +105,40 @@ public interface FsmPackage extends EPackage {
 	int STATE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Owning FSM</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__OWNING_FSM = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__NAME = 1;
+	int STATE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Transition</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Out Trans</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__OUTGOING_TRANSITION = 2;
+	int STATE__OUT_TRANS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Transition</b></em>' reference list.
+	 * The feature id for the '<em><b>Outgoing Trans</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__INCOMING_TRANSITION = 3;
+	int STATE__OUTGOING_TRANS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Trans</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__INCOMING_TRANS = 3;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -159,70 +159,6 @@ public interface FsmPackage extends EPackage {
 	int STATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fsm.impl.TransitionImpl <em>Transition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fsm.impl.TransitionImpl
-	 * @see fsm.impl.FsmPackageImpl#getTransition()
-	 * @generated
-	 */
-	int TRANSITION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__TARGET = 1;
-
-	/**
-	 * The feature id for the '<em><b>Input</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__INPUT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Output</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__OUTPUT = 3;
-
-	/**
-	 * The number of structural features of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link fsm.impl.InitialStateImpl <em>Initial State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,16 +166,7 @@ public interface FsmPackage extends EPackage {
 	 * @see fsm.impl.FsmPackageImpl#getInitialState()
 	 * @generated
 	 */
-	int INITIAL_STATE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Owning FSM</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_STATE__OWNING_FSM = STATE__OWNING_FSM;
+	int INITIAL_STATE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -251,22 +178,31 @@ public interface FsmPackage extends EPackage {
 	int INITIAL_STATE__NAME = STATE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Transition</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Out Trans</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_STATE__OUTGOING_TRANSITION = STATE__OUTGOING_TRANSITION;
+	int INITIAL_STATE__OUT_TRANS = STATE__OUT_TRANS;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Transition</b></em>' reference list.
+	 * The feature id for the '<em><b>Outgoing Trans</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_STATE__INCOMING_TRANSITION = STATE__INCOMING_TRANSITION;
+	int INITIAL_STATE__OUTGOING_TRANS = STATE__OUTGOING_TRANS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Trans</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_STATE__INCOMING_TRANS = STATE__INCOMING_TRANS;
 
 	/**
 	 * The number of structural features of the '<em>Initial State</em>' class.
@@ -294,16 +230,7 @@ public interface FsmPackage extends EPackage {
 	 * @see fsm.impl.FsmPackageImpl#getSteadyState()
 	 * @generated
 	 */
-	int STEADY_STATE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Owning FSM</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STEADY_STATE__OWNING_FSM = STATE__OWNING_FSM;
+	int STEADY_STATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -315,22 +242,31 @@ public interface FsmPackage extends EPackage {
 	int STEADY_STATE__NAME = STATE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Transition</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Out Trans</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STEADY_STATE__OUTGOING_TRANSITION = STATE__OUTGOING_TRANSITION;
+	int STEADY_STATE__OUT_TRANS = STATE__OUT_TRANS;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Transition</b></em>' reference list.
+	 * The feature id for the '<em><b>Outgoing Trans</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STEADY_STATE__INCOMING_TRANSITION = STATE__INCOMING_TRANSITION;
+	int STEADY_STATE__OUTGOING_TRANS = STATE__OUTGOING_TRANS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Trans</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEADY_STATE__INCOMING_TRANS = STATE__INCOMING_TRANS;
 
 	/**
 	 * The number of structural features of the '<em>Steady State</em>' class.
@@ -358,16 +294,7 @@ public interface FsmPackage extends EPackage {
 	 * @see fsm.impl.FsmPackageImpl#getTransientState()
 	 * @generated
 	 */
-	int TRANSIENT_STATE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Owning FSM</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSIENT_STATE__OWNING_FSM = STATE__OWNING_FSM;
+	int TRANSIENT_STATE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -379,22 +306,31 @@ public interface FsmPackage extends EPackage {
 	int TRANSIENT_STATE__NAME = STATE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Transition</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Out Trans</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSIENT_STATE__OUTGOING_TRANSITION = STATE__OUTGOING_TRANSITION;
+	int TRANSIENT_STATE__OUT_TRANS = STATE__OUT_TRANS;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Transition</b></em>' reference list.
+	 * The feature id for the '<em><b>Outgoing Trans</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSIENT_STATE__INCOMING_TRANSITION = STATE__INCOMING_TRANSITION;
+	int TRANSIENT_STATE__OUTGOING_TRANS = STATE__OUTGOING_TRANS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Trans</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSIENT_STATE__INCOMING_TRANS = STATE__INCOMING_TRANS;
 
 	/**
 	 * The number of structural features of the '<em>Transient State</em>' class.
@@ -413,6 +349,88 @@ public interface FsmPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSIENT_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fsm.impl.TransitionImpl <em>Transition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fsm.impl.TransitionImpl
+	 * @see fsm.impl.FsmPackageImpl#getTransition()
+	 * @generated
+	 */
+	int TRANSITION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__INPUT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__OUTPUT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__TARGET = 3;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__SRC = 4;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__SOURCE = 5;
+
+	/**
+	 * The number of structural features of the '<em>Transition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Transition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '<em>String</em>' data type.
@@ -457,17 +475,6 @@ public interface FsmPackage extends EPackage {
 	EClass getState();
 
 	/**
-	 * Returns the meta object for the container reference '{@link fsm.State#getOwningFSM <em>Owning FSM</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Owning FSM</em>'.
-	 * @see fsm.State#getOwningFSM()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_OwningFSM();
-
-	/**
 	 * Returns the meta object for the attribute '{@link fsm.State#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -479,80 +486,37 @@ public interface FsmPackage extends EPackage {
 	EAttribute getState_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fsm.State#getOutgoingTransition <em>Outgoing Transition</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fsm.State#getOutTrans <em>Out Trans</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Outgoing Transition</em>'.
-	 * @see fsm.State#getOutgoingTransition()
+	 * @return the meta object for the containment reference list '<em>Out Trans</em>'.
+	 * @see fsm.State#getOutTrans()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_OutgoingTransition();
+	EReference getState_OutTrans();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fsm.State#getIncomingTransition <em>Incoming Transition</em>}'.
+	 * Returns the meta object for the reference list '{@link fsm.State#getOutgoingTrans <em>Outgoing Trans</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Incoming Transition</em>'.
-	 * @see fsm.State#getIncomingTransition()
+	 * @return the meta object for the reference list '<em>Outgoing Trans</em>'.
+	 * @see fsm.State#getOutgoingTrans()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_IncomingTransition();
+	EReference getState_OutgoingTrans();
 
 	/**
-	 * Returns the meta object for class '{@link fsm.Transition <em>Transition</em>}'.
+	 * Returns the meta object for the reference list '{@link fsm.State#getIncomingTrans <em>Incoming Trans</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transition</em>'.
-	 * @see fsm.Transition
+	 * @return the meta object for the reference list '<em>Incoming Trans</em>'.
+	 * @see fsm.State#getIncomingTrans()
+	 * @see #getState()
 	 * @generated
 	 */
-	EClass getTransition();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fsm.Transition#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Source</em>'.
-	 * @see fsm.Transition#getSource()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link fsm.Transition#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see fsm.Transition#getTarget()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Target();
-
-	/**
-	 * Returns the meta object for the attribute '{@link fsm.Transition#getInput <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input</em>'.
-	 * @see fsm.Transition#getInput()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EAttribute getTransition_Input();
-
-	/**
-	 * Returns the meta object for the attribute '{@link fsm.Transition#getOutput <em>Output</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Output</em>'.
-	 * @see fsm.Transition#getOutput()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EAttribute getTransition_Output();
+	EReference getState_IncomingTrans();
 
 	/**
 	 * Returns the meta object for class '{@link fsm.InitialState <em>Initial State</em>}'.
@@ -583,6 +547,82 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTransientState();
+
+	/**
+	 * Returns the meta object for class '{@link fsm.Transition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transition</em>'.
+	 * @see fsm.Transition
+	 * @generated
+	 */
+	EClass getTransition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fsm.Transition#getInput <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input</em>'.
+	 * @see fsm.Transition#getInput()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_Input();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fsm.Transition#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Output</em>'.
+	 * @see fsm.Transition#getOutput()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_Output();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fsm.Transition#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fsm.Transition#getName()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link fsm.Transition#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see fsm.Transition#getTarget()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Target();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fsm.Transition#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Src</em>'.
+	 * @see fsm.Transition#getSrc()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Src();
+
+	/**
+	 * Returns the meta object for the reference '{@link fsm.Transition#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see fsm.Transition#getSource()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Source();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>String</em>}'.
@@ -647,14 +687,6 @@ public interface FsmPackage extends EPackage {
 		EClass STATE = eINSTANCE.getState();
 
 		/**
-		 * The meta object literal for the '<em><b>Owning FSM</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__OWNING_FSM = eINSTANCE.getState_OwningFSM();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -663,62 +695,28 @@ public interface FsmPackage extends EPackage {
 		EAttribute STATE__NAME = eINSTANCE.getState_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Outgoing Transition</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Out Trans</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__OUTGOING_TRANSITION = eINSTANCE.getState_OutgoingTransition();
+		EReference STATE__OUT_TRANS = eINSTANCE.getState_OutTrans();
 
 		/**
-		 * The meta object literal for the '<em><b>Incoming Transition</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Outgoing Trans</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__INCOMING_TRANSITION = eINSTANCE.getState_IncomingTransition();
+		EReference STATE__OUTGOING_TRANS = eINSTANCE.getState_OutgoingTrans();
 
 		/**
-		 * The meta object literal for the '{@link fsm.impl.TransitionImpl <em>Transition</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fsm.impl.TransitionImpl
-		 * @see fsm.impl.FsmPackageImpl#getTransition()
-		 * @generated
-		 */
-		EClass TRANSITION = eINSTANCE.getTransition();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Incoming Trans</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Input</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TRANSITION__INPUT = eINSTANCE.getTransition_Input();
-
-		/**
-		 * The meta object literal for the '<em><b>Output</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TRANSITION__OUTPUT = eINSTANCE.getTransition_Output();
+		EReference STATE__INCOMING_TRANS = eINSTANCE.getState_IncomingTrans();
 
 		/**
 		 * The meta object literal for the '{@link fsm.impl.InitialStateImpl <em>Initial State</em>}' class.
@@ -749,6 +747,64 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRANSIENT_STATE = eINSTANCE.getTransientState();
+
+		/**
+		 * The meta object literal for the '{@link fsm.impl.TransitionImpl <em>Transition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fsm.impl.TransitionImpl
+		 * @see fsm.impl.FsmPackageImpl#getTransition()
+		 * @generated
+		 */
+		EClass TRANSITION = eINSTANCE.getTransition();
+
+		/**
+		 * The meta object literal for the '<em><b>Input</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__INPUT = eINSTANCE.getTransition_Input();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__OUTPUT = eINSTANCE.getTransition_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__NAME = eINSTANCE.getTransition_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__SRC = eINSTANCE.getTransition_Src();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
 
 		/**
 		 * The meta object literal for the '<em>String</em>' data type.

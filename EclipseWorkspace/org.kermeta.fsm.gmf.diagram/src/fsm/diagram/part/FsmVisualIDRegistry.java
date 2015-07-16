@@ -11,12 +11,12 @@ import fsm.FsmPackage;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
+import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
+import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
-import fsm.diagram.edit.parts.WrappingLabel2EditPart;
-import fsm.diagram.edit.parts.WrappingLabel4EditPart;
-import fsm.diagram.edit.parts.WrappingLabel5EditPart;
-import fsm.diagram.edit.parts.WrappingLabelEditPart;
+import fsm.diagram.edit.parts.TransitionInputEditPart;
+import fsm.diagram.edit.parts.TransitionOutputEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -174,20 +174,20 @@ public class FsmVisualIDRegistry {
 			}
 			break;
 		case SteadyStateEditPart.VISUAL_ID:
-			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
+			if (SteadyStateNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case TransientStateEditPart.VISUAL_ID:
-			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
+			if (TransientStateNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case TransitionEditPart.VISUAL_ID:
-			if (WrappingLabel4EditPart.VISUAL_ID == nodeVisualID) {
+			if (TransitionInputEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (WrappingLabel5EditPart.VISUAL_ID == nodeVisualID) {
+			if (TransitionOutputEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

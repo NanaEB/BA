@@ -254,10 +254,10 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<FsmAbstractNavigatorItem> result = new LinkedList<FsmAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			FsmNavigatorGroup incominglinks = new FsmNavigatorGroup(
-					Messages.NavigatorGroupName_TransientState_2002_incominglinks,
+					Messages.NavigatorGroupName_TransientState_2001_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FsmNavigatorGroup outgoinglinks = new FsmNavigatorGroup(
-					Messages.NavigatorGroupName_TransientState_2002_outgoinglinks,
+					Messages.NavigatorGroupName_TransientState_2001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -281,10 +281,10 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<FsmAbstractNavigatorItem> result = new LinkedList<FsmAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			FsmNavigatorGroup incominglinks = new FsmNavigatorGroup(
-					Messages.NavigatorGroupName_InitialState_2003_incominglinks,
+					Messages.NavigatorGroupName_InitialState_2002_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FsmNavigatorGroup outgoinglinks = new FsmNavigatorGroup(
-					Messages.NavigatorGroupName_InitialState_2003_outgoinglinks,
+					Messages.NavigatorGroupName_InitialState_2002_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -308,10 +308,10 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<FsmAbstractNavigatorItem> result = new LinkedList<FsmAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			FsmNavigatorGroup incominglinks = new FsmNavigatorGroup(
-					Messages.NavigatorGroupName_SteadyState_2004_incominglinks,
+					Messages.NavigatorGroupName_SteadyState_2003_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FsmNavigatorGroup outgoinglinks = new FsmNavigatorGroup(
-					Messages.NavigatorGroupName_SteadyState_2004_outgoinglinks,
+					Messages.NavigatorGroupName_SteadyState_2003_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),

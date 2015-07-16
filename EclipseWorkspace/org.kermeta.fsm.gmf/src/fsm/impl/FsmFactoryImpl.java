@@ -59,10 +59,10 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 		switch (eClass.getClassifierID()) {
 			case FsmPackage.FSM: return createFSM();
 			case FsmPackage.STATE: return createState();
-			case FsmPackage.TRANSITION: return createTransition();
 			case FsmPackage.INITIAL_STATE: return createInitialState();
 			case FsmPackage.STEADY_STATE: return createSteadyState();
 			case FsmPackage.TRANSIENT_STATE: return createTransientState();
+			case FsmPackage.TRANSITION: return createTransition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -123,16 +123,6 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Transition createTransition() {
-		TransitionImpl transition = new TransitionImpl();
-		return transition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InitialState createInitialState() {
 		InitialStateImpl initialState = new InitialStateImpl();
 		return initialState;
@@ -156,6 +146,16 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 	public TransientState createTransientState() {
 		TransientStateImpl transientState = new TransientStateImpl();
 		return transientState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Transition createTransition() {
+		TransitionImpl transition = new TransitionImpl();
+		return transition;
 	}
 
 	/**

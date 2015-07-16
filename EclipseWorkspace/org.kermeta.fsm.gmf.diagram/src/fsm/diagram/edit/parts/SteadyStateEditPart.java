@@ -39,7 +39,7 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2004;
+	public static final int VISUAL_ID = 2003;
 
 	/**
 	 * @generated
@@ -114,9 +114,10 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabelEditPart) {
-			((WrappingLabelEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureSteadyStateNameFigure());
+		if (childEditPart instanceof SteadyStateNameEditPart) {
+			((SteadyStateNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigureSteadyStateNameFigure());
 			return true;
 		}
 		return false;
@@ -126,7 +127,7 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabelEditPart) {
+		if (childEditPart instanceof SteadyStateNameEditPart) {
 			return true;
 		}
 		return false;
@@ -250,7 +251,7 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(FsmVisualIDRegistry
-				.getType(WrappingLabelEditPart.VISUAL_ID));
+				.getType(SteadyStateNameEditPart.VISUAL_ID));
 	}
 
 	/**

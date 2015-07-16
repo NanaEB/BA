@@ -28,13 +28,13 @@ public class FSMItemSemanticEditPolicy extends FsmBaseItemSemanticEditPolicy {
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (FsmElementTypes.SteadyState_2004 == req.getElementType()) {
+		if (FsmElementTypes.SteadyState_2003 == req.getElementType()) {
 			return getGEFWrapper(new SteadyStateCreateCommand(req));
 		}
-		if (FsmElementTypes.TransientState_2002 == req.getElementType()) {
+		if (FsmElementTypes.TransientState_2001 == req.getElementType()) {
 			return getGEFWrapper(new TransientStateCreateCommand(req));
 		}
-		if (FsmElementTypes.InitialState_2003 == req.getElementType()) {
+		if (FsmElementTypes.InitialState_2002 == req.getElementType()) {
 			return getGEFWrapper(new InitialStateCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

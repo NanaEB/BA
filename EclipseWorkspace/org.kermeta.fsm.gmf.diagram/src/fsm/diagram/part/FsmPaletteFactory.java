@@ -31,69 +31,69 @@ public class FsmPaletteFactory {
 		PaletteGroup paletteContainer = new PaletteGroup(
 				Messages.Fsm1Group_title);
 		paletteContainer.setId("createFsm1Group"); //$NON-NLS-1$
-		paletteContainer.add(createTransition1CreationTool());
-		paletteContainer.add(createInitialState2CreationTool());
-		paletteContainer.add(createSteadyState3CreationTool());
-		paletteContainer.add(createTransientState4CreationTool());
+		paletteContainer.add(createInitialState1CreationTool());
+		paletteContainer.add(createSteadyState2CreationTool());
+		paletteContainer.add(createTransientState3CreationTool());
+		paletteContainer.add(createTransition4CreationTool());
 		return paletteContainer;
 	}
 
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTransition1CreationTool() {
+	private ToolEntry createInitialState1CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.InitialState1CreationTool_title,
+				Messages.InitialState1CreationTool_desc,
+				Collections.singletonList(FsmElementTypes.InitialState_2002));
+		entry.setId("createInitialState1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FsmElementTypes
+				.getImageDescriptor(FsmElementTypes.InitialState_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSteadyState2CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.SteadyState2CreationTool_title,
+				Messages.SteadyState2CreationTool_desc,
+				Collections.singletonList(FsmElementTypes.SteadyState_2003));
+		entry.setId("createSteadyState2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FsmElementTypes
+				.getImageDescriptor(FsmElementTypes.SteadyState_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createTransientState3CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.TransientState3CreationTool_title,
+				Messages.TransientState3CreationTool_desc,
+				Collections.singletonList(FsmElementTypes.TransientState_2001));
+		entry.setId("createTransientState3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FsmElementTypes
+				.getImageDescriptor(FsmElementTypes.TransientState_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createTransition4CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
-				Messages.Transition1CreationTool_title,
-				Messages.Transition1CreationTool_desc,
+				Messages.Transition4CreationTool_title,
+				Messages.Transition4CreationTool_desc,
 				Collections.singletonList(FsmElementTypes.Transition_4001));
-		entry.setId("createTransition1CreationTool"); //$NON-NLS-1$
+		entry.setId("createTransition4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FsmElementTypes
 				.getImageDescriptor(FsmElementTypes.Transition_4001));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createInitialState2CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.InitialState2CreationTool_title,
-				Messages.InitialState2CreationTool_desc,
-				Collections.singletonList(FsmElementTypes.InitialState_2003));
-		entry.setId("createInitialState2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FsmElementTypes
-				.getImageDescriptor(FsmElementTypes.InitialState_2003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createSteadyState3CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.SteadyState3CreationTool_title,
-				Messages.SteadyState3CreationTool_desc,
-				Collections.singletonList(FsmElementTypes.SteadyState_2004));
-		entry.setId("createSteadyState3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FsmElementTypes
-				.getImageDescriptor(FsmElementTypes.SteadyState_2004));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createTransientState4CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.TransientState4CreationTool_title,
-				Messages.TransientState4CreationTool_desc,
-				Collections.singletonList(FsmElementTypes.TransientState_2002));
-		entry.setId("createTransientState4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FsmElementTypes
-				.getImageDescriptor(FsmElementTypes.TransientState_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

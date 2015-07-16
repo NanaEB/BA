@@ -65,7 +65,7 @@ public class TransitionReorientCommand extends EditElementCommand {
 		if (!(oldEnd instanceof State && newEnd instanceof State)) {
 			return false;
 		}
-		State target = getLink().getSource();
+		State target = getLink().getTarget();
 		return FsmBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canExistTransition_4001(getLink(), getNewSource(), target);
 	}
@@ -107,8 +107,8 @@ public class TransitionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().getOutgoingTransition().remove(getLink());
-		getNewSource().getOutgoingTransition().add(getLink());
+		getOldSource().getOutTrans().remove(getLink());
+		getNewSource().getOutTrans().add(getLink());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -116,7 +116,7 @@ public class TransitionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getLink().setSource(getNewTarget());
+		getLink().setTarget(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 

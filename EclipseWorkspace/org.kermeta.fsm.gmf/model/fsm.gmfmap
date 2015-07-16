@@ -18,12 +18,10 @@
             href="fsm.gmfgraph#SteadyStateName"/>
         <features
             href="fsm.ecore#//State/name"/>
-        <editableFeatures
-            href="fsm.ecore#//State/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="fsm.gmftool#//@palette/@tools.0/@tools.2"/>
+          href="fsm.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
           href="fsm.gmfgraph#SteadyState"/>
     </ownedChild>
@@ -40,12 +38,10 @@
             href="fsm.gmfgraph#TransientStateName"/>
         <features
             href="fsm.ecore#//State/name"/>
-        <editableFeatures
-            href="fsm.ecore#//State/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="fsm.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="fsm.gmftool#//@palette/@tools.0/@tools.2"/>
       <diagramNode
           href="fsm.gmfgraph#TransientState"/>
     </ownedChild>
@@ -58,7 +54,7 @@
           href="fsm.ecore#//InitialState"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="fsm.gmftool#//@palette/@tools.0/@tools.1"/>
+          href="fsm.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="fsm.gmfgraph#InitialState"/>
     </ownedChild>
@@ -67,35 +63,29 @@
     <domainMetaElement
         href="fsm.ecore#//Transition"/>
     <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping"
-        editorPattern="">
+        xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
           href="fsm.gmfgraph#TransitionInput"/>
       <features
           href="fsm.ecore#//Transition/input"/>
-      <editableFeatures
-          href="fsm.ecore#//Transition/input"/>
     </labelMappings>
     <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping"
-        editorPattern="">
+        xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
           href="fsm.gmfgraph#TransitionOutput"/>
       <features
           href="fsm.ecore#//Transition/output"/>
-      <editableFeatures
-          href="fsm.ecore#//Transition/output"/>
     </labelMappings>
     <containmentFeature
-        href="fsm.ecore#//State/outgoingTransition"/>
+        href="fsm.ecore#//State/outTrans"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="fsm.gmftool#//@palette/@tools.0/@tools.0"/>
+        href="fsm.gmftool#//@palette/@tools.0/@tools.3"/>
     <diagramLink
         href="fsm.gmfgraph#Transition"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="fsm.ecore#//Transition/source"/>
+        href="fsm.ecore#//Transition/target"/>
   </links>
   <diagram>
     <diagramCanvas

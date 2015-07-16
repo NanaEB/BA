@@ -21,9 +21,9 @@ public class FsmModelingAssistantProviderOfFSMEditPart extends
 	@Override
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(FsmElementTypes.SteadyState_2004);
-		types.add(FsmElementTypes.TransientState_2002);
-		types.add(FsmElementTypes.InitialState_2003);
+		types.add(FsmElementTypes.SteadyState_2003);
+		types.add(FsmElementTypes.TransientState_2001);
+		types.add(FsmElementTypes.InitialState_2002);
 		return types;
 	}
 

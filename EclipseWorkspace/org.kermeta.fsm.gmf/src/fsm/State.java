@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fsm.State#getOwningFSM <em>Owning FSM</em>}</li>
  *   <li>{@link fsm.State#getName <em>Name</em>}</li>
- *   <li>{@link fsm.State#getOutgoingTransition <em>Outgoing Transition</em>}</li>
- *   <li>{@link fsm.State#getIncomingTransition <em>Incoming Transition</em>}</li>
+ *   <li>{@link fsm.State#getOutTrans <em>Out Trans</em>}</li>
+ *   <li>{@link fsm.State#getOutgoingTrans <em>Outgoing Trans</em>}</li>
+ *   <li>{@link fsm.State#getIncomingTrans <em>Incoming Trans</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,34 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface State extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Owning FSM</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link fsm.FSM#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Owning FSM</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owning FSM</em>' container reference.
-	 * @see #setOwningFSM(FSM)
-	 * @see fsm.FsmPackage#getState_OwningFSM()
-	 * @see fsm.FSM#getStates
-	 * @model opposite="states" required="true" transient="false"
-	 * @generated
-	 */
-	FSM getOwningFSM();
-
-	/**
-	 * Sets the value of the '{@link fsm.State#getOwningFSM <em>Owning FSM</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Owning FSM</em>' container reference.
-	 * @see #getOwningFSM()
-	 * @generated
-	 */
-	void setOwningFSM(FSM value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,7 +37,7 @@ public interface State extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see fsm.FsmPackage#getState_Name()
-	 * @model dataType="fsm.String"
+	 * @model
 	 * @generated
 	 */
 	String getName();
@@ -81,39 +53,57 @@ public interface State extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Outgoing Transition</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Out Trans</b></em>' containment reference list.
+	 * The list contents are of type {@link fsm.Transition}.
+	 * It is bidirectional and its opposite is '{@link fsm.Transition#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Out Trans</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Out Trans</em>' containment reference list.
+	 * @see fsm.FsmPackage#getState_OutTrans()
+	 * @see fsm.Transition#getSrc
+	 * @model opposite="src" containment="true"
+	 * @generated
+	 */
+	EList<Transition> getOutTrans();
+
+	/**
+	 * Returns the value of the '<em><b>Outgoing Trans</b></em>' reference list.
 	 * The list contents are of type {@link fsm.Transition}.
 	 * It is bidirectional and its opposite is '{@link fsm.Transition#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Outgoing Transition</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Outgoing Trans</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outgoing Transition</em>' containment reference list.
-	 * @see fsm.FsmPackage#getState_OutgoingTransition()
+	 * @return the value of the '<em>Outgoing Trans</em>' reference list.
+	 * @see fsm.FsmPackage#getState_OutgoingTrans()
 	 * @see fsm.Transition#getSource
-	 * @model opposite="source" containment="true"
+	 * @model opposite="source"
 	 * @generated
 	 */
-	EList<Transition> getOutgoingTransition();
+	EList<Transition> getOutgoingTrans();
 
 	/**
-	 * Returns the value of the '<em><b>Incoming Transition</b></em>' reference list.
+	 * Returns the value of the '<em><b>Incoming Trans</b></em>' reference list.
 	 * The list contents are of type {@link fsm.Transition}.
 	 * It is bidirectional and its opposite is '{@link fsm.Transition#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Incoming Transition</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Incoming Trans</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Incoming Transition</em>' reference list.
-	 * @see fsm.FsmPackage#getState_IncomingTransition()
+	 * @return the value of the '<em>Incoming Trans</em>' reference list.
+	 * @see fsm.FsmPackage#getState_IncomingTrans()
 	 * @see fsm.Transition#getTarget
 	 * @model opposite="target"
 	 * @generated
 	 */
-	EList<Transition> getIncomingTransition();
+	EList<Transition> getIncomingTrans();
 
 } // State

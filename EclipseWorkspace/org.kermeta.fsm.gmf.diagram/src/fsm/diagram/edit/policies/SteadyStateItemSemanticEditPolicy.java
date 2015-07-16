@@ -29,7 +29,7 @@ public class SteadyStateItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SteadyStateItemSemanticEditPolicy() {
-		super(FsmElementTypes.SteadyState_2004);
+		super(FsmElementTypes.SteadyState_2003);
 	}
 
 	/**

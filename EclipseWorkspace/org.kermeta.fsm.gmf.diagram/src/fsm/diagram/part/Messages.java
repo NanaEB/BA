@@ -248,42 +248,42 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Transition1CreationTool_title;
+	public static String InitialState1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Transition1CreationTool_desc;
+	public static String InitialState1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String InitialState2CreationTool_title;
+	public static String SteadyState2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String InitialState2CreationTool_desc;
+	public static String SteadyState2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String SteadyState3CreationTool_title;
+	public static String TransientState3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String SteadyState3CreationTool_desc;
+	public static String TransientState3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String TransientState4CreationTool_title;
+	public static String Transition4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String TransientState4CreationTool_desc;
+	public static String Transition4CreationTool_desc;
 
 	/**
 	 * @generated
@@ -298,32 +298,32 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_TransientState_2002_incominglinks;
+	public static String NavigatorGroupName_TransientState_2001_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_TransientState_2002_outgoinglinks;
+	public static String NavigatorGroupName_TransientState_2001_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_InitialState_2003_incominglinks;
+	public static String NavigatorGroupName_InitialState_2002_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_InitialState_2003_outgoinglinks;
+	public static String NavigatorGroupName_InitialState_2002_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_SteadyState_2004_incominglinks;
+	public static String NavigatorGroupName_SteadyState_2003_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_SteadyState_2004_outgoinglinks;
+	public static String NavigatorGroupName_SteadyState_2003_outgoinglinks;
 
 	/**
 	 * @generated

@@ -79,11 +79,11 @@ public class FsmDiagramUpdater {
 		case FSMEditPart.VISUAL_ID:
 			return getFSM_1000ContainedLinks(view);
 		case SteadyStateEditPart.VISUAL_ID:
-			return getSteadyState_2004ContainedLinks(view);
+			return getSteadyState_2003ContainedLinks(view);
 		case TransientStateEditPart.VISUAL_ID:
-			return getTransientState_2002ContainedLinks(view);
+			return getTransientState_2001ContainedLinks(view);
 		case InitialStateEditPart.VISUAL_ID:
-			return getInitialState_2003ContainedLinks(view);
+			return getInitialState_2002ContainedLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001ContainedLinks(view);
 		}
@@ -96,11 +96,11 @@ public class FsmDiagramUpdater {
 	public static List<FsmLinkDescriptor> getIncomingLinks(View view) {
 		switch (FsmVisualIDRegistry.getVisualID(view)) {
 		case SteadyStateEditPart.VISUAL_ID:
-			return getSteadyState_2004IncomingLinks(view);
+			return getSteadyState_2003IncomingLinks(view);
 		case TransientStateEditPart.VISUAL_ID:
-			return getTransientState_2002IncomingLinks(view);
+			return getTransientState_2001IncomingLinks(view);
 		case InitialStateEditPart.VISUAL_ID:
-			return getInitialState_2003IncomingLinks(view);
+			return getInitialState_2002IncomingLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001IncomingLinks(view);
 		}
@@ -113,11 +113,11 @@ public class FsmDiagramUpdater {
 	public static List<FsmLinkDescriptor> getOutgoingLinks(View view) {
 		switch (FsmVisualIDRegistry.getVisualID(view)) {
 		case SteadyStateEditPart.VISUAL_ID:
-			return getSteadyState_2004OutgoingLinks(view);
+			return getSteadyState_2003OutgoingLinks(view);
 		case TransientStateEditPart.VISUAL_ID:
-			return getTransientState_2002OutgoingLinks(view);
+			return getTransientState_2001OutgoingLinks(view);
 		case InitialStateEditPart.VISUAL_ID:
-			return getInitialState_2003OutgoingLinks(view);
+			return getInitialState_2002OutgoingLinks(view);
 		case TransitionEditPart.VISUAL_ID:
 			return getTransition_4001OutgoingLinks(view);
 		}
@@ -134,7 +134,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getSteadyState_2004ContainedLinks(
+	public static List<FsmLinkDescriptor> getSteadyState_2003ContainedLinks(
 			View view) {
 		SteadyState modelElement = (SteadyState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
@@ -145,7 +145,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getTransientState_2002ContainedLinks(
+	public static List<FsmLinkDescriptor> getTransientState_2001ContainedLinks(
 			View view) {
 		TransientState modelElement = (TransientState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
@@ -156,7 +156,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getInitialState_2003ContainedLinks(
+	public static List<FsmLinkDescriptor> getInitialState_2002ContainedLinks(
 			View view) {
 		InitialState modelElement = (InitialState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
@@ -175,7 +175,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getSteadyState_2004IncomingLinks(
+	public static List<FsmLinkDescriptor> getSteadyState_2003IncomingLinks(
 			View view) {
 		SteadyState modelElement = (SteadyState) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -189,7 +189,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getTransientState_2002IncomingLinks(
+	public static List<FsmLinkDescriptor> getTransientState_2001IncomingLinks(
 			View view) {
 		TransientState modelElement = (TransientState) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -203,7 +203,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getInitialState_2003IncomingLinks(
+	public static List<FsmLinkDescriptor> getInitialState_2002IncomingLinks(
 			View view) {
 		InitialState modelElement = (InitialState) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -225,7 +225,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getSteadyState_2004OutgoingLinks(
+	public static List<FsmLinkDescriptor> getSteadyState_2003OutgoingLinks(
 			View view) {
 		SteadyState modelElement = (SteadyState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
@@ -236,7 +236,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getTransientState_2002OutgoingLinks(
+	public static List<FsmLinkDescriptor> getTransientState_2001OutgoingLinks(
 			View view) {
 		TransientState modelElement = (TransientState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
@@ -247,7 +247,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmLinkDescriptor> getInitialState_2003OutgoingLinks(
+	public static List<FsmLinkDescriptor> getInitialState_2002OutgoingLinks(
 			View view) {
 		InitialState modelElement = (InitialState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
@@ -269,7 +269,7 @@ public class FsmDiagramUpdater {
 	private static Collection<FsmLinkDescriptor> getContainedTypeModelFacetLinks_Transition_4001(
 			State container) {
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
-		for (Iterator<?> links = container.getOutgoingTransition().iterator(); links
+		for (Iterator<?> links = container.getOutTrans().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof Transition) {
@@ -280,7 +280,7 @@ public class FsmDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			State dst = link.getSource();
+			State dst = link.getTarget();
 			result.add(new FsmLinkDescriptor(container, dst, link,
 					FsmElementTypes.Transition_4001,
 					TransitionEditPart.VISUAL_ID));
@@ -299,7 +299,7 @@ public class FsmDiagramUpdater {
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() != FsmPackage.eINSTANCE
-					.getTransition_Source()
+					.getTransition_Target()
 					|| false == setting.getEObject() instanceof Transition) {
 				continue;
 			}

@@ -252,7 +252,7 @@ public class FSMCanonicalEditPolicy extends CanonicalEditPolicy {
 		case SteadyStateEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FsmDiagramUpdater
-						.getSteadyState_2004ContainedLinks(view));
+						.getSteadyState_2003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -260,7 +260,7 @@ public class FSMCanonicalEditPolicy extends CanonicalEditPolicy {
 		case TransientStateEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FsmDiagramUpdater
-						.getTransientState_2002ContainedLinks(view));
+						.getTransientState_2001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -268,7 +268,7 @@ public class FSMCanonicalEditPolicy extends CanonicalEditPolicy {
 		case InitialStateEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FsmDiagramUpdater
-						.getInitialState_2003ContainedLinks(view));
+						.getInitialState_2002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

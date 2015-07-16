@@ -29,7 +29,7 @@ public class InitialStateItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public InitialStateItemSemanticEditPolicy() {
-		super(FsmElementTypes.InitialState_2003);
+		super(FsmElementTypes.InitialState_2002);
 	}
 
 	/**

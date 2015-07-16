@@ -1,6 +1,5 @@
 package fsm.diagram.edit.parts;
 
-import org.eclipse.draw2d.BorderLayout;
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
@@ -25,10 +24,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.draw2d.CenterLayout;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Font;
-import org.eclipse.swt.widgets.Display;
 
 import fsm.diagram.edit.policies.TransientStateItemSemanticEditPolicy;
 import fsm.diagram.part.FsmVisualIDRegistry;
@@ -41,7 +37,7 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2002;
+	public static final int VISUAL_ID = 2001;
 
 	/**
 	 * @generated
@@ -116,9 +112,10 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabel2EditPart) {
-			((WrappingLabel2EditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureTransientStateLabel());
+		if (childEditPart instanceof TransientStateNameEditPart) {
+			((TransientStateNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigureTransientStateNameFigure());
 			return true;
 		}
 		return false;
@@ -128,7 +125,7 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof WrappingLabel2EditPart) {
+		if (childEditPart instanceof TransientStateNameEditPart) {
 			return true;
 		}
 		return false;
@@ -252,7 +249,7 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(FsmVisualIDRegistry
-				.getType(WrappingLabel2EditPart.VISUAL_ID));
+				.getType(TransientStateNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -263,21 +260,16 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTransientStateLabel;
+		private WrappingLabel fFigureTransientStateNameFigure;
 
 		/**
 		 * @generated
 		 */
 		public TransientStateFigure() {
 			this.setLayoutManager(new CenterLayout());
-			this.setFillXOR(true);
-			this.setOutlineXOR(true);
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(ColorConstants.black);
-
-			this.setFont(THIS_FONT);
-
 			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(100),
 					getMapMode().DPtoLP(60)));
 
@@ -292,28 +284,21 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureTransientStateLabel = new WrappingLabel();
+			fFigureTransientStateNameFigure = new WrappingLabel();
 
-			fFigureTransientStateLabel.setText("state name");
+			fFigureTransientStateNameFigure.setText("state name");
 
-			this.add(fFigureTransientStateLabel);
+			this.add(fFigureTransientStateNameFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureTransientStateLabel() {
-			return fFigureTransientStateLabel;
+		public WrappingLabel getFigureTransientStateNameFigure() {
+			return fFigureTransientStateNameFigure;
 		}
 
 	}
-
-	/**
-	 * @generated
-	 */
-	static final Font THIS_FONT = new Font(Display.getCurrent(), Display
-			.getDefault().getSystemFont().getFontData()[0].getName(), 9,
-			SWT.NORMAL);
 
 }

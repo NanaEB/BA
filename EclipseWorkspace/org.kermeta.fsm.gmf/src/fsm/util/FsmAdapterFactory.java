@@ -76,10 +76,6 @@ public class FsmAdapterFactory extends AdapterFactoryImpl {
 				return createStateAdapter();
 			}
 			@Override
-			public Adapter caseTransition(Transition object) {
-				return createTransitionAdapter();
-			}
-			@Override
 			public Adapter caseInitialState(InitialState object) {
 				return createInitialStateAdapter();
 			}
@@ -90,6 +86,10 @@ public class FsmAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTransientState(TransientState object) {
 				return createTransientStateAdapter();
+			}
+			@Override
+			public Adapter caseTransition(Transition object) {
+				return createTransitionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -140,20 +140,6 @@ public class FsmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fsm.Transition <em>Transition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fsm.Transition
-	 * @generated
-	 */
-	public Adapter createTransitionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link fsm.InitialState <em>Initial State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -192,6 +178,20 @@ public class FsmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransientStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fsm.Transition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fsm.Transition
+	 * @generated
+	 */
+	public Adapter createTransitionAdapter() {
 		return null;
 	}
 

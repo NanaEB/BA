@@ -11,19 +11,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//FSM/states"/>
     </genClasses>
     <genClasses ecoreClass="fsm.ecore#//State">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//State/owningFSM"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//State/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//State/outgoingTransition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/incomingTransition"/>
-    </genClasses>
-    <genClasses ecoreClass="fsm.ecore#//Transition">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//Transition/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//Transition/target"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/input"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/output"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//State/outTrans"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/outgoingTrans"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/incomingTrans"/>
     </genClasses>
     <genClasses ecoreClass="fsm.ecore#//InitialState"/>
     <genClasses ecoreClass="fsm.ecore#//SteadyState"/>
     <genClasses ecoreClass="fsm.ecore#//TransientState"/>
+    <genClasses ecoreClass="fsm.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/input"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/output"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//Transition/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//Transition/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//Transition/source"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

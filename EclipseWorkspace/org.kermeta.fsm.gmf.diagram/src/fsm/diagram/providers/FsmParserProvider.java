@@ -14,10 +14,10 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import fsm.FsmPackage;
-import fsm.diagram.edit.parts.WrappingLabel2EditPart;
-import fsm.diagram.edit.parts.WrappingLabel4EditPart;
-import fsm.diagram.edit.parts.WrappingLabel5EditPart;
-import fsm.diagram.edit.parts.WrappingLabelEditPart;
+import fsm.diagram.edit.parts.SteadyStateNameEditPart;
+import fsm.diagram.edit.parts.TransientStateNameEditPart;
+import fsm.diagram.edit.parts.TransitionInputEditPart;
+import fsm.diagram.edit.parts.TransitionOutputEditPart;
 import fsm.diagram.parsers.MessageFormatParser;
 import fsm.diagram.part.FsmVisualIDRegistry;
 
@@ -30,43 +30,37 @@ public class FsmParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser steadyStateName_5001Parser;
+	private IParser steadyStateName_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSteadyStateName_5001Parser() {
-		if (steadyStateName_5001Parser == null) {
+	private IParser getSteadyStateName_5003Parser() {
+		if (steadyStateName_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getState_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { FsmPackage.eINSTANCE
-					.getState_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
-			steadyStateName_5001Parser = parser;
+			MessageFormatParser parser = new MessageFormatParser(features);
+			steadyStateName_5003Parser = parser;
 		}
-		return steadyStateName_5001Parser;
+		return steadyStateName_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser transientStateName_5002Parser;
+	private IParser transientStateName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTransientStateName_5002Parser() {
-		if (transientStateName_5002Parser == null) {
+	private IParser getTransientStateName_5001Parser() {
+		if (transientStateName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getState_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { FsmPackage.eINSTANCE
-					.getState_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
-			transientStateName_5002Parser = parser;
+			MessageFormatParser parser = new MessageFormatParser(features);
+			transientStateName_5001Parser = parser;
 		}
-		return transientStateName_5002Parser;
+		return transientStateName_5001Parser;
 	}
 
 	/**
@@ -81,10 +75,7 @@ public class FsmParserProvider extends AbstractProvider implements
 		if (transitionInput_6001Parser == null) {
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getTransition_Input() };
-			EAttribute[] editableFeatures = new EAttribute[] { FsmPackage.eINSTANCE
-					.getTransition_Input() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
+			MessageFormatParser parser = new MessageFormatParser(features);
 			transitionInput_6001Parser = parser;
 		}
 		return transitionInput_6001Parser;
@@ -102,10 +93,7 @@ public class FsmParserProvider extends AbstractProvider implements
 		if (transitionOutput_6002Parser == null) {
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getTransition_Output() };
-			EAttribute[] editableFeatures = new EAttribute[] { FsmPackage.eINSTANCE
-					.getTransition_Output() };
-			MessageFormatParser parser = new MessageFormatParser(features,
-					editableFeatures);
+			MessageFormatParser parser = new MessageFormatParser(features);
 			transitionOutput_6002Parser = parser;
 		}
 		return transitionOutput_6002Parser;
@@ -116,13 +104,13 @@ public class FsmParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case WrappingLabelEditPart.VISUAL_ID:
-			return getSteadyStateName_5001Parser();
-		case WrappingLabel2EditPart.VISUAL_ID:
-			return getTransientStateName_5002Parser();
-		case WrappingLabel4EditPart.VISUAL_ID:
+		case SteadyStateNameEditPart.VISUAL_ID:
+			return getSteadyStateName_5003Parser();
+		case TransientStateNameEditPart.VISUAL_ID:
+			return getTransientStateName_5001Parser();
+		case TransitionInputEditPart.VISUAL_ID:
 			return getTransitionInput_6001Parser();
-		case WrappingLabel5EditPart.VISUAL_ID:
+		case TransitionOutputEditPart.VISUAL_ID:
 			return getTransitionOutput_6002Parser();
 		}
 		return null;

@@ -19,7 +19,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.gmf.tooling.runtime.draw2d.CenterLayout;
 import org.eclipse.swt.graphics.Color;
 
 import fsm.diagram.edit.policies.InitialStateItemSemanticEditPolicy;
@@ -32,7 +31,7 @@ public class InitialStateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 2002;
 
 	/**
 	 * @generated
@@ -93,14 +92,14 @@ public class InitialStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new InitFigure();
+		return primaryShape = new InitialStateFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public InitFigure getPrimaryShape() {
-		return (InitFigure) primaryShape;
+	public InitialStateFigure getPrimaryShape() {
+		return (InitialStateFigure) primaryShape;
 	}
 
 	/**
@@ -187,12 +186,12 @@ public class InitialStateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class InitFigure extends Ellipse {
+	public class InitialStateFigure extends Ellipse {
 
 		/**
 		 * @generated
 		 */
-		public InitFigure() {
+		public InitialStateFigure() {
 			this.setForegroundColor(ColorConstants.black);
 			this.setBackgroundColor(ColorConstants.black);
 			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(22),

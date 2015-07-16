@@ -57,15 +57,15 @@ public class FsmElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType SteadyState_2004 = getElementType("org.kermeta.fsm.gmf.diagram.SteadyState_2004"); //$NON-NLS-1$
+	public static final IElementType SteadyState_2003 = getElementType("org.kermeta.fsm.gmf.diagram.SteadyState_2003"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType TransientState_2002 = getElementType("org.kermeta.fsm.gmf.diagram.TransientState_2002"); //$NON-NLS-1$
+	public static final IElementType TransientState_2001 = getElementType("org.kermeta.fsm.gmf.diagram.TransientState_2001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType InitialState_2003 = getElementType("org.kermeta.fsm.gmf.diagram.InitialState_2003"); //$NON-NLS-1$
+	public static final IElementType InitialState_2002 = getElementType("org.kermeta.fsm.gmf.diagram.InitialState_2002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -111,13 +111,13 @@ public class FsmElementTypes {
 
 			elements.put(FSM_1000, FsmPackage.eINSTANCE.getFSM());
 
-			elements.put(SteadyState_2004,
+			elements.put(SteadyState_2003,
 					FsmPackage.eINSTANCE.getSteadyState());
 
-			elements.put(TransientState_2002,
+			elements.put(TransientState_2001,
 					FsmPackage.eINSTANCE.getTransientState());
 
-			elements.put(InitialState_2003,
+			elements.put(InitialState_2002,
 					FsmPackage.eINSTANCE.getInitialState());
 
 			elements.put(Transition_4001, FsmPackage.eINSTANCE.getTransition());
@@ -139,9 +139,9 @@ public class FsmElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(FSM_1000);
-			KNOWN_ELEMENT_TYPES.add(SteadyState_2004);
-			KNOWN_ELEMENT_TYPES.add(TransientState_2002);
-			KNOWN_ELEMENT_TYPES.add(InitialState_2003);
+			KNOWN_ELEMENT_TYPES.add(SteadyState_2003);
+			KNOWN_ELEMENT_TYPES.add(TransientState_2001);
+			KNOWN_ELEMENT_TYPES.add(InitialState_2002);
 			KNOWN_ELEMENT_TYPES.add(Transition_4001);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
@@ -155,11 +155,11 @@ public class FsmElementTypes {
 		case FSMEditPart.VISUAL_ID:
 			return FSM_1000;
 		case SteadyStateEditPart.VISUAL_ID:
-			return SteadyState_2004;
+			return SteadyState_2003;
 		case TransientStateEditPart.VISUAL_ID:
-			return TransientState_2002;
+			return TransientState_2001;
 		case InitialStateEditPart.VISUAL_ID:
-			return InitialState_2003;
+			return InitialState_2002;
 		case TransitionEditPart.VISUAL_ID:
 			return Transition_4001;
 		}

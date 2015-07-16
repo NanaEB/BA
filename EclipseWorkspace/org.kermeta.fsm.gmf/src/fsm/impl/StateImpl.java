@@ -2,7 +2,6 @@
  */
 package fsm.impl;
 
-import fsm.FSM;
 import fsm.FsmPackage;
 import fsm.State;
 import fsm.Transition;
@@ -22,7 +21,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -32,10 +30,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fsm.impl.StateImpl#getOwningFSM <em>Owning FSM</em>}</li>
  *   <li>{@link fsm.impl.StateImpl#getName <em>Name</em>}</li>
- *   <li>{@link fsm.impl.StateImpl#getOutgoingTransition <em>Outgoing Transition</em>}</li>
- *   <li>{@link fsm.impl.StateImpl#getIncomingTransition <em>Incoming Transition</em>}</li>
+ *   <li>{@link fsm.impl.StateImpl#getOutTrans <em>Out Trans</em>}</li>
+ *   <li>{@link fsm.impl.StateImpl#getOutgoingTrans <em>Outgoing Trans</em>}</li>
+ *   <li>{@link fsm.impl.StateImpl#getIncomingTrans <em>Incoming Trans</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,24 +61,34 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getOutgoingTransition() <em>Outgoing Transition</em>}' containment reference list.
+	 * The cached value of the '{@link #getOutTrans() <em>Out Trans</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutgoingTransition()
+	 * @see #getOutTrans()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Transition> outgoingTransition;
+	protected EList<Transition> outTrans;
 
 	/**
-	 * The cached value of the '{@link #getIncomingTransition() <em>Incoming Transition</em>}' reference list.
+	 * The cached value of the '{@link #getOutgoingTrans() <em>Outgoing Trans</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIncomingTransition()
+	 * @see #getOutgoingTrans()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Transition> incomingTransition;
+	protected EList<Transition> outgoingTrans;
+
+	/**
+	 * The cached value of the '{@link #getIncomingTrans() <em>Incoming Trans</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIncomingTrans()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> incomingTrans;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,47 +107,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	protected EClass eStaticClass() {
 		return FsmPackage.Literals.STATE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FSM getOwningFSM() {
-		if (eContainerFeatureID() != FsmPackage.STATE__OWNING_FSM) return null;
-		return (FSM)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOwningFSM(FSM newOwningFSM, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwningFSM, FsmPackage.STATE__OWNING_FSM, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOwningFSM(FSM newOwningFSM) {
-		if (newOwningFSM != eInternalContainer() || (eContainerFeatureID() != FsmPackage.STATE__OWNING_FSM && newOwningFSM != null)) {
-			if (EcoreUtil.isAncestor(this, newOwningFSM))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newOwningFSM != null)
-				msgs = ((InternalEObject)newOwningFSM).eInverseAdd(this, FsmPackage.FSM__STATES, FSM.class, msgs);
-			msgs = basicSetOwningFSM(newOwningFSM, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.STATE__OWNING_FSM, newOwningFSM, newOwningFSM));
 	}
 
 	/**
@@ -168,11 +135,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Transition> getOutgoingTransition() {
-		if (outgoingTransition == null) {
-			outgoingTransition = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, FsmPackage.STATE__OUTGOING_TRANSITION, FsmPackage.TRANSITION__SOURCE);
+	public EList<Transition> getOutTrans() {
+		if (outTrans == null) {
+			outTrans = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, FsmPackage.STATE__OUT_TRANS, FsmPackage.TRANSITION__SRC);
 		}
-		return outgoingTransition;
+		return outTrans;
 	}
 
 	/**
@@ -180,11 +147,23 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Transition> getIncomingTransition() {
-		if (incomingTransition == null) {
-			incomingTransition = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, FsmPackage.STATE__INCOMING_TRANSITION, FsmPackage.TRANSITION__TARGET);
+	public EList<Transition> getOutgoingTrans() {
+		if (outgoingTrans == null) {
+			outgoingTrans = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, FsmPackage.STATE__OUTGOING_TRANS, FsmPackage.TRANSITION__SOURCE);
 		}
-		return incomingTransition;
+		return outgoingTrans;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Transition> getIncomingTrans() {
+		if (incomingTrans == null) {
+			incomingTrans = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, FsmPackage.STATE__INCOMING_TRANS, FsmPackage.TRANSITION__TARGET);
+		}
+		return incomingTrans;
 	}
 
 	/**
@@ -196,14 +175,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FsmPackage.STATE__OWNING_FSM:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetOwningFSM((FSM)otherEnd, msgs);
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingTransition()).basicAdd(otherEnd, msgs);
-			case FsmPackage.STATE__INCOMING_TRANSITION:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingTransition()).basicAdd(otherEnd, msgs);
+			case FsmPackage.STATE__OUT_TRANS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutTrans()).basicAdd(otherEnd, msgs);
+			case FsmPackage.STATE__OUTGOING_TRANS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingTrans()).basicAdd(otherEnd, msgs);
+			case FsmPackage.STATE__INCOMING_TRANS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingTrans()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -216,12 +193,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FsmPackage.STATE__OWNING_FSM:
-				return basicSetOwningFSM(null, msgs);
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
-				return ((InternalEList<?>)getOutgoingTransition()).basicRemove(otherEnd, msgs);
-			case FsmPackage.STATE__INCOMING_TRANSITION:
-				return ((InternalEList<?>)getIncomingTransition()).basicRemove(otherEnd, msgs);
+			case FsmPackage.STATE__OUT_TRANS:
+				return ((InternalEList<?>)getOutTrans()).basicRemove(otherEnd, msgs);
+			case FsmPackage.STATE__OUTGOING_TRANS:
+				return ((InternalEList<?>)getOutgoingTrans()).basicRemove(otherEnd, msgs);
+			case FsmPackage.STATE__INCOMING_TRANS:
+				return ((InternalEList<?>)getIncomingTrans()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -232,30 +209,16 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case FsmPackage.STATE__OWNING_FSM:
-				return eInternalContainer().eInverseRemove(this, FsmPackage.FSM__STATES, FSM.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FsmPackage.STATE__OWNING_FSM:
-				return getOwningFSM();
 			case FsmPackage.STATE__NAME:
 				return getName();
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
-				return getOutgoingTransition();
-			case FsmPackage.STATE__INCOMING_TRANSITION:
-				return getIncomingTransition();
+			case FsmPackage.STATE__OUT_TRANS:
+				return getOutTrans();
+			case FsmPackage.STATE__OUTGOING_TRANS:
+				return getOutgoingTrans();
+			case FsmPackage.STATE__INCOMING_TRANS:
+				return getIncomingTrans();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -269,19 +232,20 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FsmPackage.STATE__OWNING_FSM:
-				setOwningFSM((FSM)newValue);
-				return;
 			case FsmPackage.STATE__NAME:
 				setName((String)newValue);
 				return;
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
-				getOutgoingTransition().clear();
-				getOutgoingTransition().addAll((Collection<? extends Transition>)newValue);
+			case FsmPackage.STATE__OUT_TRANS:
+				getOutTrans().clear();
+				getOutTrans().addAll((Collection<? extends Transition>)newValue);
 				return;
-			case FsmPackage.STATE__INCOMING_TRANSITION:
-				getIncomingTransition().clear();
-				getIncomingTransition().addAll((Collection<? extends Transition>)newValue);
+			case FsmPackage.STATE__OUTGOING_TRANS:
+				getOutgoingTrans().clear();
+				getOutgoingTrans().addAll((Collection<? extends Transition>)newValue);
+				return;
+			case FsmPackage.STATE__INCOMING_TRANS:
+				getIncomingTrans().clear();
+				getIncomingTrans().addAll((Collection<? extends Transition>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -295,17 +259,17 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FsmPackage.STATE__OWNING_FSM:
-				setOwningFSM((FSM)null);
-				return;
 			case FsmPackage.STATE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
-				getOutgoingTransition().clear();
+			case FsmPackage.STATE__OUT_TRANS:
+				getOutTrans().clear();
 				return;
-			case FsmPackage.STATE__INCOMING_TRANSITION:
-				getIncomingTransition().clear();
+			case FsmPackage.STATE__OUTGOING_TRANS:
+				getOutgoingTrans().clear();
+				return;
+			case FsmPackage.STATE__INCOMING_TRANS:
+				getIncomingTrans().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -319,14 +283,14 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FsmPackage.STATE__OWNING_FSM:
-				return getOwningFSM() != null;
 			case FsmPackage.STATE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
-				return outgoingTransition != null && !outgoingTransition.isEmpty();
-			case FsmPackage.STATE__INCOMING_TRANSITION:
-				return incomingTransition != null && !incomingTransition.isEmpty();
+			case FsmPackage.STATE__OUT_TRANS:
+				return outTrans != null && !outTrans.isEmpty();
+			case FsmPackage.STATE__OUTGOING_TRANS:
+				return outgoingTrans != null && !outgoingTrans.isEmpty();
+			case FsmPackage.STATE__INCOMING_TRANS:
+				return incomingTrans != null && !incomingTrans.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

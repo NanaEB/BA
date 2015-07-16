@@ -64,7 +64,8 @@ public class StateItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIncomingTransitionPropertyDescriptor(object);
+			addOutgoingTransPropertyDescriptor(object);
+			addIncomingTransPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,19 +93,41 @@ public class StateItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Incoming Transition feature.
+	 * This adds a property descriptor for the Outgoing Trans feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIncomingTransitionPropertyDescriptor(Object object) {
+	protected void addOutgoingTransPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_State_incomingTransition_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_State_incomingTransition_feature", "_UI_State_type"),
-				 FsmPackage.Literals.STATE__INCOMING_TRANSITION,
+				 getString("_UI_State_outgoingTrans_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_State_outgoingTrans_feature", "_UI_State_type"),
+				 FsmPackage.Literals.STATE__OUTGOING_TRANS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Incoming Trans feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncomingTransPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_State_incomingTrans_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_State_incomingTrans_feature", "_UI_State_type"),
+				 FsmPackage.Literals.STATE__INCOMING_TRANS,
 				 true,
 				 false,
 				 true,
@@ -125,7 +148,7 @@ public class StateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FsmPackage.Literals.STATE__OUTGOING_TRANSITION);
+			childrenFeatures.add(FsmPackage.Literals.STATE__OUT_TRANS);
 		}
 		return childrenFeatures;
 	}
@@ -184,7 +207,7 @@ public class StateItemProvider
 			case FsmPackage.STATE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case FsmPackage.STATE__OUTGOING_TRANSITION:
+			case FsmPackage.STATE__OUT_TRANS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,7 +227,7 @@ public class StateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FsmPackage.Literals.STATE__OUTGOING_TRANSITION,
+				(FsmPackage.Literals.STATE__OUT_TRANS,
 				 FsmFactory.eINSTANCE.createTransition()));
 	}
 

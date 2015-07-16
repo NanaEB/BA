@@ -28,14 +28,14 @@ public class FsmEditPartFactory implements EditPartFactory {
 			case SteadyStateEditPart.VISUAL_ID:
 				return new SteadyStateEditPart(view);
 
-			case WrappingLabelEditPart.VISUAL_ID:
-				return new WrappingLabelEditPart(view);
+			case SteadyStateNameEditPart.VISUAL_ID:
+				return new SteadyStateNameEditPart(view);
 
 			case TransientStateEditPart.VISUAL_ID:
 				return new TransientStateEditPart(view);
 
-			case WrappingLabel2EditPart.VISUAL_ID:
-				return new WrappingLabel2EditPart(view);
+			case TransientStateNameEditPart.VISUAL_ID:
+				return new TransientStateNameEditPart(view);
 
 			case InitialStateEditPart.VISUAL_ID:
 				return new InitialStateEditPart(view);
@@ -43,11 +43,11 @@ public class FsmEditPartFactory implements EditPartFactory {
 			case TransitionEditPart.VISUAL_ID:
 				return new TransitionEditPart(view);
 
-			case WrappingLabel4EditPart.VISUAL_ID:
-				return new WrappingLabel4EditPart(view);
+			case TransitionInputEditPart.VISUAL_ID:
+				return new TransitionInputEditPart(view);
 
-			case WrappingLabel5EditPart.VISUAL_ID:
-				return new WrappingLabel5EditPart(view);
+			case TransitionOutputEditPart.VISUAL_ID:
+				return new TransitionOutputEditPart(view);
 
 			}
 		}
