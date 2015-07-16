@@ -1,0 +1,51 @@
+
+package fsm.diagram.part;
+
+/**
+ * @generated
+ */
+public class FsmPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createFsm1Group());
+	}
+
+	/**
+ * Creates "fsm" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createFsm1Group() {
+				org.eclipse.gef.palette.PaletteGroup paletteContainer = new org.eclipse.gef.palette.PaletteGroup(fsm.diagram.part.Messages.Fsm1Group_title);
+				 paletteContainer.setId("createFsm1Group"); //$NON-NLS-1$
+								paletteContainer.add(createState1CreationTool());
+paletteContainer.add(createStateIncomingTransition2CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createState1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(fsm.diagram.part.Messages.State1CreationTool_title, fsm.diagram.part.Messages.State1CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.FsmElementTypes.State_2001));
+				 entry.setId("createState1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.FsmElementTypes.getImageDescriptor(fsm.diagram.providers.FsmElementTypes.State_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createStateIncomingTransition2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(fsm.diagram.part.Messages.StateIncomingTransition2CreationTool_title, fsm.diagram.part.Messages.StateIncomingTransition2CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.FsmElementTypes.Transition_4001));
+				 entry.setId("createStateIncomingTransition2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.FsmElementTypes.getImageDescriptor(fsm.diagram.providers.FsmElementTypes.Transition_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

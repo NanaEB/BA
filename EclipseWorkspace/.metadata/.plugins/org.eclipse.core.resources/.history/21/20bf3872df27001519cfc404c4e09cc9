@@ -1,0 +1,14 @@
+package fsm.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramAppearancePreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramAppearancePreferencePage() {
+		setPreferenceStore(fsm.diagram.part.FsmDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

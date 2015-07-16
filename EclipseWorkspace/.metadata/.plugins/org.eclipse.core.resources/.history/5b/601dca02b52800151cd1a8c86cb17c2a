@@ -1,0 +1,189 @@
+package fsm.diagram.providers;
+
+/**
+ * @generated
+ */
+public class FsmParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser steadyStateName_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getSteadyStateName_5001Parser() {
+		if (steadyStateName_5001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getState_Name()
+			};
+					org.eclipse.emf.ecore.EAttribute[] editableFeatures = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getState_Name()
+			};
+				fsm.diagram.parsers.MessageFormatParser parser = new fsm.diagram.parsers.MessageFormatParser(features, editableFeatures);
+								steadyStateName_5001Parser = parser;
+		}
+		return steadyStateName_5001Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser transientStateName_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTransientStateName_5002Parser() {
+		if (transientStateName_5002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getState_Name()
+			};
+					org.eclipse.emf.ecore.EAttribute[] editableFeatures = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getState_Name()
+			};
+				fsm.diagram.parsers.MessageFormatParser parser = new fsm.diagram.parsers.MessageFormatParser(features, editableFeatures);
+								transientStateName_5002Parser = parser;
+		}
+		return transientStateName_5002Parser;
+	}
+
+
+	
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser transitionInput_6001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTransitionInput_6001Parser() {
+		if (transitionInput_6001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getTransition_Input()
+			};
+					org.eclipse.emf.ecore.EAttribute[] editableFeatures = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getTransition_Input()
+			};
+				fsm.diagram.parsers.MessageFormatParser parser = new fsm.diagram.parsers.MessageFormatParser(features, editableFeatures);
+								transitionInput_6001Parser = parser;
+		}
+		return transitionInput_6001Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser transitionOutput_6002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTransitionOutput_6002Parser() {
+		if (transitionOutput_6002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getTransition_Output()
+			};
+					org.eclipse.emf.ecore.EAttribute[] editableFeatures = new org.eclipse.emf.ecore.EAttribute[] {
+				fsm.FsmPackage.eINSTANCE.getTransition_Output()
+			};
+				fsm.diagram.parsers.MessageFormatParser parser = new fsm.diagram.parsers.MessageFormatParser(features, editableFeatures);
+								transitionOutput_6002Parser = parser;
+		}
+		return transitionOutput_6002Parser;
+	}
+
+
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+				case fsm.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID: return getSteadyStateName_5001Parser();
+		case fsm.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID: return getTransientStateName_5002Parser();
+						case fsm.diagram.edit.parts.WrappingLabel4EditPart.VISUAL_ID: return getTransitionInput_6001Parser();
+		case fsm.diagram.edit.parts.WrappingLabel5EditPart.VISUAL_ID: return getTransitionOutput_6002Parser();
+		}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(fsm.diagram.part.FsmVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(fsm.diagram.part.FsmVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (fsm.diagram.providers.FsmElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

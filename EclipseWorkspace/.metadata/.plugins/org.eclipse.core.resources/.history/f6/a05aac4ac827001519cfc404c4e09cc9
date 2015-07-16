@@ -1,0 +1,54 @@
+	package fsm.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class FSMItemSemanticEditPolicy extends fsm.diagram.edit.policies.FsmBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public FSMItemSemanticEditPolicy() {
+				super(fsm.diagram.providers.FsmElementTypes.FSM_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (fsm.diagram.providers.FsmElementTypes.SteadyState_2004 == req.getElementType()) {
+	return getGEFWrapper(new fsm.diagram.edit.commands.SteadyStateCreateCommand(req));
+}
+		if (fsm.diagram.providers.FsmElementTypes.TransientState_2002 == req.getElementType()) {
+	return getGEFWrapper(new fsm.diagram.edit.commands.TransientStateCreateCommand(req));
+}
+		if (fsm.diagram.providers.FsmElementTypes.InitialState_2003 == req.getElementType()) {
+	return getGEFWrapper(new fsm.diagram.edit.commands.InitialStateCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}
