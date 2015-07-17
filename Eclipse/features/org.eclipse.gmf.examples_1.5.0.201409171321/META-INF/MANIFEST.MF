@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_51
+Built-By: genie.modeling.gmp.gmf-tooling
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+
+Name: epl-v10.html
+SHA1-Digest: pTOyybcpEe+Y8lkSVUtarMleXqE=
+
+Name: META-INF/maven/org.eclipse.gmf-tooling.features/org.eclipse.gmf.
+ examples/pom.properties
+SHA1-Digest: KwhqnGk7x8hLAbbl3pzAG3pnjEQ=
+
+Name: eclipse_update_120.jpg
+SHA1-Digest: IydL3lnQQQF8OVmO7CZ6uea8T0k=
+
+Name: META-INF/maven/org.eclipse.gmf-tooling.features/org.eclipse.gmf.
+ examples/pom.xml
+SHA1-Digest: oONuqOJr+WciwMDAa+/6gzUrw90=
+
+Name: license.html
+SHA1-Digest: fphtEeCfqpoKqwts62pNnuL86wM=
+
+Name: feature.properties
+SHA1-Digest: 7Di3J187wqIYWoFcM8iagcXN76s=
+
+Name: feature.xml
+SHA1-Digest: JkDCy4MRJg3URky2pibzId7++RU=
+

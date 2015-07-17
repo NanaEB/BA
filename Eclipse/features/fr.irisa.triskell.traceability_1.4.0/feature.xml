@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.irisa.triskell.traceability"
+      label="Kermeta MDK for Traceability"
+      version="1.4.0"
+      provider-name="IRISA/INRIA">
+   <install-handler/>
+
+   <description url="http://www.kermeta.org/">
+      This Eclipse feature contains the plugins for Traceability metamodel.
+It includes:
+- The traceability model;
+- The traceability edit plugin;
+- The traceability editor plugin (generated with EMF);
+   </description>
+
+   <copyright url="http://www.eclipse.org/legal/epl-v10.html">
+      Copyright : IRISA / INRIA / Universite de Rennes 1.
+All rights reserved.
+KerMeta workbench and most of its plugins are made available
+under the terms of the Eclipse Public License v1.0 which accompanies
+this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+   </copyright>
+
+   <license url="[Enter License URL here.]">
+      Usage Of Content
+INRIA MAKES AVAILABLE SOFTWARE, DOCUMENTATION, INFORMATION AND/OR
+OTHER MATERIALS FOR OPEN SOURCE PROJECTS (COLLECTIVELY &quot;CONTENT&quot;).
+USE OF THE CONTENT IS GOVERNED BY THE TERMS AND CONDITIONS OF
+THIS
+AGREEMENT AND/OR THE TERMS AND CONDITIONS OF LICENSE AGREEMENTS
+OR
+NOTICES INDICATED OR REFERENCED BELOW. BY USING THE CONTENT,
+YOU
+AGREE THAT YOUR USE OF THE CONTENT IS GOVERNED BY THIS AGREEMENT
+AND/OR THE TERMS AND CONDITIONS OF ANY APPLICABLE LICENSE AGREEMENTS
+OR NOTICES INDICATED OR REFERENCED BELOW. IF YOU DO NOT AGREE
+TO THE
+TERMS AND CONDITIONS OF THIS AGREEMENT AND THE TERMS AND CONDITIONS
+OF ANY APPLICABLE LICENSE AGREEMENTS OR NOTICES INDICATED OR
+REFERENCED
+BELOW, THEN YOU MAY NOT USE THE CONTENT.
+Applicable Licenses
+Unless otherwise indicated, all Content made available here
+is provided to you under the terms and conditions of the Lesser
+ Eclipse Public
+License (&quot;EPL&quot;).
+   </license>
+
+   <url>
+      <update label="Kermeta update site" url="http://www.kermeta.org/update"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.cheatsheets"/>
+      <import feature="org.eclipse.emf" version="2.4.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.editors"/>
+   </requires>
+
+   <plugin
+         id="fr.irisa.triskell.traceability.model"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.traceability.model.edit"
+         download-size="0"
+         install-size="0"
+         version="1.3.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.traceability.model.editor"
+         download-size="0"
+         install-size="0"
+         version="1.3.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.eclipse.util"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.traceability.documentation"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+</feature>

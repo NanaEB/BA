@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.irisa.triskell.kermeta"
+      label="Kermeta Workbench"
+      version="1.4.1"
+      provider-name="IRISA/INRIA"
+      plugin="fr.irisa.triskell.kermeta"
+      image="images/kmt_32.gif">
+   <install-handler/>
+
+   <description url="http://www.kermeta.org/">
+      KerMeta workbench and most of its plugins are distributed under
+the terms of the EPL licence.
+Special note:
+KerMeta TouchGraph plugin is distributed under the terms of the
+GPL license.
+   </description>
+
+   <copyright url="http://www.eclipse.org/legal/epl-v10.html">
+      Copyright : IRISA / INRIA / Universite de Rennes 1.
+All rights reserved.
+KerMeta workbench and most of its plugins are made available
+under the terms of the Eclipse Public License v1.0 which accompanies
+this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+Special note:
+KerMeta TouchGraph plugin is distributed under the terms of the
+GPL license.
+   </copyright>
+
+   <license url="http://www.kermeta.org/">
+      KerMeta workbench and most of its plugins are distributed under the terms of the EPL licence.
+Special note:
+KerMeta TouchGraph plugin is distributed under the terms of the
+GPL license.
+   </license>
+
+   <url>
+      <update label="Kermeta update site" url="http://www.kermeta.org/update"/>
+      <discovery label="Kermeta update site" url="http://www.kermeta.org/update"/>
+   </url>
+
+   <includes
+         id="fr.irisa.triskell.traceability"
+         version="1.4.0"/>
+
+   <includes
+         id="org.kermeta.log4j"
+         version="1.4.0"/>
+
+   <requires>
+      <import feature="fr.irisa.triskell.traceability" match="greaterOrEqual"/>
+      <import feature="org.eclipse.platform" version="3.3.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.emf" version="2.4.1.v200808251517" match="greaterOrEqual"/>
+      <import feature="org.kermeta.log4j" version="1.2.0"/>
+   </requires>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta"
+         download-size="2500"
+         install-size="4570"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.texteditor"
+         download-size="200"
+         install-size="1400"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.model.edit"
+         download-size="430"
+         install-size="430"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.model.editor"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.kpm"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.kpm.actions"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.kpm.edit"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.kpm.editor"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.eclipse.util"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.io"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.model"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.ui"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.merger"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.interest"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.documentation"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.touchnavigator"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecoretools.registration"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecoretools.registration.ui"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.kpm.ui"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.antlr.antlr2"
+         download-size="0"
+         install-size="0"
+         version="2.7.7"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.language.mdk"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.runner"
+         download-size="0"
+         install-size="0"
+         version="1.4.1"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.runner.ui"
+         download-size="0"
+         install-size="0"
+         version="1.4.1"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.kermeta.interpreter"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.kermeta.compilerv2"
+         download-size="0"
+         install-size="0"
+         version="1.4.1"
+         unpack="false"/>
+
+   <plugin
+         id="fr.irisa.triskell.cache.utilities"
+         download-size="0"
+         install-size="0"
+         version="1.4.0"
+         unpack="false"/>
+
+</feature>
