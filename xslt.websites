@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source> 
+	<classname>Bar</classname>
+	<message>Hossale</message>
+</source> 
+
+
+
+<xsl:template  match="/">
+	public class <xsl:value-of select="classname"/>{
+}
+</xsl:template>
+
+http://www.data2type.de/xml-xslt-xslfo/xslt/xslt-einfuehrung/
+http://www.oio.de/m/codegenerator/codegenerator.pdf
+http://www.zvon.org/xxl/XSLTutorial/Books/Output/example1_ch1.html
+http://www.vogella.com/tutorials/XSLT/article.html
