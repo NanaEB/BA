@@ -35,11 +35,17 @@ public class TransitionCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
+	private final State container;
+
+	/**
+	 * @generated
+	 */
 	public TransitionCreateCommand(CreateRelationshipRequest request,
 			EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
+		container = deduceContainer(source, target);
 	}
 
 	/**
@@ -59,8 +65,12 @@ public class TransitionCreateCommand extends EditElementCommand {
 			return true; // link creation is in progress; source is not defined yet
 		}
 		// target may be null here but it's possible to check constraint
+		if (getContainer() == null) {
+			return false;
+		}
 		return FsmBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateTransition_4001(getSource(), getTarget());
+				.canCreateTransition_4001(getContainer(), getSource(),
+						getTarget());
 	}
 
 	/**
@@ -74,7 +84,8 @@ public class TransitionCreateCommand extends EditElementCommand {
 		}
 
 		Transition newElement = FsmFactory.eINSTANCE.createTransition();
-		getSource().getOutTrans().add(newElement);
+		getContainer().getOutTrans().add(newElement);
+		newElement.setSource(getSource());
 		newElement.setTarget(getTarget());
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
@@ -124,6 +135,31 @@ public class TransitionCreateCommand extends EditElementCommand {
 	 */
 	protected State getTarget() {
 		return (State) target;
+	}
+
+	/**
+	 * @generated
+	 */
+	public State getContainer() {
+		return container;
+	}
+
+	/**
+	 * Default approach is to traverse ancestors of the source to find instance of container.
+	 * Modify with appropriate logic.
+	 * @generated
+	 */
+	private static State deduceContainer(EObject source, EObject target) {
+		// Find container element for the new link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null; element = element
+				.eContainer()) {
+			if (element instanceof State) {
+				return (State) element;
+			}
+		}
+		return null;
 	}
 
 }

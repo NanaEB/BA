@@ -324,15 +324,16 @@ public class FsmBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTransition_4001(State source, State target) {
-			return canExistTransition_4001(null, source, target);
+		public boolean canCreateTransition_4001(State container, State source,
+				State target) {
+			return canExistTransition_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistTransition_4001(Transition linkInstance,
-				State source, State target) {
+		public boolean canExistTransition_4001(State container,
+				Transition linkInstance, State source, State target) {
 			return true;
 		}
 	}

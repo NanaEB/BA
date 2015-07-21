@@ -83,6 +83,9 @@
         href="fsm.gmftool#//@palette/@tools.0/@tools.3"/>
     <diagramLink
         href="fsm.gmfgraph#Transition"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="fsm.ecore#//Transition/source"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="fsm.ecore#//Transition/target"/>

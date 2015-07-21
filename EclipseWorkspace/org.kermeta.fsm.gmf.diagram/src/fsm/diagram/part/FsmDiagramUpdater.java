@@ -229,7 +229,7 @@ public class FsmDiagramUpdater {
 			View view) {
 		SteadyState modelElement = (SteadyState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
 	}
 
@@ -240,7 +240,7 @@ public class FsmDiagramUpdater {
 			View view) {
 		TransientState modelElement = (TransientState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
 	}
 
@@ -251,7 +251,7 @@ public class FsmDiagramUpdater {
 			View view) {
 		InitialState modelElement = (InitialState) view.getElement();
 		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));
 		return result;
 	}
 
@@ -281,7 +281,8 @@ public class FsmDiagramUpdater {
 				continue;
 			}
 			State dst = link.getTarget();
-			result.add(new FsmLinkDescriptor(container, dst, link,
+			State src = link.getSource();
+			result.add(new FsmLinkDescriptor(src, dst, link,
 					FsmElementTypes.Transition_4001,
 					TransitionEditPart.VISUAL_ID));
 		}
@@ -308,14 +309,52 @@ public class FsmDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			if (false == link.eContainer() instanceof State) {
-				continue;
-			}
-			State container = (State) link.eContainer();
-			result.add(new FsmLinkDescriptor(container, target, link,
+			State src = link.getSource();
+			result.add(new FsmLinkDescriptor(src, target, link,
 					FsmElementTypes.Transition_4001,
 					TransitionEditPart.VISUAL_ID));
+		}
+		return result;
+	}
 
+	/**
+	 * @generated
+	 */
+	private static Collection<FsmLinkDescriptor> getOutgoingTypeModelFacetLinks_Transition_4001(
+			State source) {
+		State container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof State) {
+				container = (State) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<FsmLinkDescriptor> result = new LinkedList<FsmLinkDescriptor>();
+		for (Iterator<?> links = container.getOutTrans().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof Transition) {
+				continue;
+			}
+			Transition link = (Transition) linkObject;
+			if (TransitionEditPart.VISUAL_ID != FsmVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			State dst = link.getTarget();
+			State src = link.getSource();
+			if (src != source) {
+				continue;
+			}
+			result.add(new FsmLinkDescriptor(src, dst, link,
+					FsmElementTypes.Transition_4001,
+					TransitionEditPart.VISUAL_ID));
 		}
 		return result;
 	}

@@ -190,6 +190,8 @@
             href="fsm.genmodel#//fsm/State/outTrans"/>
         <childMetaFeature
             href="fsm.genmodel#//fsm/State/outTrans"/>
+        <sourceMetaFeature
+            href="fsm.genmodel#//fsm/Transition/source"/>
         <targetMetaFeature
             href="fsm.genmodel#//fsm/Transition/target"/>
       </modelFacet>

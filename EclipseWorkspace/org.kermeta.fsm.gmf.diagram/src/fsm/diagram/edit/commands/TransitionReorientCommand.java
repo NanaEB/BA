@@ -66,8 +66,13 @@ public class TransitionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		State target = getLink().getTarget();
+		if (!(getLink().eContainer() instanceof State)) {
+			return false;
+		}
+		State container = (State) getLink().eContainer();
 		return FsmBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistTransition_4001(getLink(), getNewSource(), target);
+				.canExistTransition_4001(container, getLink(), getNewSource(),
+						target);
 	}
 
 	/**
@@ -77,12 +82,14 @@ public class TransitionReorientCommand extends EditElementCommand {
 		if (!(oldEnd instanceof State && newEnd instanceof State)) {
 			return false;
 		}
+		State source = getLink().getSource();
 		if (!(getLink().eContainer() instanceof State)) {
 			return false;
 		}
-		State source = (State) getLink().eContainer();
+		State container = (State) getLink().eContainer();
 		return FsmBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistTransition_4001(getLink(), source, getNewTarget());
+				.canExistTransition_4001(container, getLink(), source,
+						getNewTarget());
 	}
 
 	/**
@@ -107,8 +114,7 @@ public class TransitionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().getOutTrans().remove(getLink());
-		getNewSource().getOutTrans().add(getLink());
+		getLink().setSource(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
