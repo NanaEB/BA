@@ -40,6 +40,9 @@ public class FsmEditPartFactory implements EditPartFactory {
 			case InitialStateEditPart.VISUAL_ID:
 				return new InitialStateEditPart(view);
 
+			case InitialStateNameEditPart.VISUAL_ID:
+				return new InitialStateNameEditPart(view);
+
 			case TransitionEditPart.VISUAL_ID:
 				return new TransitionEditPart(view);
 

@@ -16,9 +16,9 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
-import fsm.InitialState;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
+import fsm.diagram.edit.parts.InitialStateNameEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
@@ -201,12 +201,18 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 	 * @generated
 	 */
 	private String getInitialState_2002Text(View view) {
-		InitialState domainModelElement = (InitialState) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
+		IParser parser = FsmParserProvider
+				.getParser(FsmElementTypes.InitialState_2002,
+						view.getElement() != null ? view.getElement() : view,
+						FsmVisualIDRegistry
+								.getType(InitialStateNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			FsmDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 2002); //$NON-NLS-1$
+					"Parser was not found for label " + 5004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

@@ -25,7 +25,6 @@
         visualID="2003"
         editPartClassName="SteadyStateEditPart"
         itemSemanticEditPolicyClassName="SteadyStateItemSemanticEditPolicy"
-        notationViewFactoryClassName="SteadyStateViewFactory"
         canonicalEditPolicyClassName="SteadyStateCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="SteadyStateGraphicalNodeEditPolicy"
         createCommandClassName="SteadyStateCreateCommand">
@@ -58,8 +57,7 @@
       <labels
           visualID="5003"
           editPartClassName="SteadyStateNameEditPart"
-          itemSemanticEditPolicyClassName="SteadyStateNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="SteadyStateNameViewFactory">
+          itemSemanticEditPolicyClassName="SteadyStateNameItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -78,7 +76,6 @@
         visualID="2001"
         editPartClassName="TransientStateEditPart"
         itemSemanticEditPolicyClassName="TransientStateItemSemanticEditPolicy"
-        notationViewFactoryClassName="TransientStateViewFactory"
         canonicalEditPolicyClassName="TransientStateCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="TransientStateGraphicalNodeEditPolicy"
         createCommandClassName="TransientStateCreateCommand">
@@ -110,8 +107,7 @@
       <labels
           visualID="5001"
           editPartClassName="TransientStateNameEditPart"
-          itemSemanticEditPolicyClassName="TransientStateNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="TransientStateNameViewFactory">
+          itemSemanticEditPolicyClassName="TransientStateNameItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -130,7 +126,6 @@
         visualID="2002"
         editPartClassName="InitialStateEditPart"
         itemSemanticEditPolicyClassName="InitialStateItemSemanticEditPolicy"
-        notationViewFactoryClassName="InitialStateViewFactory"
         canonicalEditPolicyClassName="InitialStateCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="InitialStateGraphicalNodeEditPolicy"
         createCommandClassName="InitialStateCreateCommand">
@@ -142,15 +137,15 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="InitialStateFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InitialStateFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InitialStateFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(22)&#xA;, getMapMode().DPtoLP(22)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InitialStateFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureInitialStateNameFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InitialStateFigure() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.gmf.tooling.runtime.draw2d.CenterLayout());&#xA;&#x9;&#x9;this.setLineWidth(5);&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(32)&#xA;, getMapMode().DPtoLP(32)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(4)&#xA;, getMapMode().DPtoLP(4)&#xA;, getMapMode().DPtoLP(4)&#xA;, getMapMode().DPtoLP(4)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureInitialStateNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureInitialStateNameFigure.setText(&quot;state name&quot;);&#xA;&#x9;fFigureInitialStateNameFigure.setForegroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;&#x9;fFigureInitialStateNameFigure.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;&#xA;this.add(fFigureInitialStateNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureInitialStateNameFigure() {&#xA;&#x9;&#x9;return fFigureInitialStateNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"
             fixedBackground="true"/>
         <attributes
             xsi:type="gmfgen:DefaultSizeAttributes"
-            width="22"
-            height="22"/>
+            width="32"
+            height="32"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -160,12 +155,33 @@
         <childMetaFeature
             href="fsm.genmodel#//fsm/FSM/states"/>
       </modelFacet>
+      <labels
+          visualID="5004"
+          editPartClassName="InitialStateNameEditPart"
+          itemSemanticEditPolicyClassName="InitialStateNameItemSemanticEditPolicy">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureInitialStateNameFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:StyleAttributes"
+              fixedForeground="true"
+              fixedBackground="true"/>
+        </viewmap>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="fsm.genmodel#//fsm/State/name"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
     <links
         visualID="4001"
         editPartClassName="TransitionEditPart"
         itemSemanticEditPolicyClassName="TransitionItemSemanticEditPolicy"
-        notationViewFactoryClassName="TransitionViewFactory"
         createCommandClassName="TransitionCreateCommand"
         reorientCommandClassName="TransitionReorientCommand">
       <diagramRunTimeClass
@@ -198,8 +214,7 @@
       <labels
           visualID="6001"
           editPartClassName="TransitionInputEditPart"
-          itemSemanticEditPolicyClassName="TransitionInputItemSemanticEditPolicy"
-          notationViewFactoryClassName="TransitionInputViewFactory">
+          itemSemanticEditPolicyClassName="TransitionInputItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -220,8 +235,7 @@
       <labels
           visualID="6002"
           editPartClassName="TransitionOutputEditPart"
-          itemSemanticEditPolicyClassName="TransitionOutputItemSemanticEditPolicy"
-          notationViewFactoryClassName="TransitionOutputViewFactory">
+          itemSemanticEditPolicyClassName="TransitionOutputItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -413,7 +427,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.0/@labels.1/@modelFacet"/>
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.0/@labels.1/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

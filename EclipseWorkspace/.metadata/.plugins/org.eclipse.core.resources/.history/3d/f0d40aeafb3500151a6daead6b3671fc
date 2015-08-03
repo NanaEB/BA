@@ -1,0 +1,30 @@
+package fsm.diagram.part;
+
+/**
+ * Wizard page that allows to select element from model.
+ * @generated
+ */
+public class ModelElementSelectionPage extends org.eclipse.gmf.tooling.runtime.part.DefaultModelElementSelectionPage {
+	
+	/**
+ * @generated
+ */
+public ModelElementSelectionPage(String pageName) {
+	super(fsm.diagram.part.FsmDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory(), pageName);
+}
+
+	
+	
+	
+	
+/**
+ * Override to provide custom model element description.
+ * @generated
+ */
+protected String getSelectionTitle() {
+	return fsm.diagram.part.Messages.ModelElementSelectionPageMessage;
+}
+
+	
+	
+	}

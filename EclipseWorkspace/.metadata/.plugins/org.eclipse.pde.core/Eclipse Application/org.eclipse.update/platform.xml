@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1437393197197" transient="false" version="3.0">
+<config date="1438605864684" transient="false" version="3.0">
 <site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
 <feature id="org.eclipse.m2e.logback.feature" plugin-identifier="org.eclipse.m2e.logback.configuration" url="features/org.eclipse.m2e.logback.feature_1.5.1.20150109-1820/" version="1.5.1.20150109-1820">
 </feature>
@@ -19,11 +19,13 @@
 </feature>
 <feature id="org.eclipse.emf.workspace" url="features/org.eclipse.emf.workspace_1.8.0.201405281451/" version="1.8.0.201405281451">
 </feature>
-<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.10.2.v20150123-0348/" version="2.10.2.v20150123-0348">
-</feature>
 <feature id="org.eclipse.emf.codegen.ui" url="features/org.eclipse.emf.codegen.ui_2.8.0.v20150123-0452/" version="2.8.0.v20150123-0452">
 </feature>
+<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.10.2.v20150123-0348/" version="2.10.2.v20150123-0348">
+</feature>
 <feature id="org.eclipse.emf.sdk" url="features/org.eclipse.emf.sdk_2.10.2.v20150123-0452/" version="2.10.2.v20150123-0452">
+</feature>
+<feature id="org.eclipse.wst.xml.xpath2.processor.feature" plugin-identifier="org.eclipse.wst.xml.xpath2" url="features/org.eclipse.wst.xml.xpath2.processor.feature_2.0.301.v201409111854/" version="2.0.301.v201409111854">
 </feature>
 <feature id="org.eclipse.mylyn.builds" plugin-identifier="org.eclipse.mylyn.builds.core" url="features/org.eclipse.mylyn.builds_1.6.2.v20150218-0552/" version="1.6.2.v20150218-0552">
 </feature>
@@ -54,6 +56,8 @@
 <feature id="org.eclipse.gmf.sdk.experimental.source" url="features/org.eclipse.gmf.sdk.experimental.source_1.3.0.201409171321/" version="1.3.0.201409171321">
 </feature>
 <feature id="org.eclipse.emf.validation.doc" url="features/org.eclipse.emf.validation.doc_1.8.0.201405281429/" version="1.8.0.201405281429">
+</feature>
+<feature id="org.eclipse.wst.xsl.feature" plugin-identifier="org.eclipse.wst.xsl" url="features/org.eclipse.wst.xsl.feature_1.3.401.v201409111855/" version="1.3.401.v201409111855">
 </feature>
 <feature id="org.eclipse.draw2d" url="features/org.eclipse.draw2d_3.9.101.201408150207/" version="3.9.101.201408150207">
 </feature>
@@ -108,6 +112,8 @@
 <feature id="org.kermeta.language.dev.feature" url="features/org.kermeta.language.dev.feature_2.1.1.SNAPSHOT_20130925_1240/" version="2.1.1.SNAPSHOT_20130925_1240">
 </feature>
 <feature id="org.eclipse.gmf.runtime.notation.source" url="features/org.eclipse.gmf.runtime.notation.source_1.8.0.201405281433/" version="1.8.0.201405281433">
+</feature>
+<feature id="com.nubean.xmlespresso" url="features/com.nubean.xmlespresso_8.0.0.201206142237/" version="8.0.0.201206142237">
 </feature>
 <feature id="org.eclipse.mylyn.commons" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons_3.14.2.v20150217-2244/" version="3.14.2.v20150217-2244">
 </feature>

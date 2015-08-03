@@ -14,14 +14,19 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.draw2d.CenterLayout;
 import org.eclipse.swt.graphics.Color;
 
 import fsm.diagram.edit.policies.InitialStateItemSemanticEditPolicy;
+import fsm.diagram.part.FsmVisualIDRegistry;
 
 /**
  * @generated
@@ -105,8 +110,58 @@ public class InitialStateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof InitialStateNameEditPart) {
+			((InitialStateNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigureInitialStateNameFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof InitialStateNameEditPart) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		return getContentPane();
+	}
+
+	/**
+	 * @generated
+	 */
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(22, 22);
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(32, 32);
 		return result;
 	}
 
@@ -134,6 +189,11 @@ public class InitialStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(5);
+			nodeShape.setLayoutManager(layout);
+		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -186,23 +246,60 @@ public class InitialStateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	public EditPart getPrimaryChildEditPart() {
+		return getChildBySemanticHint(FsmVisualIDRegistry
+				.getType(InitialStateNameEditPart.VISUAL_ID));
+	}
+
+	/**
+	 * @generated
+	 */
 	public class InitialStateFigure extends Ellipse {
 
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureInitialStateNameFigure;
+
+		/**
+		 * @generated
+		 */
 		public InitialStateFigure() {
+			this.setLayoutManager(new CenterLayout());
+			this.setLineWidth(5);
 			this.setForegroundColor(ColorConstants.black);
 			this.setBackgroundColor(ColorConstants.black);
-			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(22),
-					getMapMode().DPtoLP(22)));
+			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(32),
+					getMapMode().DPtoLP(32)));
 
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(20),
-					getMapMode().DPtoLP(20), getMapMode().DPtoLP(20),
-					getMapMode().DPtoLP(20)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(20),
-					getMapMode().DPtoLP(20), getMapMode().DPtoLP(20),
-					getMapMode().DPtoLP(20)));
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(4),
+					getMapMode().DPtoLP(4), getMapMode().DPtoLP(4),
+					getMapMode().DPtoLP(4)));
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureInitialStateNameFigure = new WrappingLabel();
+
+			fFigureInitialStateNameFigure.setText("state name");
+			fFigureInitialStateNameFigure
+					.setForegroundColor(ColorConstants.white);
+			fFigureInitialStateNameFigure
+					.setBackgroundColor(ColorConstants.white);
+
+			this.add(fFigureInitialStateNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureInitialStateNameFigure() {
+			return fFigureInitialStateNameFigure;
 		}
 
 	}

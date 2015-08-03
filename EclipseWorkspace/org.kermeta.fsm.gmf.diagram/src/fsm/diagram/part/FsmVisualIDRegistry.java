@@ -10,6 +10,7 @@ import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 import fsm.FsmPackage;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
+import fsm.diagram.edit.parts.InitialStateNameEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
@@ -180,6 +181,11 @@ public class FsmVisualIDRegistry {
 			break;
 		case TransientStateEditPart.VISUAL_ID:
 			if (TransientStateNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InitialStateEditPart.VISUAL_ID:
+			if (InitialStateNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

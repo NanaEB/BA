@@ -42,6 +42,7 @@ import org.eclipse.swt.graphics.FontData;
 
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
+import fsm.diagram.edit.parts.InitialStateNameEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
@@ -349,6 +350,8 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
+		Node label5004 = createLabel(node,
+				FsmVisualIDRegistry.getType(InitialStateNameEditPart.VISUAL_ID));
 		return node;
 	}
 

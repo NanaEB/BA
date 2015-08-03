@@ -1,0 +1,18 @@
+package fsm.diagram.providers;
+
+/**
+ * @generated
+ */
+public class FsmEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public FsmEditPartProvider() {
+		super(new fsm.diagram.edit.parts.FsmEditPartFactory(), 			fsm.diagram.part.FsmVisualIDRegistry.TYPED_INSTANCE, 			fsm.diagram.edit.parts.FSMEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

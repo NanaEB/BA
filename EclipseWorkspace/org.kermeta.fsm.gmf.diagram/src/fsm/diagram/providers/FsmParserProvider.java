@@ -14,6 +14,7 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import fsm.FsmPackage;
+import fsm.diagram.edit.parts.InitialStateNameEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransitionInputEditPart;
@@ -66,6 +67,24 @@ public class FsmParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser initialStateName_5004Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getInitialStateName_5004Parser() {
+		if (initialStateName_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
+					.getState_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			initialStateName_5004Parser = parser;
+		}
+		return initialStateName_5004Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	private IParser transitionInput_6001Parser;
 
 	/**
@@ -108,6 +127,8 @@ public class FsmParserProvider extends AbstractProvider implements
 			return getSteadyStateName_5003Parser();
 		case TransientStateNameEditPart.VISUAL_ID:
 			return getTransientStateName_5001Parser();
+		case InitialStateNameEditPart.VISUAL_ID:
+			return getInitialStateName_5004Parser();
 		case TransitionInputEditPart.VISUAL_ID:
 			return getTransitionInput_6001Parser();
 		case TransitionOutputEditPart.VISUAL_ID:
