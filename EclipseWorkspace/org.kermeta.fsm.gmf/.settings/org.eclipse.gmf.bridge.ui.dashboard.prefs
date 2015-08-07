@@ -1,7 +1,0 @@
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/org.kermeta.fsm.gmf/model/fsm.genmodel
-gmf_dashboard/domainModel=platform\:/resource/org.kermeta.fsm.gmf/model/fsm.ecore
-gmf_dashboard/generationModel=platform\:/resource/org.kermeta.fsm.gmf/model/fsm.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/org.kermeta.fsm.gmf/model/fsm.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/org.kermeta.fsm.gmf/model/fsm.gmfmap
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/org.kermeta.fsm.gmf/model/fsm.gmftool
