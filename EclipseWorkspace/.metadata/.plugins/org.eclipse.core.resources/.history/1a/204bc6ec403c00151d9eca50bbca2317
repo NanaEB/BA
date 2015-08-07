@@ -1,0 +1,15 @@
+package fsm.diagram.providers;
+
+/**
+ * @generated
+ */
+public class StatemachineIconProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+		/**
+ * @generated
+ */
+	public StatemachineIconProvider() {
+		super(fsm.diagram.providers.StatemachineElementTypes.TYPED_INSTANCE);
+	}
+
+	}

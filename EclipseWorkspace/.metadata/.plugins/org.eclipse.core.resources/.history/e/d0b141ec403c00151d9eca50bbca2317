@@ -1,0 +1,23 @@
+package fsm.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class StatemachineModelingAssistantProviderOfStateMachineEditPart extends fsm.diagram.providers.StatemachineModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(4);
+					types.add(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001);
+					types.add(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002);
+					types.add(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003);
+					types.add(fsm.diagram.providers.StatemachineElementTypes.StateMachineVariable_2004);
+					return types;	
+	}
+			
+	
+	}

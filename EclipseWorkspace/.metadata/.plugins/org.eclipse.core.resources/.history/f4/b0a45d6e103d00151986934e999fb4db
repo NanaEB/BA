@@ -1,0 +1,541 @@
+	package fsm.diagram.part;
+
+	/**
+ * @generated
+ */
+public class FsmDiagramUpdater {
+		
+		/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (fsm.diagram.part.FsmVisualIDRegistry.getVisualID(view)) {
+		case fsm.diagram.edit.parts.FSMEditPart.VISUAL_ID:
+	return getFSM_1000SemanticChildren(view);
+case fsm.diagram.edit.parts.SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
+	return getSteadyStateSteadyStateEntryCompartment_7001SemanticChildren(view);
+case fsm.diagram.edit.parts.SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
+	return getSteadyStateSteadyStateExitCompartment_7003SemanticChildren(view);
+case fsm.diagram.edit.parts.TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
+	return getTransientStateTransientStateEntryCompartment_7002SemanticChildren(view);
+case fsm.diagram.edit.parts.TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
+	return getTransientStateTransientStateExitCompartment_7004SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmNodeDescriptor> getFSM_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+fsm.FSM modelElement = (fsm.FSM) view.getElement();
+	java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getState().iterator(); it.hasNext();) {
+		fsm.State childElement = (fsm.State) it.next();
+					int visualID = fsm.diagram.part.FsmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == fsm.diagram.edit.parts.SteadyStateEditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == fsm.diagram.edit.parts.TransientStateEditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						{ fsm.InitialState childElement = modelElement.getIntialState();
+					int visualID = fsm.diagram.part.FsmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == fsm.diagram.edit.parts.InitialStateEditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmNodeDescriptor> getSteadyStateSteadyStateEntryCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+fsm.SteadyState modelElement = (fsm.SteadyState) containerView.getElement();
+	java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor>();
+						{ fsm.Action childElement = modelElement.getEntry();
+					int visualID = fsm.diagram.part.FsmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == fsm.diagram.edit.parts.ActionEditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmNodeDescriptor> getSteadyStateSteadyStateExitCompartment_7003SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+fsm.SteadyState modelElement = (fsm.SteadyState) containerView.getElement();
+	java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor>();
+						{ fsm.eAction childElement = modelElement.getExit();
+					int visualID = fsm.diagram.part.FsmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == fsm.diagram.edit.parts.EActionEditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmNodeDescriptor> getTransientStateTransientStateEntryCompartment_7002SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+fsm.TransientState modelElement = (fsm.TransientState) containerView.getElement();
+	java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor>();
+						{ fsm.Action childElement = modelElement.getEntry();
+					int visualID = fsm.diagram.part.FsmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == fsm.diagram.edit.parts.Action2EditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmNodeDescriptor> getTransientStateTransientStateExitCompartment_7004SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+fsm.TransientState modelElement = (fsm.TransientState) containerView.getElement();
+	java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmNodeDescriptor>();
+						{ fsm.eAction childElement = modelElement.getExit();
+					int visualID = fsm.diagram.part.FsmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == fsm.diagram.edit.parts.EAction2EditPart.VISUAL_ID) {
+	result.add(new fsm.diagram.part.FsmNodeDescriptor(childElement, visualID));
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (fsm.diagram.part.FsmVisualIDRegistry.getVisualID(view)) {
+		case fsm.diagram.edit.parts.FSMEditPart.VISUAL_ID:
+	return getFSM_1000ContainedLinks(view);
+case fsm.diagram.edit.parts.SteadyStateEditPart.VISUAL_ID:
+	return getSteadyState_2005ContainedLinks(view);
+case fsm.diagram.edit.parts.TransientStateEditPart.VISUAL_ID:
+	return getTransientState_2006ContainedLinks(view);
+case fsm.diagram.edit.parts.InitialStateEditPart.VISUAL_ID:
+	return getInitialState_2007ContainedLinks(view);
+case fsm.diagram.edit.parts.ActionEditPart.VISUAL_ID:
+	return getAction_3001ContainedLinks(view);
+case fsm.diagram.edit.parts.EActionEditPart.VISUAL_ID:
+	return getEAction_3003ContainedLinks(view);
+case fsm.diagram.edit.parts.Action2EditPart.VISUAL_ID:
+	return getAction_3002ContainedLinks(view);
+case fsm.diagram.edit.parts.EAction2EditPart.VISUAL_ID:
+	return getEAction_3004ContainedLinks(view);
+case fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (fsm.diagram.part.FsmVisualIDRegistry.getVisualID(view)) {
+		case fsm.diagram.edit.parts.SteadyStateEditPart.VISUAL_ID:
+	return getSteadyState_2005IncomingLinks(view);
+case fsm.diagram.edit.parts.TransientStateEditPart.VISUAL_ID:
+	return getTransientState_2006IncomingLinks(view);
+case fsm.diagram.edit.parts.InitialStateEditPart.VISUAL_ID:
+	return getInitialState_2007IncomingLinks(view);
+case fsm.diagram.edit.parts.ActionEditPart.VISUAL_ID:
+	return getAction_3001IncomingLinks(view);
+case fsm.diagram.edit.parts.EActionEditPart.VISUAL_ID:
+	return getEAction_3003IncomingLinks(view);
+case fsm.diagram.edit.parts.Action2EditPart.VISUAL_ID:
+	return getAction_3002IncomingLinks(view);
+case fsm.diagram.edit.parts.EAction2EditPart.VISUAL_ID:
+	return getEAction_3004IncomingLinks(view);
+case fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (fsm.diagram.part.FsmVisualIDRegistry.getVisualID(view)) {
+		case fsm.diagram.edit.parts.SteadyStateEditPart.VISUAL_ID:
+	return getSteadyState_2005OutgoingLinks(view);
+case fsm.diagram.edit.parts.TransientStateEditPart.VISUAL_ID:
+	return getTransientState_2006OutgoingLinks(view);
+case fsm.diagram.edit.parts.InitialStateEditPart.VISUAL_ID:
+	return getInitialState_2007OutgoingLinks(view);
+case fsm.diagram.edit.parts.ActionEditPart.VISUAL_ID:
+	return getAction_3001OutgoingLinks(view);
+case fsm.diagram.edit.parts.EActionEditPart.VISUAL_ID:
+	return getEAction_3003OutgoingLinks(view);
+case fsm.diagram.edit.parts.Action2EditPart.VISUAL_ID:
+	return getAction_3002OutgoingLinks(view);
+case fsm.diagram.edit.parts.EAction2EditPart.VISUAL_ID:
+	return getEAction_3004OutgoingLinks(view);
+case fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+	return getTransition_4001OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getFSM_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getSteadyState_2005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.SteadyState modelElement = (fsm.SteadyState) view.getElement();
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getTransientState_2006ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.TransientState modelElement = (fsm.TransientState) view.getElement();
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getInitialState_2007ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.InitialState modelElement = (fsm.InitialState) view.getElement();
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getAction_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getEAction_3003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getAction_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getEAction_3004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getTransition_4001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getSteadyState_2005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.SteadyState modelElement = (fsm.SteadyState) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getTransientState_2006IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.TransientState modelElement = (fsm.TransientState) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Transition_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getInitialState_2007IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getAction_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getEAction_3003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getAction_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getEAction_3004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getTransition_4001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getSteadyState_2005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.SteadyState modelElement = (fsm.SteadyState) view.getElement();
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getTransientState_2006OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.TransientState modelElement = (fsm.TransientState) view.getElement();
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getInitialState_2007OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	fsm.InitialState modelElement = (fsm.InitialState) view.getElement();
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Transition_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getAction_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getEAction_3003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getAction_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getEAction_3004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<fsm.diagram.part.FsmLinkDescriptor> getTransition_4001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<fsm.diagram.part.FsmLinkDescriptor> getContainedTypeModelFacetLinks_Transition_4001(fsm.SuperState container) {
+	java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getOutTrans().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof fsm.Transition) {
+		continue;
+	}
+	fsm.Transition link = (fsm.Transition) linkObject;
+		if (fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID != fsm.diagram.part.FsmVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			fsm.State dst = link.getTarget();
+							fsm.SuperState src = link.getSrc();
+							result.add(new fsm.diagram.part.FsmLinkDescriptor(src, dst, link, fsm.diagram.providers.FsmElementTypes.Transition_4001, fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+	
+/**
+ * @generated
+ */
+private static java.util.Collection<fsm.diagram.part.FsmLinkDescriptor> getIncomingTypeModelFacetLinks_Transition_4001(fsm.State target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != fsm.FsmPackage.eINSTANCE.getTransition_Target() || false == setting.getEObject() instanceof fsm.Transition) {
+	continue;
+}
+fsm.Transition link = (fsm.Transition) setting.getEObject();
+	if (fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID != fsm.diagram.part.FsmVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				fsm.SuperState src = link.getSrc();
+			result.add(new fsm.diagram.part.FsmLinkDescriptor(src, target, link, fsm.diagram.providers.FsmElementTypes.Transition_4001, fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<fsm.diagram.part.FsmLinkDescriptor> getOutgoingTypeModelFacetLinks_Transition_4001(fsm.SuperState source) {
+	fsm.SuperState container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof fsm.SuperState) {
+			container = (fsm.SuperState) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor> result = new java.util.LinkedList<fsm.diagram.part.FsmLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getOutTrans().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof fsm.Transition) {
+		continue;
+	}
+	fsm.Transition link = (fsm.Transition) linkObject;
+		if (fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID != fsm.diagram.part.FsmVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			fsm.State dst = link.getTarget();
+							fsm.SuperState src = link.getSrc();
+								if (src != source) {
+	continue;
+}
+						result.add(new fsm.diagram.part.FsmLinkDescriptor(src, dst, link, fsm.diagram.providers.FsmElementTypes.Transition_4001, fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+		
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<fsm.diagram.part.FsmNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return FsmDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<fsm.diagram.part.FsmLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FsmDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<fsm.diagram.part.FsmLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FsmDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<fsm.diagram.part.FsmLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return FsmDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

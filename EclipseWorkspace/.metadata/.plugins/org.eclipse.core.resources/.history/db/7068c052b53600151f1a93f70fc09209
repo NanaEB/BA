@@ -1,0 +1,22 @@
+package fsm.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FsmModelingAssistantProviderOfFSMEditPart extends fsm.diagram.providers.FsmModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+					types.add(fsm.diagram.providers.FsmElementTypes.SteadyState_2003);
+					types.add(fsm.diagram.providers.FsmElementTypes.TransientState_2001);
+					types.add(fsm.diagram.providers.FsmElementTypes.InitialState_2002);
+					return types;	
+	}
+			
+	
+	}

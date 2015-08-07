@@ -1,0 +1,49 @@
+package fsm.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class FsmEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (fsm.diagram.part.FsmVisualIDRegistry.getVisualID(view)) {
+				
+	case fsm.diagram.edit.parts.FSMEditPart.VISUAL_ID:
+		return new fsm.diagram.edit.parts.FSMEditPart(view);
+									
+	case fsm.diagram.edit.parts.StateEditPart.VISUAL_ID:
+		return new fsm.diagram.edit.parts.StateEditPart(view);
+					
+	case fsm.diagram.edit.parts.StateNameEditPart.VISUAL_ID:
+		return new fsm.diagram.edit.parts.StateNameEditPart(view);
+																	
+	case fsm.diagram.edit.parts.TransitionEditPart.VISUAL_ID:
+		return new fsm.diagram.edit.parts.TransitionEditPart(view);
+					
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

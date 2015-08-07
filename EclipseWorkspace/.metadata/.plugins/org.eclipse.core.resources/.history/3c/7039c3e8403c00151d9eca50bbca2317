@@ -1,0 +1,15 @@
+package fsm.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class StatemachineBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}
