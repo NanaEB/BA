@@ -1,0 +1,167 @@
+/**
+ */
+package fsm.impl;
+
+import fsm.FsmPackage;
+import fsm.InitialState;
+import fsm.Transition;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Initial State</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link fsm.impl.InitialStateImpl#getOutTransInit <em>Out Trans Init</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class InitialStateImpl extends MinimalEObjectImpl.Container implements InitialState {
+	/**
+	 * The cached value of the '{@link #getOutTransInit() <em>Out Trans Init</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutTransInit()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> outTransInit;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InitialStateImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FsmPackage.Literals.INITIAL_STATE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Transition> getOutTransInit() {
+		if (outTransInit == null) {
+			outTransInit = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, FsmPackage.INITIAL_STATE__OUT_TRANS_INIT, FsmPackage.TRANSITION__SRC_INIT);
+		}
+		return outTransInit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FsmPackage.INITIAL_STATE__OUT_TRANS_INIT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutTransInit()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FsmPackage.INITIAL_STATE__OUT_TRANS_INIT:
+				return ((InternalEList<?>)getOutTransInit()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FsmPackage.INITIAL_STATE__OUT_TRANS_INIT:
+				return getOutTransInit();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FsmPackage.INITIAL_STATE__OUT_TRANS_INIT:
+				getOutTransInit().clear();
+				getOutTransInit().addAll((Collection<? extends Transition>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FsmPackage.INITIAL_STATE__OUT_TRANS_INIT:
+				getOutTransInit().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FsmPackage.INITIAL_STATE__OUT_TRANS_INIT:
+				return outTransInit != null && !outTransInit.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //InitialStateImpl

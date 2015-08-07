@@ -1,0 +1,105 @@
+
+package fsm.diagram.part;
+
+/**
+ * @generated
+ */
+public class StatemachinePaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(fsm.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createAction1CreationTool());
+paletteContainer.add(createFinalState2CreationTool());
+paletteContainer.add(createInitialState3CreationTool());
+paletteContainer.add(createNormalState4CreationTool());
+paletteContainer.add(createStateMachineVariable5CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(fsm.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createTransition1CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createAction1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(fsm.diagram.part.Messages.Action1CreationTool_title, fsm.diagram.part.Messages.Action1CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.StatemachineElementTypes.Action_3001));
+				 entry.setId("createAction1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.StatemachineElementTypes.getImageDescriptor(fsm.diagram.providers.StatemachineElementTypes.Action_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFinalState2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(fsm.diagram.part.Messages.FinalState2CreationTool_title, fsm.diagram.part.Messages.FinalState2CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003));
+				 entry.setId("createFinalState2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.StatemachineElementTypes.getImageDescriptor(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createInitialState3CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(fsm.diagram.part.Messages.InitialState3CreationTool_title, fsm.diagram.part.Messages.InitialState3CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002));
+				 entry.setId("createInitialState3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.StatemachineElementTypes.getImageDescriptor(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createNormalState4CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(fsm.diagram.part.Messages.NormalState4CreationTool_title, fsm.diagram.part.Messages.NormalState4CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001));
+				 entry.setId("createNormalState4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.StatemachineElementTypes.getImageDescriptor(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createStateMachineVariable5CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(fsm.diagram.part.Messages.StateMachineVariable5CreationTool_title, fsm.diagram.part.Messages.StateMachineVariable5CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.StatemachineElementTypes.StateMachineVariable_2004));
+				 entry.setId("createStateMachineVariable5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.StatemachineElementTypes.getImageDescriptor(fsm.diagram.providers.StatemachineElementTypes.StateMachineVariable_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createTransition1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(fsm.diagram.part.Messages.Transition1CreationTool_title, fsm.diagram.part.Messages.Transition1CreationTool_desc, java.util.Collections.singletonList(fsm.diagram.providers.StatemachineElementTypes.Transition_4001));
+				 entry.setId("createTransition1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(fsm.diagram.providers.StatemachineElementTypes.getImageDescriptor(fsm.diagram.providers.StatemachineElementTypes.Transition_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

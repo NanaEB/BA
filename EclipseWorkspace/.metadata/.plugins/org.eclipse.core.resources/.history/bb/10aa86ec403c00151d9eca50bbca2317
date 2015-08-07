@@ -1,0 +1,25 @@
+package fsm.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = fsm.diagram.part.StatemachineDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			fsm.diagram.part.StatemachineDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

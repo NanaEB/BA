@@ -1,0 +1,157 @@
+package fsm.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class StatemachineModelingAssistantProviderOfInitialStateEditPart extends fsm.diagram.providers.StatemachineModelingAssistantProvider {
+
+					
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSource(org.eclipse.core.runtime.IAdaptable source) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((fsm.diagram.edit.parts.InitialStateEditPart) sourceEditPart);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSource(fsm.diagram.edit.parts.InitialStateEditPart source) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+				types.add(fsm.diagram.providers.StatemachineElementTypes.Transition_4001);
+				types.add(fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002);
+				return types;
+	}
+	
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSourceAndTarget(
+			org.eclipse.core.runtime.IAdaptable source, org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((fsm.diagram.edit.parts.InitialStateEditPart) sourceEditPart, targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSourceAndTarget(fsm.diagram.edit.parts.InitialStateEditPart source, org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+							if (targetEditPart instanceof fsm.diagram.edit.parts.NormalStateEditPart) {
+			types.add(fsm.diagram.providers.StatemachineElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof fsm.diagram.edit.parts.InitialStateEditPart) {
+			types.add(fsm.diagram.providers.StatemachineElementTypes.Transition_4001);
+		}
+					if (targetEditPart instanceof fsm.diagram.edit.parts.FinalStateEditPart) {
+			types.add(fsm.diagram.providers.StatemachineElementTypes.Transition_4001);
+		}
+										if (targetEditPart instanceof fsm.diagram.edit.parts.NormalStateEditPart) {
+			types.add(fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002);
+		}
+					if (targetEditPart instanceof fsm.diagram.edit.parts.InitialStateEditPart) {
+			types.add(fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002);
+		}
+					if (targetEditPart instanceof fsm.diagram.edit.parts.FinalStateEditPart) {
+			types.add(fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002);
+		}
+							return types;
+	}
+
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForTarget(org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForTarget((fsm.diagram.edit.parts.InitialStateEditPart) sourceEditPart, relationshipType);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForTarget(fsm.diagram.edit.parts.InitialStateEditPart source, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == fsm.diagram.providers.StatemachineElementTypes.Transition_4001) {
+						types.add(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003);
+					}
+		 else 		if (relationshipType == fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002) {
+						types.add(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003);
+					}
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnTarget(org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((fsm.diagram.edit.parts.InitialStateEditPart) targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnTarget(fsm.diagram.edit.parts.InitialStateEditPart target) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+				types.add(fsm.diagram.providers.StatemachineElementTypes.Transition_4001);
+				types.add(fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForSource(org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForSource((fsm.diagram.edit.parts.InitialStateEditPart) targetEditPart, relationshipType);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForSource(fsm.diagram.edit.parts.InitialStateEditPart target, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == fsm.diagram.providers.StatemachineElementTypes.Transition_4001) {
+						types.add(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003);
+					}
+		 else 		if (relationshipType == fsm.diagram.providers.StatemachineElementTypes.StateReachable_4002) {
+						types.add(fsm.diagram.providers.StatemachineElementTypes.NormalState_2001);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.InitialState_2002);
+						types.add(fsm.diagram.providers.StatemachineElementTypes.FinalState_2003);
+					}
+				return types;
+	}
+
+	}
