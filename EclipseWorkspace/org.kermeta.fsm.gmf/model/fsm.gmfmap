@@ -46,7 +46,7 @@
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.1">
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
             href="fsm.ecore#//State/exit"/>
         <ownedChild>
@@ -67,14 +67,9 @@
         </ownedChild>
       </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.0">
+          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1">
         <compartment
-            href="fsm.gmfgraph#SteadyStateEntryCompartment"/>
-      </compartments>
-      <compartments
-          children="//@nodes.0/@ownedChild/@children.1">
-        <compartment
-            href="fsm.gmfgraph#SteadyStateExitCompartment"/>
+            href="fsm.gmfgraph#steady_entry_exit_actions"/>
       </compartments>
     </ownedChild>
   </nodes>
@@ -119,7 +114,7 @@
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.1/@ownedChild/@compartments.1">
+          compartment="//@nodes.1/@ownedChild/@compartments.0">
         <containmentFeature
             href="fsm.ecore#//State/exit"/>
         <ownedChild>
@@ -140,14 +135,9 @@
         </ownedChild>
       </children>
       <compartments
-          children="//@nodes.1/@ownedChild/@children.0">
+          children="//@nodes.1/@ownedChild/@children.0 //@nodes.1/@ownedChild/@children.1">
         <compartment
-            href="fsm.gmfgraph#TransientStateEntryCompartment"/>
-      </compartments>
-      <compartments
-          children="//@nodes.1/@ownedChild/@children.1">
-        <compartment
-            href="fsm.gmfgraph#TransientStateExitCompartment"/>
+            href="fsm.gmfgraph#transient_entry_exit_actions"/>
       </compartments>
     </ownedChild>
   </nodes>

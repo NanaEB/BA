@@ -27,7 +27,10 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
 import fsm.diagram.edit.policies.TransientStateItemSemanticEditPolicy;
 import fsm.diagram.part.FsmVisualIDRegistry;
@@ -125,19 +128,11 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 							.getFigureTransientStateNameFigure());
 			return true;
 		}
-		if (childEditPart instanceof TransientStateTransientStateEntryCompartmentEditPart) {
+		if (childEditPart instanceof TransientStateTransient_entry_exit_actionsEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getFigureTransientStateEntryCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((TransientStateTransientStateEntryCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof TransientStateTransientStateExitCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFigureTransientStateExitCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((TransientStateTransientStateExitCompartmentEditPart) childEditPart)
+			pane.add(((TransientStateTransient_entry_exit_actionsEditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -151,17 +146,10 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof TransientStateNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof TransientStateTransientStateEntryCompartmentEditPart) {
+		if (childEditPart instanceof TransientStateTransient_entry_exit_actionsEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getFigureTransientStateEntryCompartmentFigure();
-			pane.remove(((TransientStateTransientStateEntryCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof TransientStateTransientStateExitCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFigureTransientStateExitCompartmentFigure();
-			pane.remove(((TransientStateTransientStateExitCompartmentEditPart) childEditPart)
+			pane.remove(((TransientStateTransient_entry_exit_actionsEditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -192,13 +180,9 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof TransientStateTransientStateEntryCompartmentEditPart) {
+		if (editPart instanceof TransientStateTransient_entry_exit_actionsEditPart) {
 			return getPrimaryShape()
 					.getFigureTransientStateEntryCompartmentFigure();
-		}
-		if (editPart instanceof TransientStateTransientStateExitCompartmentEditPart) {
-			return getPrimaryShape()
-					.getFigureTransientStateExitCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -309,11 +293,11 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 					.getAdapter(IElementType.class);
 			if (type == FsmElementTypes.Action_3002) {
 				return getChildBySemanticHint(FsmVisualIDRegistry
-						.getType(TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID));
+						.getType(TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID));
 			}
 			if (type == FsmElementTypes.EAction_3004) {
 				return getChildBySemanticHint(FsmVisualIDRegistry
-						.getType(TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID));
+						.getType(TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID));
 			}
 		}
 		return super.getTargetEditPart(request);
@@ -359,6 +343,10 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 			fFigureTransientStateNameFigure = new WrappingLabel();
 
 			fFigureTransientStateNameFigure.setText("state name");
+
+			fFigureTransientStateNameFigure
+					.setFont(FFIGURETRANSIENTSTATENAMEFIGURE_FONT);
+
 			fFigureTransientStateNameFigure.setMaximumSize(new Dimension(
 					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
@@ -405,5 +393,12 @@ public class TransientStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	static final Color THIS_FORE = new Color(null, 0, 0, 0);
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGURETRANSIENTSTATENAMEFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 10, SWT.BOLD);
 
 }

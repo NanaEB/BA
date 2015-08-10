@@ -19,8 +19,7 @@ import fsm.diagram.edit.commands.TransitionCreateCommand;
 import fsm.diagram.edit.commands.TransitionReorientCommand;
 import fsm.diagram.edit.parts.Action2EditPart;
 import fsm.diagram.edit.parts.EAction2EditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
 import fsm.diagram.part.FsmVisualIDRegistry;
 import fsm.diagram.providers.FsmElementTypes;
@@ -87,7 +86,7 @@ public class TransientStateItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (FsmVisualIDRegistry.getVisualID(node)) {
-			case TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
+			case TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();
@@ -99,14 +98,6 @@ public class TransientStateItemSemanticEditPolicy extends
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					}
-				}
-				break;
-			case TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
-				for (Iterator<?> cit = node.getChildren().iterator(); cit
-						.hasNext();) {
-					Node cnode = (Node) cit.next();
-					switch (FsmVisualIDRegistry.getVisualID(cnode)) {
 					case EAction2EditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),

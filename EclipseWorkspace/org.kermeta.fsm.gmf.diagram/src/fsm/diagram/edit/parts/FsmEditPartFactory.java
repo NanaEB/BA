@@ -64,18 +64,11 @@ public class FsmEditPartFactory implements EditPartFactory {
 			case EActionExitLabel2EditPart.VISUAL_ID:
 				return new EActionExitLabel2EditPart(view);
 
-			case SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
-				return new SteadyStateSteadyStateEntryCompartmentEditPart(view);
+			case SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID:
+				return new SteadyStateSteady_entry_exit_actionsEditPart(view);
 
-			case SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
-				return new SteadyStateSteadyStateExitCompartmentEditPart(view);
-
-			case TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
-				return new TransientStateTransientStateEntryCompartmentEditPart(
-						view);
-
-			case TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
-				return new TransientStateTransientStateExitCompartmentEditPart(
+			case TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID:
+				return new TransientStateTransient_entry_exit_actionsEditPart(
 						view);
 
 			case TransitionEditPart.VISUAL_ID:

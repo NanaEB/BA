@@ -28,11 +28,9 @@ import fsm.diagram.edit.parts.EActionEditPart;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
 import fsm.diagram.providers.FsmElementTypes;
 
@@ -48,14 +46,10 @@ public class FsmDiagramUpdater {
 		switch (FsmVisualIDRegistry.getVisualID(view)) {
 		case FSMEditPart.VISUAL_ID:
 			return getFSM_1000SemanticChildren(view);
-		case SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
-			return getSteadyStateSteadyStateEntryCompartment_7001SemanticChildren(view);
-		case SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
-			return getSteadyStateSteadyStateExitCompartment_7003SemanticChildren(view);
-		case TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
-			return getTransientStateTransientStateEntryCompartment_7002SemanticChildren(view);
-		case TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
-			return getTransientStateTransientStateExitCompartment_7004SemanticChildren(view);
+		case SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID:
+			return getSteadyStateSteady_entry_exit_actions_7001SemanticChildren(view);
+		case TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID:
+			return getTransientStateTransient_entry_exit_actions_7002SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -96,7 +90,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmNodeDescriptor> getSteadyStateSteadyStateEntryCompartment_7001SemanticChildren(
+	public static List<FsmNodeDescriptor> getSteadyStateSteady_entry_exit_actions_7001SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -115,23 +109,6 @@ public class FsmDiagramUpdater {
 				result.add(new FsmNodeDescriptor(childElement, visualID));
 			}
 		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<FsmNodeDescriptor> getSteadyStateSteadyStateExitCompartment_7003SemanticChildren(
-			View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		SteadyState modelElement = (SteadyState) containerView.getElement();
-		LinkedList<FsmNodeDescriptor> result = new LinkedList<FsmNodeDescriptor>();
 		{
 			fsm.eAction childElement = modelElement.getExit();
 			int visualID = FsmVisualIDRegistry.getNodeVisualID(view,
@@ -146,7 +123,7 @@ public class FsmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FsmNodeDescriptor> getTransientStateTransientStateEntryCompartment_7002SemanticChildren(
+	public static List<FsmNodeDescriptor> getTransientStateTransient_entry_exit_actions_7002SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -166,24 +143,6 @@ public class FsmDiagramUpdater {
 				result.add(new FsmNodeDescriptor(childElement, visualID));
 			}
 		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<FsmNodeDescriptor> getTransientStateTransientStateExitCompartment_7004SemanticChildren(
-			View view) {
-		if (false == view.eContainer() instanceof View) {
-			return Collections.emptyList();
-		}
-		View containerView = (View) view.eContainer();
-		if (!containerView.isSetElement()) {
-			return Collections.emptyList();
-		}
-		TransientState modelElement = (TransientState) containerView
-				.getElement();
-		LinkedList<FsmNodeDescriptor> result = new LinkedList<FsmNodeDescriptor>();
 		{
 			fsm.eAction childElement = modelElement.getExit();
 			int visualID = FsmVisualIDRegistry.getNodeVisualID(view,

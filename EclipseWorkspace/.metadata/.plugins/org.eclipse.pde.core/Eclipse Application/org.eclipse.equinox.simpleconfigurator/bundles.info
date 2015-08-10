@@ -775,11 +775,11 @@ org.kermeta.diagnostic.model,2.1.0,file:/C:/Users/User/Desktop/eclipse%20Besnik/
 org.kermeta.eclipse.ocl.parser,1.4.0,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.eclipse.ocl.parser_1.4.0.jar,4,false
 org.kermeta.ecore.documentation,1.4.0,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.ecore.documentation_1.4.0.jar,4,false
 org.kermeta.emf.genmodel,2.1.1.SNAPSHOT_20130925_1200,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.emf.genmodel_2.1.1.SNAPSHOT_20130925_1200.jar,4,false
-org.kermeta.fsm.gmf,0.1.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.fsm.gmf/,4,false
-org.kermeta.fsm.gmf.diagram,1.0.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.fsm.gmf.diagram/,4,false
-org.kermeta.fsm.gmf.edit,1.0.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.fsm.gmf.edit/,4,false
-org.kermeta.fsm.gmf.editor,1.0.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.fsm.gmf.editor/,4,false
-org.kermeta.fsm.gmf.tests,1.0.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.fsm.gmf.tests/,4,false
+org.kermeta.fsm.gmf,0.1.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.fsm.gmf/,4,false
+org.kermeta.fsm.gmf.diagram,1.0.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.fsm.gmf.diagram/,4,false
+org.kermeta.fsm.gmf.edit,1.0.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.fsm.gmf.edit/,4,false
+org.kermeta.fsm.gmf.editor,1.0.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.fsm.gmf.editor/,4,false
+org.kermeta.fsm.gmf.tests,1.0.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.fsm.gmf.tests/,4,false
 org.kermeta.interest,1.4.0,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.interest_1.4.0.jar,4,false
 org.kermeta.kermeta1.framework.scala,1.4.7.SNAPSHOT,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.kermeta1.framework.scala_1.4.7.SNAPSHOT.jar,4,false
 org.kermeta.kmlogo.logoasm.tutorial.ui,1.4.0,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.kmlogo.logoasm.tutorial.ui_1.4.0.jar,4,false
@@ -832,8 +832,8 @@ org.kermeta.language.prettyprinter.ui,2.1.1.SNAPSHOT_20130925_1240,file:/C:/User
 org.kermeta.language.resolver,2.1.1.SNAPSHOT_20130925_1225,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.language.resolver_2.1.1.SNAPSHOT_20130925_1225.jar,4,false
 org.kermeta.language.resolver.api,2.1.1.SNAPSHOT_20130925_1225,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.language.resolver.api_2.1.1.SNAPSHOT_20130925_1225.jar,4,false
 org.kermeta.language.sample.deployer,2.1.1.SNAPSHOT_20130925_1232,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.language.sample.deployer_2.1.1.SNAPSHOT_20130925_1232.jar,4,false
-org.kermeta.language.sample.fsm.model,1.0.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.language.sample.fsm.model/,4,false
-org.kermeta.language.sample.fsm.simulation,1.0.0.qualifier,file:/C:/Users/User/Desktop/tmpgitHub/EclipseWorkspace/org.kermeta.language.sample.fsm.simulation/,4,false
+org.kermeta.language.sample.fsm.model,1.0.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.language.sample.fsm.model/,4,false
+org.kermeta.language.sample.fsm.simulation,1.0.0.qualifier,file:/C:/Users/User/Desktop/github/BA/EclipseWorkspace/org.kermeta.language.sample.fsm.simulation/,4,false
 org.kermeta.language.texteditor.eclipse,2.1.1.SNAPSHOT_20130925_1240,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.language.texteditor.eclipse_2.1.1.SNAPSHOT_20130925_1240.jar,4,false
 org.kermeta.language.texteditor.eclipse.nature,2.1.1.SNAPSHOT_20130925_1225,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.language.texteditor.eclipse.nature_2.1.1.SNAPSHOT_20130925_1225.jar,4,false
 org.kermeta.language.umlprofile2ecore,2.1.1.SNAPSHOT_20130925_1225,file:/C:/Users/User/Desktop/eclipse%20Besnik/eclipse/plugins/org.kermeta.language.umlprofile2ecore_2.1.1.SNAPSHOT_20130925_1225.jar,4,false

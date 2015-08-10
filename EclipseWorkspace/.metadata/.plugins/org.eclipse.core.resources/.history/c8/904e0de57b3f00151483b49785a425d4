@@ -1,0 +1,11 @@
+package fsm.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class FsmModelingAssistantProviderOfEAction2EditPart extends fsm.diagram.providers.FsmModelingAssistantProvider {
+
+					
+	
+
+	}

@@ -53,12 +53,10 @@ import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
 import fsm.diagram.edit.parts.TransitionInputEditPart;
 import fsm.diagram.edit.parts.TransitionOutputEditPart;
@@ -319,12 +317,7 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 		createCompartment(
 				node,
 				FsmVisualIDRegistry
-						.getType(SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID),
-				true, false, true, true);
-		createCompartment(
-				node,
-				FsmVisualIDRegistry
-						.getType(SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID),
+						.getType(SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID),
 				true, false, true, true);
 		return node;
 	}
@@ -374,12 +367,7 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 		createCompartment(
 				node,
 				FsmVisualIDRegistry
-						.getType(TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID),
-				true, false, true, true);
-		createCompartment(
-				node,
-				FsmVisualIDRegistry
-						.getType(TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID),
+						.getType(TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID),
 				true, false, true, true);
 		return node;
 	}

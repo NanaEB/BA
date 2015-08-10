@@ -30,11 +30,9 @@ import fsm.diagram.edit.parts.EActionEditPart;
 import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
 import fsm.diagram.part.FsmVisualIDRegistry;
 import fsm.diagram.part.Messages;
@@ -271,7 +269,7 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					FsmVisualIDRegistry
-							.getType(SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID));
+							.getType(SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					FsmVisualIDRegistry.getType(ActionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
@@ -279,7 +277,7 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					FsmVisualIDRegistry
-							.getType(SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID));
+							.getType(SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					FsmVisualIDRegistry.getType(EActionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
@@ -314,7 +312,7 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					FsmVisualIDRegistry
-							.getType(TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID));
+							.getType(TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					FsmVisualIDRegistry.getType(Action2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
@@ -322,7 +320,7 @@ public class FsmNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					FsmVisualIDRegistry
-							.getType(TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID));
+							.getType(TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					FsmVisualIDRegistry.getType(EAction2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,

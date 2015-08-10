@@ -26,7 +26,10 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
 import fsm.diagram.edit.policies.SteadyStateItemSemanticEditPolicy;
 import fsm.diagram.part.FsmVisualIDRegistry;
@@ -124,19 +127,11 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 							.getFigureSteadyStateNameFigure());
 			return true;
 		}
-		if (childEditPart instanceof SteadyStateSteadyStateEntryCompartmentEditPart) {
+		if (childEditPart instanceof SteadyStateSteady_entry_exit_actionsEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getFigureSteadyStateEntryCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((SteadyStateSteadyStateEntryCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof SteadyStateSteadyStateExitCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFigureSteadyStateExitCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((SteadyStateSteadyStateExitCompartmentEditPart) childEditPart)
+			pane.add(((SteadyStateSteady_entry_exit_actionsEditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -150,17 +145,10 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof SteadyStateNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof SteadyStateSteadyStateEntryCompartmentEditPart) {
+		if (childEditPart instanceof SteadyStateSteady_entry_exit_actionsEditPart) {
 			IFigure pane = getPrimaryShape()
 					.getFigureSteadyStateEntryCompartmentFigure();
-			pane.remove(((SteadyStateSteadyStateEntryCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof SteadyStateSteadyStateExitCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFigureSteadyStateExitCompartmentFigure();
-			pane.remove(((SteadyStateSteadyStateExitCompartmentEditPart) childEditPart)
+			pane.remove(((SteadyStateSteady_entry_exit_actionsEditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -191,13 +179,9 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof SteadyStateSteadyStateEntryCompartmentEditPart) {
+		if (editPart instanceof SteadyStateSteady_entry_exit_actionsEditPart) {
 			return getPrimaryShape()
 					.getFigureSteadyStateEntryCompartmentFigure();
-		}
-		if (editPart instanceof SteadyStateSteadyStateExitCompartmentEditPart) {
-			return getPrimaryShape()
-					.getFigureSteadyStateExitCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -308,11 +292,11 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 					.getAdapter(IElementType.class);
 			if (type == FsmElementTypes.Action_3001) {
 				return getChildBySemanticHint(FsmVisualIDRegistry
-						.getType(SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID));
+						.getType(SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID));
 			}
 			if (type == FsmElementTypes.EAction_3003) {
 				return getChildBySemanticHint(FsmVisualIDRegistry
-						.getType(SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID));
+						.getType(SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID));
 			}
 		}
 		return super.getTargetEditPart(request);
@@ -357,6 +341,10 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 			fFigureSteadyStateNameFigure = new WrappingLabel();
 
 			fFigureSteadyStateNameFigure.setText("state name");
+
+			fFigureSteadyStateNameFigure
+					.setFont(FFIGURESTEADYSTATENAMEFIGURE_FONT);
+
 			fFigureSteadyStateNameFigure.setMaximumSize(new Dimension(
 					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
@@ -403,5 +391,12 @@ public class SteadyStateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	static final Color THIS_FORE = new Color(null, 0, 0, 0);
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGURESTEADYSTATENAMEFIGURE_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 10, SWT.BOLD);
 
 }

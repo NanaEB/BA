@@ -264,6 +264,7 @@ public class ActionEditPart extends ShapeNodeEditPart {
 		public ActionFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
+			this.setOutline(false);
 			this.setForegroundColor(THIS_FORE);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
@@ -278,7 +279,7 @@ public class ActionEditPart extends ShapeNodeEditPart {
 
 			fFigureActionLabelFigure = new WrappingLabel();
 
-			fFigureActionLabelFigure.setText("Entry");
+			fFigureActionLabelFigure.setText("code");
 
 			this.add(fFigureActionLabelFigure);
 

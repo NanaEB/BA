@@ -49,8 +49,8 @@ public class FsmPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Actions2Group_title);
 		paletteContainer.setId("createActions2Group"); //$NON-NLS-1$
-		paletteContainer.add(createEntry1CreationTool());
-		paletteContainer.add(createExit2CreationTool());
+		paletteContainer.add(createAction1CreationTool());
+		paletteContainer.add(createAction2CreationTool());
 		return paletteContainer;
 	}
 
@@ -114,14 +114,14 @@ public class FsmPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEntry1CreationTool() {
+	private ToolEntry createAction1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(FsmElementTypes.Action_3001);
 		types.add(FsmElementTypes.Action_3002);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.Entry1CreationTool_title,
-				Messages.Entry1CreationTool_desc, types);
-		entry.setId("createEntry1CreationTool"); //$NON-NLS-1$
+				Messages.Action1CreationTool_title,
+				Messages.Action1CreationTool_desc, types);
+		entry.setId("createAction1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FsmElementTypes
 				.getImageDescriptor(FsmElementTypes.Action_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -131,14 +131,14 @@ public class FsmPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createExit2CreationTool() {
+	private ToolEntry createAction2CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(FsmElementTypes.EAction_3003);
 		types.add(FsmElementTypes.EAction_3004);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.Exit2CreationTool_title,
-				Messages.Exit2CreationTool_desc, types);
-		entry.setId("createExit2CreationTool"); //$NON-NLS-1$
+				Messages.Action2CreationTool_title,
+				Messages.Action2CreationTool_desc, types);
+		entry.setId("createAction2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FsmElementTypes
 				.getImageDescriptor(FsmElementTypes.EAction_3003));
 		entry.setLargeIcon(entry.getSmallIcon());

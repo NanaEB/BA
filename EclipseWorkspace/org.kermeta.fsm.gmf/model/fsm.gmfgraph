@@ -53,6 +53,11 @@
           <maximumSize
               dx="10000"
               dy="50"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName=""
+              height="10"
+              style="BOLD"/>
         </children>
         <children
             xsi:type="gmfgraph:Rectangle"
@@ -93,6 +98,11 @@
           <maximumSize
               dx="10000"
               dy="50"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName=""
+              height="10"
+              style="BOLD"/>
         </children>
         <children
             xsi:type="gmfgraph:Rectangle"
@@ -151,7 +161,8 @@
         name="ActionFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
-          name="ActionFigure">
+          name="ActionFigure"
+          outline="false">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
             red="225"
@@ -168,7 +179,7 @@
         <children
             xsi:type="gmfgraph:Label"
             name="ActionLabelFigure"
-            text="Entry"/>
+            text="code"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
@@ -177,7 +188,8 @@
         name="eActionFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
-          name="eActionFigure">
+          name="eActionFigure"
+          outline="false">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
             red="255"
@@ -194,7 +206,7 @@
         <children
             xsi:type="gmfgraph:Label"
             name="eActionLabelFigure"
-            text="Exit"/>
+            text="code"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
@@ -219,22 +231,12 @@
       name="Transition"
       figure="TransitionFigure"/>
   <compartments
-      name="SteadyStateExitCompartment"
-      figure="SteadyStateFigure"
-      collapsible="true"
-      accessor="//@figures.0/@descriptors.1/@accessors.2"/>
-  <compartments
-      name="TransientStateExitCompartment"
-      figure="TransientStateFigure"
-      collapsible="true"
-      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
-  <compartments
-      name="SteadyStateEntryCompartment"
+      name="steady_entry_exit_actions"
       figure="SteadyStateFigure"
       collapsible="true"
       accessor="//@figures.0/@descriptors.1/@accessors.1"/>
   <compartments
-      name="TransientStateEntryCompartment"
+      name="transient_entry_exit_actions"
       figure="TransientStateFigure"
       collapsible="true"
       accessor="//@figures.0/@descriptors.2/@accessors.2"/>

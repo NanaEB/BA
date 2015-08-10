@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_OyvMoD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_OyvMoT0SEeW5nqFzn-UGAQ" bindingContexts="_Oy5ALD0SEeW5nqFzn-UGAQ">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;plugin.xml&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/plugin.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/plugin.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;fsm.gmfmap&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;fsm.genmodel&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.genmodel&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.genmodel&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Action3ItemSemanticEditPolicy.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/policies/Action3ItemSemanticEditPolicy.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/policies/Action3ItemSemanticEditPolicy.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SteadyStateNormalStateEntryCompartmentEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateNormalStateEntryCompartmentEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateNormalStateEntryCompartmentEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.codegen.gmfgen.presentation.GMFGenEditorID&quot; name=&quot;fsm.gmfgen&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfgen&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfgen&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.ecore.part.EcoreDiagramEditorID&quot; name=&quot;fsm.ecore_diagram&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.ecore_diagram&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.ecore_diagram&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SteadyStateEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.EcoreEditorID&quot; name=&quot;fsm.ecore&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.ecore&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.ecore&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;plugin.xml&quot; tooltip=&quot;org.kermeta.fsm.gmf/plugin.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/plugin.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;Statemachine.gmfmap&quot; tooltip=&quot;gmf/model/Statemachine.gmfmap&quot;>&#xD;&#xA;&lt;persistable path=&quot;/gmf/model/Statemachine.gmfmap&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;plugin.xml&quot; tooltip=&quot;gmf.diagram/plugin.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/gmf.diagram/plugin.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.ecore.part.EcoreDiagramEditorID&quot; name=&quot;Statemachine.ecore_diagram&quot; tooltip=&quot;gmf/model/Statemachine.ecore_diagram&quot;>&#xD;&#xA;&lt;persistable path=&quot;/gmf/model/Statemachine.ecore_diagram&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.EcoreEditorID&quot; name=&quot;Statemachine.ecore&quot; tooltip=&quot;gmf/model/Statemachine.ecore&quot;>&#xD;&#xA;&lt;persistable path=&quot;/gmf/model/Statemachine.ecore&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;Statemachine.genmodel&quot; tooltip=&quot;gmf/model/Statemachine.genmodel&quot;>&#xD;&#xA;&lt;persistable path=&quot;/gmf/model/Statemachine.genmodel&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;plugin.xml&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/plugin.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/plugin.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TransientStateEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/TransientStateEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/TransientStateEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;fsm.gmfmap&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID&quot; name=&quot;fsm.gmfgraph&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfgraph&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfgraph&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;FsmPaletteFactory.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/part/FsmPaletteFactory.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/part/FsmPaletteFactory.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SteadyStateSteadyStateExitCompartmentEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateSteadyStateExitCompartmentEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateSteadyStateExitCompartmentEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.ecore.part.EcoreDiagramEditorID&quot; name=&quot;fsm.ecore_diagram&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.ecore_diagram&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.ecore_diagram&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.codegen.gmfgen.presentation.GMFGenEditorID&quot; name=&quot;fsm.gmfgen&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfgen&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfgen&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;fsm.genmodel&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.genmodel&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf/model/fsm.genmodel&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;ListCompartmentEditPart.class&quot; tooltip=&quot;org.eclipse.gmf.runtime.diagram.ui.editparts.ListCompartmentEditPart&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=org.kermeta.fsm.gmf.diagram/C:\/Users\/User\/Desktop\/eclipse Besnik\/eclipse\/plugins\/org.eclipse.gmf.runtime.diagram.ui_1.8.0.201406111639.jar&amp;lt;org.eclipse.gmf.runtime.diagram.ui.editparts(ListCompartmentEditPart.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TransientStateTransientStateExitCompartmentEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/TransientStateTransientStateExitCompartmentEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/TransientStateTransientStateExitCompartmentEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DiagramEditorContextMenuProvider.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/part/DiagramEditorContextMenuProvider.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/part/DiagramEditorContextMenuProvider.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SteadyStateSteadyStateEntryCompartmentEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateSteadyStateEntryCompartmentEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateSteadyStateEntryCompartmentEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Action2EditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/Action2EditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/Action2EditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SteadyStateEditPart.java&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateEditPart.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.kermeta.fsm.gmf.diagram/src/fsm/diagram/edit/parts/SteadyStateEditPart.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_OyvMoT0SEeW5nqFzn-UGAQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_OyvMoj0SEeW5nqFzn-UGAQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1273" height="1010">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_OyvMoT0SEeW5nqFzn-UGAQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_OyvMoj0SEeW5nqFzn-UGAQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="840" height="1010">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
@@ -171,7 +171,7 @@
           <tags>persp.newWizSC:org.eclipse.ui.wizards.new.folder</tags>
           <tags>persp.viewSC:org.eclipse.pde.runtime.LogView</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_OyvMxj0SEeW5nqFzn-UGAQ" selectedElement="_OyvMzz0SEeW5nqFzn-UGAQ" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_OyvMxz0SEeW5nqFzn-UGAQ" containerData="1923" selectedElement="_OyvMyD0SEeW5nqFzn-UGAQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_OyvMxz0SEeW5nqFzn-UGAQ" containerData="2885" selectedElement="_OyvMyD0SEeW5nqFzn-UGAQ">
               <children xsi:type="basic:PartStack" xmi:id="_OyvMyD0SEeW5nqFzn-UGAQ" elementId="topLeft" containerData="6000" selectedElement="_OyvMyT0SEeW5nqFzn-UGAQ">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.primaryNavigationStack</tags>
@@ -185,7 +185,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_OyvMzj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_Oy49yT0SEeW5nqFzn-UGAQ"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_OyvMzz0SEeW5nqFzn-UGAQ" containerData="8077" selectedElement="_OyvM1T0SEeW5nqFzn-UGAQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_OyvMzz0SEeW5nqFzn-UGAQ" containerData="7115" selectedElement="_OyvM1T0SEeW5nqFzn-UGAQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_OyvM0D0SEeW5nqFzn-UGAQ" containerData="6025" selectedElement="_OyvM0T0SEeW5nqFzn-UGAQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_OyvM0T0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_OyvN-D0SEeW5nqFzn-UGAQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_OyvM0j0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.views.ContentOutlineMStack" toBeRendered="false" containerData="2500">
@@ -197,8 +197,6 @@
               <children xsi:type="basic:PartStack" xmi:id="_OyvM1T0SEeW5nqFzn-UGAQ" elementId="bottomRight" containerData="3975" selectedElement="_OyvM2D0SEeW5nqFzn-UGAQ">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
-                <tags>active</tags>
-                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_OyvM1j0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.views.ProblemView" ref="_OyvOOT0SEeW5nqFzn-UGAQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_OyvM1z0SEeW5nqFzn-UGAQ" elementId="org.eclipse.pde.ui.TargetPlatformState" ref="_Oy497D0SEeW5nqFzn-UGAQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_OyvM2D0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_OyvOTj0SEeW5nqFzn-UGAQ"/>
@@ -236,56 +234,21 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_OyvN-D0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.editorss" selectedElement="_OyvN-T0SEeW5nqFzn-UGAQ">
-      <children xsi:type="basic:PartStack" xmi:id="_OyvN-T0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_OyvOBT0SEeW5nqFzn-UGAQ">
+      <children xsi:type="basic:PartStack" xmi:id="_OyvN-T0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_7YBkkD97EeWoztLfTJ6i2g">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_OyvN-j0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="fsm.ecore_diagram" iconURI="platform:/plugin/org.eclipse.gmf.ecore.editor/icons/full/obj16/EcoreModelFile.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.gmf.ecore.part.EcoreDiagramEditorID&quot; name=&quot;fsm.ecore_diagram&quot; partName=&quot;fsm.ecore_diagram&quot; title=&quot;fsm.ecore_diagram&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.ecore_diagram&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf/model/fsm.ecore_diagram&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.gmf.ecore.part.EcoreDiagramEditorID</tags>
           <tags>removeOnHide</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_OyvN-z0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="fsm.gmfmap" iconURI="platform:/plugin/org.eclipse.gmf.map.edit/icons/full/obj16/GMFMapModelFile.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;fsm.gmfmap&quot; partName=&quot;fsm.gmfmap&quot; title=&quot;fsm.gmfmap&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvN_D0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvN_T0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvN_j0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvN_z0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOAD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOAT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
-          </menus>
-        </children>
         <children xsi:type="basic:Part" xmi:id="_OyvOAj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="fsm.ecore" iconURI="platform:/plugin/org.eclipse.emf.ecore.editor/icons/full/obj16/EcoreModelFile.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.emf.ecore.presentation.EcoreEditorID&quot; name=&quot;fsm.ecore&quot; partName=&quot;fsm.ecore&quot; title=&quot;fsm.ecore&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.ecore&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf/model/fsm.ecore&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.emf.ecore.presentation.EcoreEditorID</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_OyvOAz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="org.kermeta.fsm.gmf" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/obj16/plugin_mf_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;plugin.xml&quot; partName=&quot;org.kermeta.fsm.gmf&quot; title=&quot;org.kermeta.fsm.gmf&quot; tooltip=&quot;org.kermeta.fsm.gmf/plugin.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf/plugin.xml&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.pde.ui.manifestEditor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_OyvOBD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="fsm.genmodel" iconURI="platform:/plugin/org.eclipse.emf.codegen.ecore.ui/icons/full/obj16/GenModelModelFile.gif" closeable="true">
@@ -294,59 +257,25 @@
           <tags>org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID</tags>
           <tags>removeOnHide</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_OyvOBT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="org.kermeta.fsm.gmf.diagram" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/obj16/plugin_mf_obj.gif" closeable="true">
+        <children xsi:type="basic:Part" xmi:id="_B6QnsD9qEeWkrKIyASOXOg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="fsm.gmfmap" iconURI="platform:/plugin/org.eclipse.gmf.map.edit/icons/full/obj16/GMFMapModelFile.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;fsm.gmfmap&quot; partName=&quot;fsm.gmfmap&quot; title=&quot;fsm.gmfmap&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfmap&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_zk5YwD92EeWoztLfTJ6i2g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="fsm.gmfgraph" iconURI="platform:/plugin/org.eclipse.gmf.graphdef.edit/icons/full/obj16/GMFGraphModelFile.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID&quot; name=&quot;fsm.gmfgraph&quot; partName=&quot;fsm.gmfgraph&quot; title=&quot;fsm.gmfgraph&quot; tooltip=&quot;org.kermeta.fsm.gmf/model/fsm.gmfgraph&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf/model/fsm.gmfgraph&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_7YBkkD97EeWoztLfTJ6i2g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="org.kermeta.fsm.gmf.diagram" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/obj16/plugin_mf_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;plugin.xml&quot; partName=&quot;org.kermeta.fsm.gmf.diagram&quot; title=&quot;org.kermeta.fsm.gmf.diagram&quot; tooltip=&quot;org.kermeta.fsm.gmf.diagram/plugin.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.kermeta.fsm.gmf.diagram/plugin.xml&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.pde.ui.manifestEditor</tags>
           <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOBj0SEeW5nqFzn-UGAQ" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOBz0SEeW5nqFzn-UGAQ" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOCD0SEeW5nqFzn-UGAQ" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOCT0SEeW5nqFzn-UGAQ" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOCj0SEeW5nqFzn-UGAQ" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvOCz0SEeW5nqFzn-UGAQ" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvODD0SEeW5nqFzn-UGAQ" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvODT0SEeW5nqFzn-UGAQ" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_OyvODj0SEeW5nqFzn-UGAQ" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -413,7 +342,7 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_OyvOOT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;638&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (100 items)&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;638&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_OyvOOj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.views.ProblemView">
@@ -504,7 +433,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
       <menus xmi:id="_OyvOTz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -706,7 +634,7 @@
       <tags>categoryTag:WindowBuilder</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_Oy491j0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.bridge.ui.dashboard.DashboardPart" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="GMF Dashboard" iconURI="platform:/plugin/org.eclipse.gmf.bridge.ui.dashboard/icons/cview16/dashboard.gif" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view activeProject=&quot;org.kermeta.fsm.gmf&quot;/>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view activeProject=&quot;org.kermeta.fsm.gmf.diagram&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_Oy491z0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.bridge.ui.dashboard.DashboardPart">
@@ -746,43 +674,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy498j0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy498z0SEeW5nqFzn-UGAQ" elementId="new.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy499D0SEeW5nqFzn-UGAQ" elementId="newWizardDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy499T0SEeW5nqFzn-UGAQ" elementId="new.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy499j0SEeW5nqFzn-UGAQ" elementId="save.group" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy499z0SEeW5nqFzn-UGAQ" elementId="save">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49-D0SEeW5nqFzn-UGAQ" elementId="saveAll">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49-T0SEeW5nqFzn-UGAQ" elementId="save.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Oy49-j0SEeW5nqFzn-UGAQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_OzL7CT0SEeW5nqFzn-UGAQ"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49-z0SEeW5nqFzn-UGAQ" elementId="print.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49_D0SEeW5nqFzn-UGAQ" elementId="build.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49_T0SEeW5nqFzn-UGAQ" elementId="build.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49_j0SEeW5nqFzn-UGAQ" elementId="additions">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy49_z0SEeW5nqFzn-UGAQ" elementId="org.eclipse.wb.core.wizards.actions.NewDesignerTypeDropDownAction">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_YufXBz92EeWoztLfTJ6i2g" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_OzL7CT0SEeW5nqFzn-UGAQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-AD0SEeW5nqFzn-UGAQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -790,72 +682,18 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-Ij0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Iz0SEeW5nqFzn-UGAQ" elementId="Presentation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-JD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-JT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Jj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly" visible="false">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-Jz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-KD0SEeW5nqFzn-UGAQ" elementId="debug">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-KT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Kj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Kz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-LD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.jdt.ui.JavaElementCreationActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-LT0SEeW5nqFzn-UGAQ" elementId="JavaWizards">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Lj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.jdt.ui.actions.OpenProjectWizard" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Lz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.jdt.ui.actions.OpenPackageWizard">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-MD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.jdt.ui.actions.NewTypeDropDown">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-MT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Mj0SEeW5nqFzn-UGAQ" elementId="Search">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Mz0SEeW5nqFzn-UGAQ" elementId="openType">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-ND0SEeW5nqFzn-UGAQ" elementId="org.eclipse.mylyn.tasks.ui.openTask">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-NT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.search.OpenSearchDialogPage">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-Nj0SEeW5nqFzn-UGAQ" elementId="org.kermeta.ui.actionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Nz0SEeW5nqFzn-UGAQ" elementId="additions">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-OD0SEeW5nqFzn-UGAQ" elementId="org.kermeta.ui.destroyKermetaUnitsAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-OT0SEeW5nqFzn-UGAQ" elementId="group.nav" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -863,46 +701,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-Oz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-PD0SEeW5nqFzn-UGAQ" elementId="history.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-PT0SEeW5nqFzn-UGAQ" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Pj0SEeW5nqFzn-UGAQ" elementId="backardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Pz0SEeW5nqFzn-UGAQ" elementId="forwardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-QD0SEeW5nqFzn-UGAQ" elementId="pin.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Oy4-QT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_OzL5ND0SEeW5nqFzn-UGAQ"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Qj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Qz0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-RD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
-          <tags>Opaque</tags>
-        </children>
-      </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_Oy4-RT0SEeW5nqFzn-UGAQ" elementId="org.eclipse.gmf.mappings.presentation.GMFMapEditorID" visible="false">
-        <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Rj0SEeW5nqFzn-UGAQ" elementId="gmfmap-settings">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Rz0SEeW5nqFzn-UGAQ" elementId="gmfmap-additions">
-          <tags>Opaque</tags>
-        </children>
-      </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_Oy4-SD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.pde.ui.manifestEditor">
-        <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-ST0SEeW5nqFzn-UGAQ">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Yuldpz92EeWoztLfTJ6i2g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_OzL5ND0SEeW5nqFzn-UGAQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-Sj0SEeW5nqFzn-UGAQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -914,12 +713,6 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Oy4-Tj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-Tz0SEeW5nqFzn-UGAQ" elementId="group.help">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Oy4-UD0SEeW5nqFzn-UGAQ" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_Oy4-UT0SEeW5nqFzn-UGAQ" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
@@ -1919,6 +1712,23 @@
     <tags>View</tags>
     <tags>categoryTag:SVN</tags>
   </descriptors>
+  <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
+    <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:PerspectiveSpacer</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_8tJPcF9tEeO-yojH_y4TJA" elementId="SearchField" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.quickaccess.SearchField">
+      <tags>move_after:Spacer Glue</tags>
+      <tags>HIDEABLE</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_9LgmcF9tEeO-yojH_y4TJA" elementId="Search-PS Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:SearchField</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+  </trimContributions>
   <commands xmi:id="_OzL5Aj0SEeW5nqFzn-UGAQ" elementId="org.eclipse.wst.xsd.ui.refactor.makeTypeGlobal" commandName="Make &amp;Anonymous Type Global" description="Promotes anonymous type to global level and replaces its references" category="_OzVqUD0SEeW5nqFzn-UGAQ"/>
   <commands xmi:id="_OzL5Az0SEeW5nqFzn-UGAQ" elementId="org.eclipse.debug.ui.command.nextpage" commandName="Next Page of Memory" description="Load next page of memory" category="_OzVqRD0SEeW5nqFzn-UGAQ"/>
   <commands xmi:id="_OzL5BD0SEeW5nqFzn-UGAQ" elementId="org.eclipse.jdt.ui.edit.text.java.search.implementors.in.project" commandName="Implementors in Project" description="Search for implementors of the selected interface in the enclosing project" category="_OzVqTz0SEeW5nqFzn-UGAQ"/>

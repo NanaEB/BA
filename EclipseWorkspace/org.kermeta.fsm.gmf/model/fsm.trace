@@ -12,9 +12,6 @@
     <compartmentTraces
         visualID="7001"
         queryText="true"/>
-    <compartmentTraces
-        visualID="7003"
-        queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2006"
@@ -24,9 +21,6 @@
         queryText="true"/>
     <compartmentTraces
         visualID="7002"
-        queryText="true"/>
-    <compartmentTraces
-        visualID="7004"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces

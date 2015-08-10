@@ -19,8 +19,7 @@ import fsm.diagram.edit.commands.TransitionCreateCommand;
 import fsm.diagram.edit.commands.TransitionReorientCommand;
 import fsm.diagram.edit.parts.ActionEditPart;
 import fsm.diagram.edit.parts.EActionEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
 import fsm.diagram.part.FsmVisualIDRegistry;
 import fsm.diagram.providers.FsmElementTypes;
@@ -87,7 +86,7 @@ public class SteadyStateItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (FsmVisualIDRegistry.getVisualID(node)) {
-			case SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
+			case SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();
@@ -99,14 +98,6 @@ public class SteadyStateItemSemanticEditPolicy extends
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					}
-				}
-				break;
-			case SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
-				for (Iterator<?> cit = node.getChildren().iterator(); cit
-						.hasNext();) {
-					Node cnode = (Node) cit.next();
-					switch (FsmVisualIDRegistry.getVisualID(cnode)) {
 					case EActionEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),

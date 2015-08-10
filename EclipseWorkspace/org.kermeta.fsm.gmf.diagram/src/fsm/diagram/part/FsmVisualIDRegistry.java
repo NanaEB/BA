@@ -20,12 +20,10 @@ import fsm.diagram.edit.parts.FSMEditPart;
 import fsm.diagram.edit.parts.InitialStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.SteadyStateSteadyStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateEntryCompartmentEditPart;
-import fsm.diagram.edit.parts.TransientStateTransientStateExitCompartmentEditPart;
+import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
 import fsm.diagram.edit.parts.TransitionInputEditPart;
 import fsm.diagram.edit.parts.TransitionOutputEditPart;
@@ -149,25 +147,21 @@ public class FsmVisualIDRegistry {
 				return InitialStateEditPart.VISUAL_ID;
 			}
 			break;
-		case SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
+		case SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID:
 			if (FsmPackage.eINSTANCE.getAction().isSuperTypeOf(
 					domainElement.eClass())) {
 				return ActionEditPart.VISUAL_ID;
 			}
-			break;
-		case SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
 			if (FsmPackage.eINSTANCE.geteAction().isSuperTypeOf(
 					domainElement.eClass())) {
 				return EActionEditPart.VISUAL_ID;
 			}
 			break;
-		case TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
+		case TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID:
 			if (FsmPackage.eINSTANCE.getAction().isSuperTypeOf(
 					domainElement.eClass())) {
 				return Action2EditPart.VISUAL_ID;
 			}
-			break;
-		case TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
 			if (FsmPackage.eINSTANCE.geteAction().isSuperTypeOf(
 					domainElement.eClass())) {
 				return EAction2EditPart.VISUAL_ID;
@@ -213,10 +207,7 @@ public class FsmVisualIDRegistry {
 			if (SteadyStateNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+			if (SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -224,10 +215,7 @@ public class FsmVisualIDRegistry {
 			if (TransientStateNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+			if (TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -251,22 +239,18 @@ public class FsmVisualIDRegistry {
 				return true;
 			}
 			break;
-		case SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
+		case SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID:
 			if (ActionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
 			if (EActionEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
+		case TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID:
 			if (Action2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
 			if (EAction2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -325,10 +309,8 @@ public class FsmVisualIDRegistry {
 	 */
 	public static boolean isCompartmentVisualID(int visualID) {
 		switch (visualID) {
-		case SteadyStateSteadyStateEntryCompartmentEditPart.VISUAL_ID:
-		case SteadyStateSteadyStateExitCompartmentEditPart.VISUAL_ID:
-		case TransientStateTransientStateEntryCompartmentEditPart.VISUAL_ID:
-		case TransientStateTransientStateExitCompartmentEditPart.VISUAL_ID:
+		case SteadyStateSteady_entry_exit_actionsEditPart.VISUAL_ID:
+		case TransientStateTransient_entry_exit_actionsEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

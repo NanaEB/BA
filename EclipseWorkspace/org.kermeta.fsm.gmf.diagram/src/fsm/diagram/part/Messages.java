@@ -288,22 +288,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Entry1CreationTool_title;
+	public static String Action1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Entry1CreationTool_desc;
+	public static String Action1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Exit2CreationTool_title;
+	public static String Action2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Exit2CreationTool_desc;
+	public static String Action2CreationTool_desc;
 
 	/**
 	 * @generated
@@ -318,22 +318,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String SteadyStateSteadyStateEntryCompartmentEditPart_title;
+	public static String SteadyStateSteady_entry_exit_actionsEditPart_title;
 
 	/**
 	 * @generated
 	 */
-	public static String SteadyStateSteadyStateExitCompartmentEditPart_title;
-
-	/**
-	 * @generated
-	 */
-	public static String TransientStateTransientStateEntryCompartmentEditPart_title;
-
-	/**
-	 * @generated
-	 */
-	public static String TransientStateTransientStateExitCompartmentEditPart_title;
+	public static String TransientStateTransient_entry_exit_actionsEditPart_title;
 
 	/**
 	 * @generated
