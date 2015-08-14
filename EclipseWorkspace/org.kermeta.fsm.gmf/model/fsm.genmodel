@@ -19,8 +19,8 @@
     <genClasses ecoreClass="fsm.ecore#//SteadyState"/>
     <genClasses ecoreClass="fsm.ecore#//TransientState"/>
     <genClasses ecoreClass="fsm.ecore#//Transition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/input"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/output"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/guard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Transition/action"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//Transition/target"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//Transition/source"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//Transition/src"/>

@@ -58,10 +58,7 @@
       visualID="4001"
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.kermeta.org/fsm' and _eClass_.name = 'Transition')">
     <linkLabelTraces
-        visualID="6003"
-        queryText="true"/>
-    <linkLabelTraces
-        visualID="6004"
+        visualID="6001"
         queryText="true"/>
   </linkTraces>
 </trace:TraceModel>

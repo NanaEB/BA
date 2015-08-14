@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: fsm.diagram.part.FsmDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: fsm.diagram.edit.parts, 
+Export-Package: fsm.diagram.edit.parts,
  fsm.diagram.part,
  fsm.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

@@ -125,21 +125,13 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="TransitionFigure"
-          targetDecoration="//@figures.0/@descriptors.3/@actualFigure/@children.2">
+          targetDecoration="//@figures.0/@descriptors.3/@actualFigure/@children.0">
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TransitionInputFigure"
-            text="input"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="TransitionOutputFigure"
-            text="output"/>
         <children
             xsi:type="gmfgraph:PolylineDecoration"
             name="TaregetDecoration">
@@ -151,9 +143,11 @@
               x="-1"
               y="-1"/>
         </children>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransitionOutputLabel"
+            text=""/>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
     </descriptors>
@@ -246,26 +240,23 @@
       elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
+      name="TransitionOutput"
+      figure="TransitionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels
       name="eActionLabel"
       figure="eActionFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.5/@accessors.0"/>
   <labels
       name="ActionLabel"
       figure="ActionFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
       name="TransientStateName"
       figure="TransientStateFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.2/@accessors.0"/>
-  <labels
-      name="TransitionInput"
-      figure="TransitionFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
-  <labels
-      name="TransitionOutput"
-      figure="TransitionFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.3/@accessors.1"/>
 </gmfgraph:Canvas>

@@ -11,6 +11,9 @@
 	<section name="PluginImportWizard">
 	</section>
 	<section name="PDEFormActionManager">
+		<list key="RecentLaunches">
+			<item value="org.eclipse.pde.ui.runtimeWorkbenchShortcut"/>
+		</list>
 	</section>
 	<section name="targetStateView">
 	</section>

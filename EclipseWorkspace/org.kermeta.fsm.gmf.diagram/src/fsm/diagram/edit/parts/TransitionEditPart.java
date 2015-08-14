@@ -46,16 +46,10 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof TransitionInputEditPart) {
-			((TransitionInputEditPart) childEditPart)
+		if (childEditPart instanceof TransitionActionGuardEditPart) {
+			((TransitionActionGuardEditPart) childEditPart)
 					.setLabel(getPrimaryShape()
-							.getFigureTransitionInputFigure());
-			return true;
-		}
-		if (childEditPart instanceof TransitionOutputEditPart) {
-			((TransitionOutputEditPart) childEditPart)
-					.setLabel(getPrimaryShape()
-							.getFigureTransitionOutputFigure());
+							.getFigureTransitionOutputLabel());
 			return true;
 		}
 		return false;
@@ -75,10 +69,7 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof TransitionInputEditPart) {
-			return true;
-		}
-		if (childEditPart instanceof TransitionOutputEditPart) {
+		if (childEditPart instanceof TransitionActionGuardEditPart) {
 			return true;
 		}
 		return false;
@@ -122,11 +113,7 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTransitionInputFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransitionOutputFigure;
+		private WrappingLabel fFigureTransitionOutputLabel;
 
 		/**
 		 * @generated
@@ -144,17 +131,11 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 		 */
 		private void createContents() {
 
-			fFigureTransitionInputFigure = new WrappingLabel();
+			fFigureTransitionOutputLabel = new WrappingLabel();
 
-			fFigureTransitionInputFigure.setText("input");
+			fFigureTransitionOutputLabel.setText("output");
 
-			this.add(fFigureTransitionInputFigure);
-
-			fFigureTransitionOutputFigure = new WrappingLabel();
-
-			fFigureTransitionOutputFigure.setText("output");
-
-			this.add(fFigureTransitionOutputFigure);
+			this.add(fFigureTransitionOutputLabel);
 
 		}
 
@@ -175,15 +156,8 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureTransitionInputFigure() {
-			return fFigureTransitionInputFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransitionOutputFigure() {
-			return fFigureTransitionOutputFigure;
+		public WrappingLabel getFigureTransitionOutputLabel() {
+			return fFigureTransitionOutputLabel;
 		}
 
 	}

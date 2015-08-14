@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fsm.Transition#getInput <em>Input</em>}</li>
- *   <li>{@link fsm.Transition#getOutput <em>Output</em>}</li>
+ *   <li>{@link fsm.Transition#getGuard <em>Guard</em>}</li>
+ *   <li>{@link fsm.Transition#getAction <em>Action</em>}</li>
  *   <li>{@link fsm.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link fsm.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link fsm.Transition#getSrc <em>Src</em>}</li>
@@ -26,56 +26,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Transition extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Input</b></em>' attribute.
+	 * Returns the value of the '<em><b>Guard</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Guard</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' attribute.
-	 * @see #setInput(String)
-	 * @see fsm.FsmPackage#getTransition_Input()
+	 * @return the value of the '<em>Guard</em>' attribute.
+	 * @see #setGuard(String)
+	 * @see fsm.FsmPackage#getTransition_Guard()
 	 * @model
 	 * @generated
 	 */
-	String getInput();
+	String getGuard();
 
 	/**
-	 * Sets the value of the '{@link fsm.Transition#getInput <em>Input</em>}' attribute.
+	 * Sets the value of the '{@link fsm.Transition#getGuard <em>Guard</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input</em>' attribute.
-	 * @see #getInput()
+	 * @param value the new value of the '<em>Guard</em>' attribute.
+	 * @see #getGuard()
 	 * @generated
 	 */
-	void setInput(String value);
+	void setGuard(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Output</b></em>' attribute.
+	 * Returns the value of the '<em><b>Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Output</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Action</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output</em>' attribute.
-	 * @see #setOutput(String)
-	 * @see fsm.FsmPackage#getTransition_Output()
+	 * @return the value of the '<em>Action</em>' attribute.
+	 * @see #setAction(String)
+	 * @see fsm.FsmPackage#getTransition_Action()
 	 * @model
 	 * @generated
 	 */
-	String getOutput();
+	String getAction();
 
 	/**
-	 * Sets the value of the '{@link fsm.Transition#getOutput <em>Output</em>}' attribute.
+	 * Sets the value of the '{@link fsm.Transition#getAction <em>Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output</em>' attribute.
-	 * @see #getOutput()
+	 * @param value the new value of the '<em>Action</em>' attribute.
+	 * @see #getAction()
 	 * @generated
 	 */
-	void setOutput(String value);
+	void setAction(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.

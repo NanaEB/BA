@@ -12,8 +12,8 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="InitialState"
-          description="Create new InitialState">
+          title="Initial state"
+          description="Create new Initial state">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -21,7 +21,7 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="SteadyState"
+          title="Steady state"
           description="Create new SteadyState">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
@@ -30,7 +30,7 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TransientState"
+          title="Transient state"
           description="Create new TransientState">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
@@ -44,7 +44,7 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="action"
+          title="Entry action"
           description="Create new Entry Action">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
@@ -53,7 +53,7 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="action"
+          title="Exit action"
           description="Creat new Exit Action">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>

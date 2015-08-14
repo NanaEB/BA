@@ -32,7 +32,10 @@
           <domainMetaElement
               href="fsm.ecore#//Action"/>
           <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="entry/ {0}"
+              editorPattern="entry/ {0}"
+              editPattern="entry/ {0}">
             <diagramLabel
                 href="fsm.gmfgraph#ActionLabel"/>
             <features
@@ -53,7 +56,10 @@
           <domainMetaElement
               href="fsm.ecore#//eAction"/>
           <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="exit/ {0}"
+              editorPattern="exit/ {0}"
+              editPattern="exit/ {0}">
             <diagramLabel
                 href="fsm.gmfgraph#eActionLabel"/>
             <features
@@ -100,7 +106,9 @@
               href="fsm.ecore#//Action"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping"
-              editorPattern="">
+              viewPattern="entry/ {0}"
+              editorPattern="entry/ {0}"
+              editPattern="entry/ {0}">
             <diagramLabel
                 href="fsm.gmfgraph#ActionLabel"/>
             <features
@@ -121,7 +129,10 @@
           <domainMetaElement
               href="fsm.ecore#//eAction"/>
           <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="exit/ {0}"
+              editorPattern="exit/ {0}"
+              editPattern="exit/ {0}">
             <diagramLabel
                 href="fsm.gmfgraph#eActionLabel"/>
             <features
@@ -158,18 +169,16 @@
     <domainMetaElement
         href="fsm.ecore#//Transition"/>
     <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <diagramLabel
-          href="fsm.gmfgraph#TransitionInput"/>
-      <features
-          href="fsm.ecore#//Transition/input"/>
-    </labelMappings>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
+        xsi:type="gmfmap:FeatureLabelMapping"
+        viewPattern="[{1}] / {0}"
+        editorPattern="[{1}] / {0}"
+        editPattern="[{1}] / {0}">
       <diagramLabel
           href="fsm.gmfgraph#TransitionOutput"/>
       <features
-          href="fsm.ecore#//Transition/output"/>
+          href="fsm.ecore#//Transition/action"/>
+      <features
+          href="fsm.ecore#//Transition/guard"/>
     </labelMappings>
     <containmentFeature
         href="fsm.ecore#//SuperState/outTrans"/>
@@ -180,7 +189,7 @@
         href="fsm.gmfgraph#Transition"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="fsm.ecore#//Transition/src"/>
+        href="fsm.ecore#//Transition/source"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="fsm.ecore#//Transition/target"/>

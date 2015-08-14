@@ -20,8 +20,7 @@ import fsm.diagram.edit.parts.EActionExitLabel2EditPart;
 import fsm.diagram.edit.parts.EActionExitLabelEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
-import fsm.diagram.edit.parts.TransitionInputEditPart;
-import fsm.diagram.edit.parts.TransitionOutputEditPart;
+import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
 import fsm.diagram.parsers.MessageFormatParser;
 import fsm.diagram.part.FsmVisualIDRegistry;
 
@@ -80,6 +79,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getAction_EntryLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
+			parser.setViewPattern("entry/ {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("entry/ {0}"); //$NON-NLS-1$
+			parser.setEditPattern("entry/ {0}"); //$NON-NLS-1$
 			actionEntryLabel_5006Parser = parser;
 		}
 		return actionEntryLabel_5006Parser;
@@ -98,6 +100,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.geteAction_ExitLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
+			parser.setViewPattern("exit/ {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("exit/ {0}"); //$NON-NLS-1$
+			parser.setEditPattern("exit/ {0}"); //$NON-NLS-1$
 			eActionExitLabel_5008Parser = parser;
 		}
 		return eActionExitLabel_5008Parser;
@@ -116,6 +121,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getAction_EntryLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
+			parser.setViewPattern("entry/ {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("entry/ {0}"); //$NON-NLS-1$
+			parser.setEditPattern("entry/ {0}"); //$NON-NLS-1$
 			actionEntryLabel_5007Parser = parser;
 		}
 		return actionEntryLabel_5007Parser;
@@ -134,6 +142,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.geteAction_ExitLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
+			parser.setViewPattern("exit/ {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("exit/ {0}"); //$NON-NLS-1$
+			parser.setEditPattern("exit/ {0}"); //$NON-NLS-1$
 			eActionExitLabel_5009Parser = parser;
 		}
 		return eActionExitLabel_5009Parser;
@@ -142,37 +153,23 @@ public class FsmParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser transitionInput_6003Parser;
+	private IParser transitionActionGuard_6001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTransitionInput_6003Parser() {
-		if (transitionInput_6003Parser == null) {
-			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
-					.getTransition_Input() };
+	private IParser getTransitionActionGuard_6001Parser() {
+		if (transitionActionGuard_6001Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					FsmPackage.eINSTANCE.getTransition_Action(),
+					FsmPackage.eINSTANCE.getTransition_Guard() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			transitionInput_6003Parser = parser;
+			parser.setViewPattern("[{1}] / {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("[{1}] / {0}"); //$NON-NLS-1$
+			parser.setEditPattern("[{1}] / {0}"); //$NON-NLS-1$
+			transitionActionGuard_6001Parser = parser;
 		}
-		return transitionInput_6003Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser transitionOutput_6004Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getTransitionOutput_6004Parser() {
-		if (transitionOutput_6004Parser == null) {
-			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
-					.getTransition_Output() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			transitionOutput_6004Parser = parser;
-		}
-		return transitionOutput_6004Parser;
+		return transitionActionGuard_6001Parser;
 	}
 
 	/**
@@ -192,10 +189,8 @@ public class FsmParserProvider extends AbstractProvider implements
 			return getActionEntryLabel_5007Parser();
 		case EActionExitLabel2EditPart.VISUAL_ID:
 			return getEActionExitLabel_5009Parser();
-		case TransitionInputEditPart.VISUAL_ID:
-			return getTransitionInput_6003Parser();
-		case TransitionOutputEditPart.VISUAL_ID:
-			return getTransitionOutput_6004Parser();
+		case TransitionActionGuardEditPart.VISUAL_ID:
+			return getTransitionActionGuard_6001Parser();
 		}
 		return null;
 	}

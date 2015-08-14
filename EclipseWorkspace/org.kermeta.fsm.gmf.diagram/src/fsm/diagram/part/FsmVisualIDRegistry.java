@@ -24,9 +24,8 @@ import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
+import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
-import fsm.diagram.edit.parts.TransitionInputEditPart;
-import fsm.diagram.edit.parts.TransitionOutputEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -256,10 +255,7 @@ public class FsmVisualIDRegistry {
 			}
 			break;
 		case TransitionEditPart.VISUAL_ID:
-			if (TransitionInputEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (TransitionOutputEditPart.VISUAL_ID == nodeVisualID) {
+			if (TransitionActionGuardEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

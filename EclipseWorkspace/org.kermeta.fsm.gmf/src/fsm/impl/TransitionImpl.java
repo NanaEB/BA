@@ -25,8 +25,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fsm.impl.TransitionImpl#getInput <em>Input</em>}</li>
- *   <li>{@link fsm.impl.TransitionImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getGuard <em>Guard</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getAction <em>Action</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getSrc <em>Src</em>}</li>
@@ -37,44 +37,44 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition {
 	/**
-	 * The default value of the '{@link #getInput() <em>Input</em>}' attribute.
+	 * The default value of the '{@link #getGuard() <em>Guard</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput()
+	 * @see #getGuard()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_EDEFAULT = null;
+	protected static final String GUARD_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' attribute.
+	 * The cached value of the '{@link #getGuard() <em>Guard</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput()
+	 * @see #getGuard()
 	 * @generated
 	 * @ordered
 	 */
-	protected String input = INPUT_EDEFAULT;
+	protected String guard = GUARD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getOutput() <em>Output</em>}' attribute.
+	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput()
+	 * @see #getAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OUTPUT_EDEFAULT = null;
+	protected static final String ACTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getOutput() <em>Output</em>}' attribute.
+	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput()
+	 * @see #getAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected String output = OUTPUT_EDEFAULT;
+	protected String action = ACTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -120,8 +120,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInput() {
-		return input;
+	public String getGuard() {
+		return guard;
 	}
 
 	/**
@@ -129,11 +129,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInput(String newInput) {
-		String oldInput = input;
-		input = newInput;
+	public void setGuard(String newGuard) {
+		String oldGuard = guard;
+		guard = newGuard;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__INPUT, oldInput, input));
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__GUARD, oldGuard, guard));
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOutput() {
-		return output;
+	public String getAction() {
+		return action;
 	}
 
 	/**
@@ -150,11 +150,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutput(String newOutput) {
-		String oldOutput = output;
-		output = newOutput;
+	public void setAction(String newAction) {
+		String oldAction = action;
+		action = newAction;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__OUTPUT, oldOutput, output));
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__ACTION, oldAction, action));
 	}
 
 	/**
@@ -326,10 +326,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__INPUT:
-				return getInput();
-			case FsmPackage.TRANSITION__OUTPUT:
-				return getOutput();
+			case FsmPackage.TRANSITION__GUARD:
+				return getGuard();
+			case FsmPackage.TRANSITION__ACTION:
+				return getAction();
 			case FsmPackage.TRANSITION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -350,11 +350,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__INPUT:
-				setInput((String)newValue);
+			case FsmPackage.TRANSITION__GUARD:
+				setGuard((String)newValue);
 				return;
-			case FsmPackage.TRANSITION__OUTPUT:
-				setOutput((String)newValue);
+			case FsmPackage.TRANSITION__ACTION:
+				setAction((String)newValue);
 				return;
 			case FsmPackage.TRANSITION__TARGET:
 				setTarget((State)newValue);
@@ -377,11 +377,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__INPUT:
-				setInput(INPUT_EDEFAULT);
+			case FsmPackage.TRANSITION__GUARD:
+				setGuard(GUARD_EDEFAULT);
 				return;
-			case FsmPackage.TRANSITION__OUTPUT:
-				setOutput(OUTPUT_EDEFAULT);
+			case FsmPackage.TRANSITION__ACTION:
+				setAction(ACTION_EDEFAULT);
 				return;
 			case FsmPackage.TRANSITION__TARGET:
 				setTarget((State)null);
@@ -404,10 +404,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FsmPackage.TRANSITION__INPUT:
-				return INPUT_EDEFAULT == null ? input != null : !INPUT_EDEFAULT.equals(input);
-			case FsmPackage.TRANSITION__OUTPUT:
-				return OUTPUT_EDEFAULT == null ? output != null : !OUTPUT_EDEFAULT.equals(output);
+			case FsmPackage.TRANSITION__GUARD:
+				return GUARD_EDEFAULT == null ? guard != null : !GUARD_EDEFAULT.equals(guard);
+			case FsmPackage.TRANSITION__ACTION:
+				return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
 			case FsmPackage.TRANSITION__TARGET:
 				return target != null;
 			case FsmPackage.TRANSITION__SOURCE:
@@ -428,10 +428,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (input: ");
-		result.append(input);
-		result.append(", output: ");
-		result.append(output);
+		result.append(" (guard: ");
+		result.append(guard);
+		result.append(", action: ");
+		result.append(action);
 		result.append(')');
 		return result.toString();
 	}

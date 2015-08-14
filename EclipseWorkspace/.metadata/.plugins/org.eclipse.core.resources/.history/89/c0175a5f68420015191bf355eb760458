@@ -1,0 +1,29 @@
+	package fsm.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class TransientStateTransient_entry_exit_actionsItemSemanticEditPolicy extends fsm.diagram.edit.policies.FsmBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public TransientStateTransient_entry_exit_actionsItemSemanticEditPolicy() {
+				super(fsm.diagram.providers.FsmElementTypes.TransientState_2006);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (fsm.diagram.providers.FsmElementTypes.Action_3002 == req.getElementType()) {
+	return getGEFWrapper(new fsm.diagram.edit.commands.Action2CreateCommand(req));
+}
+		if (fsm.diagram.providers.FsmElementTypes.EAction_3004 == req.getElementType()) {
+	return getGEFWrapper(new fsm.diagram.edit.commands.EAction2CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

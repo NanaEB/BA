@@ -57,9 +57,8 @@ import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
+import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
-import fsm.diagram.edit.parts.TransitionInputEditPart;
-import fsm.diagram.edit.parts.TransitionOutputEditPart;
 import fsm.diagram.part.FsmVisualIDRegistry;
 
 /**
@@ -618,20 +617,14 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
-		Node label6003 = createLabel(edge,
-				FsmVisualIDRegistry.getType(TransitionInputEditPart.VISUAL_ID));
-		label6003.setLayoutConstraint(NotationFactory.eINSTANCE
+		Node label6001 = createLabel(edge,
+				FsmVisualIDRegistry
+						.getType(TransitionActionGuardEditPart.VISUAL_ID));
+		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location6003 = (Location) label6003.getLayoutConstraint();
-		location6003.setX(0);
-		location6003.setY(40);
-		Node label6004 = createLabel(edge,
-				FsmVisualIDRegistry.getType(TransitionOutputEditPart.VISUAL_ID));
-		label6004.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location6004 = (Location) label6004.getLayoutConstraint();
-		location6004.setX(0);
-		location6004.setY(60);
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(0);
+		location6001.setY(40);
 		return edge;
 	}
 

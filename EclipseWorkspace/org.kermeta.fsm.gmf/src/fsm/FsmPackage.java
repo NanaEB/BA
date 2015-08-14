@@ -343,22 +343,22 @@ public interface FsmPackage extends EPackage {
 	int TRANSITION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Input</b></em>' attribute.
+	 * The feature id for the '<em><b>Guard</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__INPUT = 0;
+	int TRANSITION__GUARD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * The feature id for the '<em><b>Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__OUTPUT = 1;
+	int TRANSITION__ACTION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -633,26 +633,26 @@ public interface FsmPackage extends EPackage {
 	EClass getTransition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fsm.Transition#getInput <em>Input</em>}'.
+	 * Returns the meta object for the attribute '{@link fsm.Transition#getGuard <em>Guard</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input</em>'.
-	 * @see fsm.Transition#getInput()
+	 * @return the meta object for the attribute '<em>Guard</em>'.
+	 * @see fsm.Transition#getGuard()
 	 * @see #getTransition()
 	 * @generated
 	 */
-	EAttribute getTransition_Input();
+	EAttribute getTransition_Guard();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fsm.Transition#getOutput <em>Output</em>}'.
+	 * Returns the meta object for the attribute '{@link fsm.Transition#getAction <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Output</em>'.
-	 * @see fsm.Transition#getOutput()
+	 * @return the meta object for the attribute '<em>Action</em>'.
+	 * @see fsm.Transition#getAction()
 	 * @see #getTransition()
 	 * @generated
 	 */
-	EAttribute getTransition_Output();
+	EAttribute getTransition_Action();
 
 	/**
 	 * Returns the meta object for the reference '{@link fsm.Transition#getTarget <em>Target</em>}'.
@@ -885,20 +885,20 @@ public interface FsmPackage extends EPackage {
 		EClass TRANSITION = eINSTANCE.getTransition();
 
 		/**
-		 * The meta object literal for the '<em><b>Input</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Guard</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRANSITION__INPUT = eINSTANCE.getTransition_Input();
+		EAttribute TRANSITION__GUARD = eINSTANCE.getTransition_Guard();
 
 		/**
-		 * The meta object literal for the '<em><b>Output</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRANSITION__OUTPUT = eINSTANCE.getTransition_Output();
+		EAttribute TRANSITION__ACTION = eINSTANCE.getTransition_Action();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.

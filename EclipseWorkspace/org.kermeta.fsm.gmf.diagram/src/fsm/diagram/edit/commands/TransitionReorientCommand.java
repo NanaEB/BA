@@ -83,7 +83,7 @@ public class TransitionReorientCommand extends EditElementCommand {
 		if (!(oldEnd instanceof State && newEnd instanceof State)) {
 			return false;
 		}
-		SuperState source = getLink().getSrc();
+		SuperState source = getLink().getSource();
 		if (!(getLink().eContainer() instanceof SuperState)) {
 			return false;
 		}
@@ -115,7 +115,7 @@ public class TransitionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientSource() throws ExecutionException {
-		getLink().setSrc(getNewSource());
+		getLink().setSource(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 

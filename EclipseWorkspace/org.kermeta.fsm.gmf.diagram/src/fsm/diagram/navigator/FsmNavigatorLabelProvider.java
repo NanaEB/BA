@@ -30,8 +30,8 @@ import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
+import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
-import fsm.diagram.edit.parts.TransitionInputEditPart;
 import fsm.diagram.part.FsmDiagramEditorPlugin;
 import fsm.diagram.part.FsmVisualIDRegistry;
 import fsm.diagram.providers.FsmElementTypes;
@@ -337,14 +337,15 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 		IParser parser = FsmParserProvider.getParser(
 				FsmElementTypes.Transition_4001,
 				view.getElement() != null ? view.getElement() : view,
-				FsmVisualIDRegistry.getType(TransitionInputEditPart.VISUAL_ID));
+				FsmVisualIDRegistry
+						.getType(TransitionActionGuardEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			FsmDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6003); //$NON-NLS-1$
+					"Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

@@ -468,7 +468,7 @@ public class FsmDiagramUpdater {
 				continue;
 			}
 			State dst = link.getTarget();
-			SuperState src = link.getSrc();
+			SuperState src = link.getSource();
 			result.add(new FsmLinkDescriptor(src, dst, link,
 					FsmElementTypes.Transition_4001,
 					TransitionEditPart.VISUAL_ID));
@@ -496,7 +496,7 @@ public class FsmDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			SuperState src = link.getSrc();
+			SuperState src = link.getSource();
 			result.add(new FsmLinkDescriptor(src, target, link,
 					FsmElementTypes.Transition_4001,
 					TransitionEditPart.VISUAL_ID));
@@ -535,7 +535,7 @@ public class FsmDiagramUpdater {
 				continue;
 			}
 			State dst = link.getTarget();
-			SuperState src = link.getSrc();
+			SuperState src = link.getSource();
 			if (src != source) {
 				continue;
 			}
