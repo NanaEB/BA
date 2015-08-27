@@ -1,0 +1,7 @@
+# Tracing options for the org.kermeta.fsm.gmf.diagram plug-in
+
+# Common issues
+org.kermeta.fsm.gmf.diagram/debug=false
+
+# Visual IDs
+org.kermeta.fsm.gmf.diagram/debug/visualID=false
