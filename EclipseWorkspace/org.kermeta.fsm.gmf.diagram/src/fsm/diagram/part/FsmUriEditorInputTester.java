@@ -17,7 +17,7 @@ public class FsmUriEditorInputTester extends PropertyTester {
 			return false;
 		}
 		URIEditorInput editorInput = (URIEditorInput) receiver;
-		return "fsm_diagram".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
+		return "fsm".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
 	}
 
 }

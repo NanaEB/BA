@@ -46,8 +46,8 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof TransitionActionGuardEditPart) {
-			((TransitionActionGuardEditPart) childEditPart)
+		if (childEditPart instanceof TransitionEffectGuardEditPart) {
+			((TransitionEffectGuardEditPart) childEditPart)
 					.setLabel(getPrimaryShape()
 							.getFigureTransitionOutputLabel());
 			return true;
@@ -69,7 +69,7 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof TransitionActionGuardEditPart) {
+		if (childEditPart instanceof TransitionEffectGuardEditPart) {
 			return true;
 		}
 		return false;
@@ -133,7 +133,7 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 
 			fFigureTransitionOutputLabel = new WrappingLabel();
 
-			fFigureTransitionOutputLabel.setText("output");
+			fFigureTransitionOutputLabel.setText("");
 
 			this.add(fFigureTransitionOutputLabel);
 

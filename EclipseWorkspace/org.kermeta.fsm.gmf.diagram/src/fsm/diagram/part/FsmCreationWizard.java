@@ -37,11 +37,6 @@ public class FsmCreationWizard extends Wizard implements INewWizard {
 	/**
 	 * @generated
 	 */
-	protected FsmCreationWizardPage domainModelFilePage;
-
-	/**
-	 * @generated
-	 */
 	protected Resource diagram;
 
 	/**
@@ -102,32 +97,12 @@ public class FsmCreationWizard extends Wizard implements INewWizard {
 	 */
 	public void addPages() {
 		diagramModelFilePage = new FsmCreationWizardPage(
-				"DiagramModelFile", getSelection(), "fsm_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+				"DiagramModelFile", getSelection(), "fsm"); //$NON-NLS-1$ //$NON-NLS-2$
 		diagramModelFilePage
 				.setTitle(Messages.FsmCreationWizard_DiagramModelFilePageTitle);
 		diagramModelFilePage
 				.setDescription(Messages.FsmCreationWizard_DiagramModelFilePageDescription);
 		addPage(diagramModelFilePage);
-
-		domainModelFilePage = new FsmCreationWizardPage(
-				"DomainModelFile", getSelection(), "fsm") { //$NON-NLS-1$ //$NON-NLS-2$
-
-			public void setVisible(boolean visible) {
-				if (visible) {
-					String fileName = diagramModelFilePage.getFileName();
-					fileName = fileName.substring(0, fileName.length()
-							- ".fsm_diagram".length()); //$NON-NLS-1$
-					setFileName(FsmDiagramEditorUtil.getUniqueFileName(
-							getContainerFullPath(), fileName, "fsm")); //$NON-NLS-1$
-				}
-				super.setVisible(visible);
-			}
-		};
-		domainModelFilePage
-				.setTitle(Messages.FsmCreationWizard_DomainModelFilePageTitle);
-		domainModelFilePage
-				.setDescription(Messages.FsmCreationWizard_DomainModelFilePageDescription);
-		addPage(domainModelFilePage);
 	}
 
 	/**
@@ -139,8 +114,7 @@ public class FsmCreationWizard extends Wizard implements INewWizard {
 			protected void execute(IProgressMonitor monitor)
 					throws CoreException, InterruptedException {
 				diagram = FsmDiagramEditorUtil.createDiagram(
-						diagramModelFilePage.getURI(),
-						domainModelFilePage.getURI(), monitor);
+						diagramModelFilePage.getURI(), monitor);
 				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
 					try {
 						FsmDiagramEditorUtil.openDiagram(diagram);

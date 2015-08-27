@@ -4,13 +4,13 @@
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
-      <fileTypes type="text" extension="fsm_diagram"/>
+      <fileTypes type="text" extension="fsm"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
       <?gmfgen generated="true"?>
       <parser
-         type="fsm_diagram"
+         type="fsm"
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
@@ -21,7 +21,7 @@
          id="fsm.diagram.part.FsmDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/FsmDiagramFile.gif"
-         extensions="fsm_diagram"
+         extensions="fsm"
          default="true"
          class="fsm.diagram.part.FsmDiagramEditor"
          matchingStrategy="fsm.diagram.part.FsmMatchingStrategy"
@@ -461,7 +461,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="fsm_diagram"/>
+        	      <test property="org.eclipse.core.resources.extension" value="fsm"/>
                </and>
                <instanceof value="fsm.diagram.navigator.FsmAbstractNavigatorItem"/>
             </or>
@@ -478,7 +478,7 @@
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
-        	         <test property="org.eclipse.core.resources.extension" value="fsm_diagram"/>
+        	         <test property="org.eclipse.core.resources.extension" value="fsm"/>
                   </and>
                   <instanceof value="fsm.diagram.navigator.FsmAbstractNavigatorItem"/>
                </or>

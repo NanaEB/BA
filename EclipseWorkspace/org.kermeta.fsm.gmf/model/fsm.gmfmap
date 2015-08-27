@@ -176,9 +176,13 @@
       <diagramLabel
           href="fsm.gmfgraph#TransitionOutput"/>
       <features
-          href="fsm.ecore#//Transition/action"/>
+          href="fsm.ecore#//Transition/Effect"/>
       <features
-          href="fsm.ecore#//Transition/guard"/>
+          href="fsm.ecore#//Transition/Guard"/>
+      <editableFeatures
+          href="fsm.ecore#//Transition/Effect"/>
+      <editableFeatures
+          href="fsm.ecore#//Transition/Guard"/>
     </labelMappings>
     <containmentFeature
         href="fsm.ecore#//SuperState/outTrans"/>

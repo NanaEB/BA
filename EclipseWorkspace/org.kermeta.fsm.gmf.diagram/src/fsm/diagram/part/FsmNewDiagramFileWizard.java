@@ -82,7 +82,7 @@ public class FsmNewDiagramFileWizard extends Wizard {
 		}
 		myFileCreationPage.setContainerFullPath(filePath);
 		myFileCreationPage.setFileName(FsmDiagramEditorUtil.getUniqueFileName(
-				filePath, fileName, "fsm_diagram")); //$NON-NLS-1$
+				filePath, fileName, "fsm")); //$NON-NLS-1$
 
 		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(
 				Messages.FsmNewDiagramFileWizard_RootSelectionPageName);
@@ -136,6 +136,7 @@ public class FsmNewDiagramFileWizard extends Wizard {
 						FSMEditPart.MODEL_ID,
 						FsmDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 				diagramResource.getContents().add(diagram);
+				diagramResource.getContents().add(diagram.getElement());
 				return CommandResult.newOKCommandResult();
 			}
 		};

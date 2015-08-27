@@ -57,8 +57,8 @@ import fsm.diagram.edit.parts.SteadyStateSteady_entry_exit_actionsEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateTransient_entry_exit_actionsEditPart;
-import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
+import fsm.diagram.edit.parts.TransitionEffectGuardEditPart;
 import fsm.diagram.part.FsmVisualIDRegistry;
 
 /**
@@ -619,7 +619,7 @@ public class FsmViewProvider extends AbstractProvider implements IViewProvider {
 		}
 		Node label6001 = createLabel(edge,
 				FsmVisualIDRegistry
-						.getType(TransitionActionGuardEditPart.VISUAL_ID));
+						.getType(TransitionEffectGuardEditPart.VISUAL_ID));
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
 		Location location6001 = (Location) label6001.getLayoutConstraint();

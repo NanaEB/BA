@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link fsm.Transition#getGuard <em>Guard</em>}</li>
- *   <li>{@link fsm.Transition#getAction <em>Action</em>}</li>
+ *   <li>{@link fsm.Transition#getEffect <em>Effect</em>}</li>
  *   <li>{@link fsm.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link fsm.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link fsm.Transition#getSrc <em>Src</em>}</li>
@@ -52,30 +52,30 @@ public interface Transition extends EObject {
 	void setGuard(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Action</b></em>' attribute.
+	 * Returns the value of the '<em><b>Effect</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Action</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Effect</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action</em>' attribute.
-	 * @see #setAction(String)
-	 * @see fsm.FsmPackage#getTransition_Action()
+	 * @return the value of the '<em>Effect</em>' attribute.
+	 * @see #setEffect(String)
+	 * @see fsm.FsmPackage#getTransition_Effect()
 	 * @model
 	 * @generated
 	 */
-	String getAction();
+	String getEffect();
 
 	/**
-	 * Sets the value of the '{@link fsm.Transition#getAction <em>Action</em>}' attribute.
+	 * Sets the value of the '{@link fsm.Transition#getEffect <em>Effect</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Action</em>' attribute.
-	 * @see #getAction()
+	 * @param value the new value of the '<em>Effect</em>' attribute.
+	 * @see #getEffect()
 	 * @generated
 	 */
-	void setAction(String value);
+	void setEffect(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.

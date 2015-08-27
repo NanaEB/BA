@@ -20,7 +20,7 @@ import fsm.diagram.edit.parts.EActionExitLabel2EditPart;
 import fsm.diagram.edit.parts.EActionExitLabelEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
-import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
+import fsm.diagram.edit.parts.TransitionEffectGuardEditPart;
 import fsm.diagram.parsers.MessageFormatParser;
 import fsm.diagram.part.FsmVisualIDRegistry;
 
@@ -153,23 +153,27 @@ public class FsmParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser transitionActionGuard_6001Parser;
+	private IParser transitionEffectGuard_6001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTransitionActionGuard_6001Parser() {
-		if (transitionActionGuard_6001Parser == null) {
+	private IParser getTransitionEffectGuard_6001Parser() {
+		if (transitionEffectGuard_6001Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					FsmPackage.eINSTANCE.getTransition_Action(),
+					FsmPackage.eINSTANCE.getTransition_Effect(),
 					FsmPackage.eINSTANCE.getTransition_Guard() };
-			MessageFormatParser parser = new MessageFormatParser(features);
+			EAttribute[] editableFeatures = new EAttribute[] {
+					FsmPackage.eINSTANCE.getTransition_Effect(),
+					FsmPackage.eINSTANCE.getTransition_Guard() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
 			parser.setViewPattern("[{1}] / {0}"); //$NON-NLS-1$
 			parser.setEditorPattern("[{1}] / {0}"); //$NON-NLS-1$
 			parser.setEditPattern("[{1}] / {0}"); //$NON-NLS-1$
-			transitionActionGuard_6001Parser = parser;
+			transitionEffectGuard_6001Parser = parser;
 		}
-		return transitionActionGuard_6001Parser;
+		return transitionEffectGuard_6001Parser;
 	}
 
 	/**
@@ -189,8 +193,8 @@ public class FsmParserProvider extends AbstractProvider implements
 			return getActionEntryLabel_5007Parser();
 		case EActionExitLabel2EditPart.VISUAL_ID:
 			return getEActionExitLabel_5009Parser();
-		case TransitionActionGuardEditPart.VISUAL_ID:
-			return getTransitionActionGuard_6001Parser();
+		case TransitionEffectGuardEditPart.VISUAL_ID:
+			return getTransitionEffectGuard_6001Parser();
 		}
 		return null;
 	}

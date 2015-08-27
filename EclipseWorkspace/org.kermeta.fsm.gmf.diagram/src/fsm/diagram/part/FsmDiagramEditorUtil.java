@@ -137,7 +137,7 @@ public class FsmDiagramEditorUtil {
 	 * This method should be called within a workspace modify operation since it creates resources.
 	 * @generated
 	 */
-	public static Resource createDiagram(URI diagramURI, URI modelURI,
+	public static Resource createDiagram(URI diagramURI,
 			IProgressMonitor progressMonitor) {
 		TransactionalEditingDomain editingDomain = GMFEditingDomainFactory.INSTANCE
 				.createEditingDomain();
@@ -145,8 +145,6 @@ public class FsmDiagramEditorUtil {
 				Messages.FsmDiagramEditorUtil_CreateDiagramProgressTask, 3);
 		final Resource diagramResource = editingDomain.getResourceSet()
 				.createResource(diagramURI);
-		final Resource modelResource = editingDomain.getResourceSet()
-				.createResource(modelURI);
 		final String diagramName = diagramURI.lastSegment();
 		AbstractTransactionalCommand command = new AbstractTransactionalCommand(
 				editingDomain,
@@ -156,7 +154,7 @@ public class FsmDiagramEditorUtil {
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
 				fsm.FSM model = createInitialModel();
-				attachModelToResource(model, modelResource);
+				attachModelToResource(model, diagramResource);
 
 				Diagram diagram = ViewService.createDiagram(model,
 						FSMEditPart.MODEL_ID,
@@ -168,8 +166,7 @@ public class FsmDiagramEditorUtil {
 				}
 
 				try {
-					modelResource.save(fsm.diagram.part.FsmDiagramEditorUtil
-							.getSaveOptions());
+
 					diagramResource.save(fsm.diagram.part.FsmDiagramEditorUtil
 							.getSaveOptions());
 				} catch (IOException e) {
@@ -187,7 +184,7 @@ public class FsmDiagramEditorUtil {
 			FsmDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}

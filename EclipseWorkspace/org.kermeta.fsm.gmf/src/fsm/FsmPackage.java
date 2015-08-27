@@ -352,13 +352,13 @@ public interface FsmPackage extends EPackage {
 	int TRANSITION__GUARD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Action</b></em>' attribute.
+	 * The feature id for the '<em><b>Effect</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__ACTION = 1;
+	int TRANSITION__EFFECT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -644,15 +644,15 @@ public interface FsmPackage extends EPackage {
 	EAttribute getTransition_Guard();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fsm.Transition#getAction <em>Action</em>}'.
+	 * Returns the meta object for the attribute '{@link fsm.Transition#getEffect <em>Effect</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Action</em>'.
-	 * @see fsm.Transition#getAction()
+	 * @return the meta object for the attribute '<em>Effect</em>'.
+	 * @see fsm.Transition#getEffect()
 	 * @see #getTransition()
 	 * @generated
 	 */
-	EAttribute getTransition_Action();
+	EAttribute getTransition_Effect();
 
 	/**
 	 * Returns the meta object for the reference '{@link fsm.Transition#getTarget <em>Target</em>}'.
@@ -893,12 +893,12 @@ public interface FsmPackage extends EPackage {
 		EAttribute TRANSITION__GUARD = eINSTANCE.getTransition_Guard();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Effect</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRANSITION__ACTION = eINSTANCE.getTransition_Action();
+		EAttribute TRANSITION__EFFECT = eINSTANCE.getTransition_Effect();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
