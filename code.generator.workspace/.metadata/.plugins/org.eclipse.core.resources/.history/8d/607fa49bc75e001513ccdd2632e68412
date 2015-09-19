@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+#define FSM_DEBUG      
+#include <stdio.h>
+#include <string.h>
+#include <omnetpp.h>
+		
+		
+class FSM: public cSimpleModule{
+	cFSM fsm;
+	enum {	f
+			INIT = 0,
+			
+ 		 };
+
+public:
+    FSM();
+    virtual ~FSM();
+
+protected:
+    virtual void initialize();
+    virtual void handleMessage(cMessage *msg);
+};
+
+Define_Module(FSM);
+
+FSM::FSM() {}
+
+FSM::~FSM() {}
+
+void Tic::initialize() {
+
+    fsm.setName("fsm");
+
+}
+
+
+void FSM::handleMessage(cMessage *msg) {
+
+	FSM_Switch(fsm){
+		
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+		  
+	}
+}		
+		
+	
+  
