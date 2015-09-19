@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsm="http://www.kermeta.org/fsm">
+  <state xsi:type="fsm:SteadyState" name="a">
+    <outTrans Guard="guardab" Effect="effectab" target="//@state[name='b']" source="//@state[name='a']"/>
+    <outTrans Guard="" Effect="effectac" target="//@state[name='c']" source="//@state[name='a']"/>
+  </state>
+  <state xsi:type="fsm:TransientState" name="b">
+    <outTrans Guard="guardbc" Effect="effectbc" target="//@state[name='c']" source="//@state[name='b']"/>
+  </state>
+  <state xsi:type="fsm:TransientState" name="c">
+    <outTrans Guard="guardcd" Effect="" target="//@state[name='d']" source="//@state[name='c']"/>
+  </state>
+  <state xsi:type="fsm:SteadyState" name="d">
+    <outTrans target="//@state[name='a']" source="//@state[name='d']"/>
+  </state>
+  <state xsi:type="fsm:SteadyState"/>
+  <intialState>
+    <outTrans Guard="hallo" Effect="jaBitte()" target="//@state[name='a']" source="//@intialState"/>
+    <outTrans target="//@state[name=null]" source="//@intialState"/>
+  </intialState>
+</fsm:FSM>
