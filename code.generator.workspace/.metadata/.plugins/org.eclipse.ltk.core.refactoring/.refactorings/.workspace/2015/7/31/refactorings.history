@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;CodeGenerator/src/source.out.xml&apos;" deleteContents="false" description="Delete resource &apos;CodeGenerator/src/source.out.xml&apos;" element1="/CodeGenerator/src/source.out.xml" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1438334092913"/>&#x0A;<refactoring comment="Delete resource &apos;CodeGenerator/src/source.out.xml&apos;" deleteContents="false" description="Delete resource &apos;CodeGenerator/src/source.out.xml&apos;" element1="/CodeGenerator/src/source.out.xml" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1438347387058"/>
-</session>

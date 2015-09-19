@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+C:\Users\User\Desktop\um xml hochzulade dann loeschen\BA\code.generator.workspace\.metadata\.plugins\org.eclipse.jdt.core
-1574771235.index
-440035656.index
