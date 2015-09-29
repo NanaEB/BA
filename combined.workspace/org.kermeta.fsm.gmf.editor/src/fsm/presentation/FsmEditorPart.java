@@ -74,7 +74,7 @@ public abstract class FsmEditorPart extends EditorPart implements IMenuListener,
 	/**
 	 * This creates a context menu for the viewer and adds a listener as well registering the menu for extension.
 	 */
-	protected void createContextMenuFor(StructuredViewer viewer) {
+	public void createContextMenuFor(StructuredViewer viewer) {
 		MenuManager contextMenu = new MenuManager("#PopUp");
 		contextMenu.add(new Separator("additions"));
 		contextMenu.setRemoveAllWhenShown(true);

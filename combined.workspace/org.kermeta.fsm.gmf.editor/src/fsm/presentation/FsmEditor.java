@@ -10,8 +10,10 @@ package fsm.presentation;
 
 
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -20,6 +22,15 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
@@ -108,6 +119,7 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener;
+import org.eclipse.ui.IPathEditorInput;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -125,6 +137,16 @@ import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 //import org.kermeta.fsm.gmf.diagram.part.FsmDiagramEditor;
 //import org.example.emfgmf.topicmap.provider.TopicmapItemProviderAdapterFactory;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -415,6 +437,18 @@ public class FsmEditor
 	protected IResourceChangeListener resourceChangeListener =
 		new IResourceChangeListener() {
 			public void resourceChanged(IResourceChangeEvent event) {
+				try {
+					try {
+						transform();
+					} catch (TransformerException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} catch (TransformerFactoryConfigurationError e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println("---------------------------------------------------------resourceChanged!");
 				// Only listening to these.
 				// if (event.getType() == IResourceDelta.POST_CHANGE)
 				{
@@ -924,15 +958,19 @@ public class FsmEditor
 //                pageIndex = addPage(tableTreeEditorPart, getWrappedInput());
 //                setPageText(pageIndex, getString("_UI_TreeWithColumnsPage_label"));
                 
-                // This is the page for the graphical diagram viewer.
+                // This is the page for the graphical Design viewer.
                 diagramEditor = new FsmDiagramEditor();
                 pageIndex = addPage(diagramEditor, getWrappedInput());
                 setPageText(pageIndex, "Design");
                 
-                // This is the page for the Source diagram viewer.
+                // This is the page for the graphical Source viewer.
                 editor = new TextEditor();
                 pageIndex = addPage(editor, getWrappedInput());
     			setPageText(pageIndex, "Source");
+    			
+    			 
+    			
+    			
 
             } catch (PartInitException e) {
                 // add some error handling for production-quality coding
@@ -969,6 +1007,29 @@ public class FsmEditor
 					 updateProblemIndication();
 				 }
 			 });
+	}
+
+	protected void transform() throws TransformerFactoryConfigurationError,
+			TransformerConfigurationException, TransformerException {
+		//get the path of file.fsm
+		IPathEditorInput inp =  (IPathEditorInput) getWrappedInput();
+		IPath sourcePath = inp.getPath();
+		
+		//get path of transform.xsl
+		URL location = FsmEditor.class.getProtectionDomain().getCodeSource().getLocation(); //workspace-path
+		String xslPath = location.getPath()+"transform.xsl";
+		
+		
+		//read transform.xsl
+		TransformerFactory factory = TransformerFactory.newInstance();
+		Source xslt = new StreamSource(new File(xslPath));
+		Transformer transformer = factory.newTransformer(xslt);
+		
+		//get the online xml-code of the diagram-file
+		Source text = new StreamSource(new File(sourcePath.toString()));
+		
+		//transform the xml-code andsave the output in the given path
+		transformer.transform(text, new StreamResult(new File("C:/Users/User/Desktop/29.09.15ws/BA/runtime-EclipseApplication/r/output.cpp")));
 	}
 
 	/**

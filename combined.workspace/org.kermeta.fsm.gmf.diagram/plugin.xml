@@ -439,6 +439,19 @@
          </includes>
       </viewerActionBinding>
    </extension>
+<extension point="org.eclipse.ui.editors" id="gmf-editor">
+     		 <?gmfgen generated="true"?>
+     		 <editor
+        	 id="fsm.diagram.part.FsmDiagramEditorID"
+       	  name="%editorName"
+       	  icon="icons/obj16/FsmDiagramFile.gif"
+       	  extensions="fsm"
+       	  default="true"
+        	 class="fsm.diagram.part.FsmDiagramEditor"
+        	 matchingStrategy="fsm.diagram.part.FsmMatchingStrategy"
+       	  contributorClass="fsm.diagram.part.FsmDiagramActionBarContributor">
+   	 	  </editor>
+   	</extension>
 
    <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
       <?gmfgen generated="true"?>
