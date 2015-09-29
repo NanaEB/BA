@@ -10,10 +10,8 @@ package fsm.presentation;
 
 
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -22,14 +20,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
@@ -118,7 +108,6 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener;
-import org.eclipse.ui.IPathEditorInput;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -139,13 +128,6 @@ import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributo
 
 
 
-
-
-
-
-
-
-
 import fsm.diagram.part.FsmDiagramEditor;
 import fsm.provider.FsmItemProviderAdapterFactory;
 
@@ -160,7 +142,7 @@ public class FsmEditor
 	extends MultiPageEditorPart
 	implements IEditingDomainProvider, IMenuListener, IViewerProvider, IGotoMarker, ITabbedPropertySheetPageContributor, IDiagramWorkbenchPart {
 	
-	protected TextEditor editor;
+	 protected TextEditor editor;
 	/**
 	 * This keeps track of the editing domain that is used to track all changes to the model.
 	 * <!-- begin-user-doc -->
@@ -941,49 +923,21 @@ public class FsmEditor
 //                tableTreeEditorPart = new TableTreeEditorPart(this);
 //                pageIndex = addPage(tableTreeEditorPart, getWrappedInput());
 //                setPageText(pageIndex, getString("_UI_TreeWithColumnsPage_label"));
-//                
+                
                 // This is the page for the graphical diagram viewer.
-                //
                 diagramEditor = new FsmDiagramEditor();
                 pageIndex = addPage(diagramEditor, getWrappedInput());
-                setPageText(pageIndex, "Diagram");
-                
-                //get the path of file.fsm
-                IPathEditorInput inp =  (IPathEditorInput) getWrappedInput();
-                IPath sourcePath = inp.getPath();
-                
-                //get path of transform.xsl
-                URL location = FsmEditor.class.getProtectionDomain().getCodeSource().getLocation(); //workspace-path
-                String xslPath = location.getPath()+"transform.xsl";
-                
-                
-                //read transform.xsl
-                TransformerFactory factory = TransformerFactory.newInstance();
-                Source xslt = new StreamSource(new File(xslPath));
-                Transformer transformer = factory.newTransformer(xslt);
-                
-                //get the online xml-code of the diagram-file
-                Source text = new StreamSource(new File(sourcePath.toString()));
-                
-                //transform the xml-code andsave the output in the given path
-                transformer.transform(text, new StreamResult(new File("C:/Users/User/Desktop/Neuer Ordner/BA/runtime-EclipseApplication/o/hier.cpp")));
-              
+                setPageText(pageIndex, "Design");
                 
                 // This is the page for the Source diagram viewer.
-                //
                 editor = new TextEditor();
                 pageIndex = addPage(editor, getWrappedInput());
-    			setPageText(pageIndex, editor.getTitle());
+    			setPageText(pageIndex, "Source");
+
             } catch (PartInitException e) {
                 // add some error handling for production-quality coding
                 e.printStackTrace();
-            } catch (TransformerConfigurationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (TransformerException e) {
-				System.out.println("XSLT output exception!");
-				e.printStackTrace();
-			}
+            }
 
 			getSite().getShell().getDisplay().asyncExec
 				(new Runnable() {

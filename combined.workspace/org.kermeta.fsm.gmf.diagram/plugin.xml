@@ -14,7 +14,6 @@
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
-
    
    <extension point="org.eclipse.ui.contexts" id="ui-context">
       <?gmfgen generated="true"?>
