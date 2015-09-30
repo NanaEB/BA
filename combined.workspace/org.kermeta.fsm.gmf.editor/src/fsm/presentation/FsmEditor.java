@@ -495,8 +495,7 @@ public class FsmEditor extends MultiPageEditorPart implements
 				} catch (CoreException exception) {
 					FsmEditorPlugin.INSTANCE.log(exception);
 				}
-			}System.out.println("---------------------------------------------------------resourceChanged!");
-			lt.setText("HEllo changed");
+			}
 		}
 		
 	};
@@ -508,6 +507,7 @@ public class FsmEditor extends MultiPageEditorPart implements
 	 * @generated
 	 */
 	protected void handleActivate() {
+		System.out.println("---------------------handleActivate");
 		// Recompute the read only state.
 		//
 		if (editingDomain.getResourceToReadOnlyMap() != null) {
@@ -971,6 +971,7 @@ public class FsmEditor extends MultiPageEditorPart implements
 				int index = addPage(composite);
 				setPageText(index, "Source");
 				lt.setText("HEllo create");
+				System.out.println("------------------------CREATRETETE");
 				
 			} catch (PartInitException e) {
 				// add some error handling for production-quality coding
@@ -1091,16 +1092,19 @@ public class FsmEditor extends MultiPageEditorPart implements
 	 * This is used to track the active viewer. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	protected void pageChange(int pageIndex) {
+		System.out.println("--------------------------------------pageChange");
+		transform();
 		super.pageChange(pageIndex);
 
 		if (contentOutlinePage != null) {
 			handleContentOutlineSelection(contentOutlinePage.getSelection());
 		}
 	}
+
 
 	/**
 	 * This is how the framework determines which interfaces we implement. <!--
