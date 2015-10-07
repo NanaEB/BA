@@ -63,7 +63,7 @@ void FSM::handleMessage(cMessage *msg) {
 
 <!--_______________________________________INITIALSTATE_TEMPLATE_______________________________________-->
 	<xsl:template match="intialState">               
-		case FSM_Exit(INIT):   
+			case FSM_Exit(INIT):   
 								<xsl:call-template name="printExitCaseBody"/>	
 	</xsl:template>
 
@@ -116,8 +116,12 @@ void FSM::handleMessage(cMessage *msg) {
 <!--______________________________________________________________________________-->
 
 <xsl:template name="printEnterCase">
-			case FSM_Enter(<xsl:value-of select="@name"/>):   
-								<xsl:value-of select="entry/@entryLabel"/>
+			case FSM_Enter(<xsl:value-of select="@name"/>):
+			<xsl:choose>
+   			<xsl:when test="entry/@entryLabel != ''">
+   								//entry code
+    		  					<xsl:value-of select="entry/@entryLabel"/>;</xsl:when>
+			</xsl:choose>   
 								break; 
 </xsl:template>
 
@@ -126,7 +130,7 @@ void FSM::handleMessage(cMessage *msg) {
 <xsl:template name="printExitCode"> 
  <xsl:if test="string-length(exit/@exitLabel) != 0">
  								//exit code
-								<xsl:value-of select="exit/@exitLabel"/>
+								<xsl:value-of select="exit/@exitLabel"/>;
 </xsl:if>
 </xsl:template>
 
