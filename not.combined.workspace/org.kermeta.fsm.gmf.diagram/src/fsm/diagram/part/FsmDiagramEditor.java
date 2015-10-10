@@ -1,5 +1,19 @@
 package fsm.diagram.part;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.StringWriter;
+import java.net.URL;
+import java.util.Scanner;
+
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -33,6 +47,7 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorMatchingStrategy;
 import org.eclipse.ui.IEditorReference;
 import org.eclipse.ui.IFileEditorInput;
+import org.eclipse.ui.IPathEditorInput;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.ui.ide.IGotoMarker;
@@ -48,7 +63,8 @@ import fsm.diagram.navigator.FsmNavigatorItem;
  */
 public class FsmDiagramEditor extends DiagramDocumentEditor implements
 		IGotoMarker {
-
+	public String oldSourceStreamString = "";
+	public String sourceStreamString = "";
 	/**
 	 * @generated
 	 */
@@ -158,7 +174,43 @@ public class FsmDiagramEditor extends DiagramDocumentEditor implements
 	 * @generated
 	 */
 	public boolean isSaveAsAllowed() {
+		try {
+		
+			transform();
+		} catch (FileNotFoundException | TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return true;
+	}
+	protected void transform() throws FileNotFoundException, TransformerException {
+		
+		// get the path of file.fsm
+		IPathEditorInput inp = (IPathEditorInput) getEditorInput();
+		IPath sourcePath = inp.getPath();
+		
+		// set the path of the SourceStream of the transformation
+		Source source = new StreamSource(new File(sourcePath.toString()));
+		
+		// get the String of the SourceStream to compare it
+		sourceStreamString = new Scanner(new File(sourcePath.toString())).useDelimiter("\\Z").next();			
+				
+		// get path of transform.xsl and initialize the transformer variable
+		URL location = FsmDiagramEditor.class.getProtectionDomain().getCodeSource().getLocation(); // workspace-path
+		String xslPath = location.getPath() + "transform.xsl";
+		TransformerFactory factory = TransformerFactory.newInstance();
+		Source xslt = new StreamSource(new File(xslPath));
+		Transformer transformer = factory.newTransformer(xslt);
+			
+		
+		if((!sourceStreamString.equals(oldSourceStreamString))&& (!(oldSourceStreamString==""))){
+			System.out.println("TRANSFORMED!");
+			transformer.transform(source, new StreamResult(new File("C:/Users/User/Desktop/outpuooo.xml")));
+			//transformer.transform(source, result);
+			oldSourceStreamString = sourceStreamString;
+		}
+		if(oldSourceStreamString=="")oldSourceStreamString = sourceStreamString;
+
 	}
 
 	/**
