@@ -22,16 +22,5 @@
       </wizard>
    </extension>
 
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated fsm -->
-      <editor
-            id="fsm.presentation.FsmEditorID"
-            name="%_UI_FsmEditor_label"
-            icon="icons/full/obj16/FsmModelFile.gif"
-            extensions="fsm"
-            class="fsm.presentation.FsmEditor"
-            contributorClass="fsm.presentation.FsmActionBarContributor">
-      </editor>
-   </extension>
 
 </plugin>

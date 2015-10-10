@@ -175,7 +175,7 @@ public class FsmDiagramEditor extends DiagramDocumentEditor implements
 	 */
 	public boolean isSaveAsAllowed() {
 		try {
-		
+		new File("C:/Users/User/Desktop/wiesoooo.cc");
 			transform();
 		} catch (FileNotFoundException | TransformerException e) {
 			// TODO Auto-generated catch block
@@ -191,6 +191,8 @@ public class FsmDiagramEditor extends DiagramDocumentEditor implements
 		
 		// set the path of the SourceStream of the transformation
 		Source source = new StreamSource(new File(sourcePath.toString()));
+	    String sourcePathString = sourcePath.toString();
+        String targetPath = sourcePathString.substring(0,sourcePathString.lastIndexOf(".")+1);
 		
 		// get the String of the SourceStream to compare it
 		sourceStreamString = new Scanner(new File(sourcePath.toString())).useDelimiter("\\Z").next();			
@@ -205,7 +207,9 @@ public class FsmDiagramEditor extends DiagramDocumentEditor implements
 		
 		if((!sourceStreamString.equals(oldSourceStreamString))&& (!(oldSourceStreamString==""))){
 			System.out.println("TRANSFORMED!");
-			transformer.transform(source, new StreamResult(new File("C:/Users/User/Desktop/outpuooo.xml")));
+			//transformer.transform(source, new StreamResult(new File(targetPath+"cc")));
+			transformer.transform(source, new StreamResult(new File("C:/Users/User/Desktop/wieso.cc")));
+			
 			//transformer.transform(source, result);
 			oldSourceStreamString = sourceStreamString;
 		}
