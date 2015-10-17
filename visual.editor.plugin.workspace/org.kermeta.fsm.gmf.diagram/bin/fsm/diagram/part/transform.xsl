@@ -1,10 +1,16 @@
 <xsl:stylesheet version='1.0'
 	xmlns:xsl='http://www.w3.org/1999/XSL/Transform' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xmlns:fsm='http://www.kermeta.org/fsm' xmlns:xmi='http://www.omg.org/XMI'>
-
+<!--_______________________________________REMOVE_FIRST_LINE_______________________________________-->
+<xsl:output method="xml" indent="yes" omit-xml-declaration="yes" />
 
 <xsl:key name="target" match="state" use="@xmi:id"/>
+<!--_______________________________________REMOVING LINE-BREAKS________________________________-->
+<xsl:template match="*/text()[normalize-space()]">
+    <xsl:value-of select="normalize-space()"/>
+</xsl:template>
 
+<xsl:template match="*/text()[not(normalize-space())]" />
 <!--_______________________________________ROOT_TEMPLATE_______________________________________-->
 
 	<xsl:template match="fsm:FSM">
