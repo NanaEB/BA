@@ -61,7 +61,7 @@ public class TransitionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addGuardPropertyDescriptor(object);
-			addActionPropertyDescriptor(object);
+			addEffectPropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
 		}
@@ -79,8 +79,8 @@ public class TransitionItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Transition_guard_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_guard_feature", "_UI_Transition_type"),
+				 getString("_UI_Transition_Guard_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_Guard_feature", "_UI_Transition_type"),
 				 FsmPackage.Literals.TRANSITION__GUARD,
 				 true,
 				 false,
@@ -91,19 +91,19 @@ public class TransitionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Action feature.
+	 * This adds a property descriptor for the Effect feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addActionPropertyDescriptor(Object object) {
+	protected void addEffectPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Transition_action_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_action_feature", "_UI_Transition_type"),
-				 FsmPackage.Literals.TRANSITION__ACTION,
+				 getString("_UI_Transition_Effect_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_Effect_feature", "_UI_Transition_type"),
+				 FsmPackage.Literals.TRANSITION__EFFECT,
 				 true,
 				 false,
 				 false,
@@ -195,7 +195,7 @@ public class TransitionItemProvider
 
 		switch (notification.getFeatureID(Transition.class)) {
 			case FsmPackage.TRANSITION__GUARD:
-			case FsmPackage.TRANSITION__ACTION:
+			case FsmPackage.TRANSITION__EFFECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

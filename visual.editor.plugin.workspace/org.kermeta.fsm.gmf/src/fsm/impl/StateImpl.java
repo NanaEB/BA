@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link fsm.impl.StateImpl#getName <em>Name</em>}</li>
  *   <li>{@link fsm.impl.StateImpl#getEntry <em>Entry</em>}</li>
  *   <li>{@link fsm.impl.StateImpl#getExit <em>Exit</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

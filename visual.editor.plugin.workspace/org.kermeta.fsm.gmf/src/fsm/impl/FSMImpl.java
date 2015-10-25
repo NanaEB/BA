@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link fsm.impl.FSMImpl#getState <em>State</em>}</li>
  *   <li>{@link fsm.impl.FSMImpl#getIntialState <em>Intial State</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -5,8 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel"
     sameFileForDiagramAndModel="true"
-    diagramFileExtension="fsm"
-    domainFileExtension="fsm">
+    diagramFileExtension="fsm">
   <diagram
       visualID="1000"
       editPartClassName="FSMEditPart"
@@ -395,8 +394,8 @@
       </modelFacet>
       <labels
           visualID="6001"
-          editPartClassName="TransitionActionGuardEditPart"
-          itemSemanticEditPolicyClassName="TransitionActionGuardItemSemanticEditPolicy">
+          editPartClassName="TransitionEffectGuardEditPart"
+          itemSemanticEditPolicyClassName="TransitionEffectGuardItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -414,9 +413,13 @@
             editorPattern="[{1}] / {0}"
             editPattern="[{1}] / {0}">
           <metaFeatures
-              href="fsm.genmodel#//fsm/Transition/action"/>
+              href="fsm.genmodel#//fsm/Transition/Effect"/>
           <metaFeatures
-              href="fsm.genmodel#//fsm/Transition/guard"/>
+              href="fsm.genmodel#//fsm/Transition/Guard"/>
+          <editableMetaFeatures
+              href="fsm.genmodel#//fsm/Transition/Effect"/>
+          <editableMetaFeatures
+              href="fsm.genmodel#//fsm/Transition/Guard"/>
         </modelFacet>
       </labels>
     </links>

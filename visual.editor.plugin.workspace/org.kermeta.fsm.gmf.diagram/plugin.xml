@@ -44,7 +44,7 @@
       
             <category 
           id="org.eclipse.ui.omnetfsm" 
-          name="OMNeT-FSM">
+          name="OMNeT++ FSM">
       </category> 
   	  <wizard
   	     name="%newWizardName"

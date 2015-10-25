@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link fsm.impl.eActionImpl#getExitLabel <em>Exit Label</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

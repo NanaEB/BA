@@ -10,12 +10,12 @@ package fsm;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link fsm.State#getName <em>Name</em>}</li>
  *   <li>{@link fsm.State#getEntry <em>Entry</em>}</li>
  *   <li>{@link fsm.State#getExit <em>Exit</em>}</li>
  * </ul>
+ * </p>
  *
  * @see fsm.FsmPackage#getState()
  * @model

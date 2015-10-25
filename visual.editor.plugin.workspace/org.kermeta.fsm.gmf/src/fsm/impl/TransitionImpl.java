@@ -24,14 +24,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link fsm.impl.TransitionImpl#getGuard <em>Guard</em>}</li>
- *   <li>{@link fsm.impl.TransitionImpl#getAction <em>Action</em>}</li>
+ *   <li>{@link fsm.impl.TransitionImpl#getEffect <em>Effect</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link fsm.impl.TransitionImpl#getSrc <em>Src</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -57,24 +57,24 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	protected String guard = GUARD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * The default value of the '{@link #getEffect() <em>Effect</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAction()
+	 * @see #getEffect()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ACTION_EDEFAULT = null;
+	protected static final String EFFECT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * The cached value of the '{@link #getEffect() <em>Effect</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAction()
+	 * @see #getEffect()
 	 * @generated
 	 * @ordered
 	 */
-	protected String action = ACTION_EDEFAULT;
+	protected String effect = EFFECT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -141,8 +141,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAction() {
-		return action;
+	public String getEffect() {
+		return effect;
 	}
 
 	/**
@@ -150,11 +150,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAction(String newAction) {
-		String oldAction = action;
-		action = newAction;
+	public void setEffect(String newEffect) {
+		String oldEffect = effect;
+		effect = newEffect;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__ACTION, oldAction, action));
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__EFFECT, oldEffect, effect));
 	}
 
 	/**
@@ -328,8 +328,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		switch (featureID) {
 			case FsmPackage.TRANSITION__GUARD:
 				return getGuard();
-			case FsmPackage.TRANSITION__ACTION:
-				return getAction();
+			case FsmPackage.TRANSITION__EFFECT:
+				return getEffect();
 			case FsmPackage.TRANSITION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -353,8 +353,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			case FsmPackage.TRANSITION__GUARD:
 				setGuard((String)newValue);
 				return;
-			case FsmPackage.TRANSITION__ACTION:
-				setAction((String)newValue);
+			case FsmPackage.TRANSITION__EFFECT:
+				setEffect((String)newValue);
 				return;
 			case FsmPackage.TRANSITION__TARGET:
 				setTarget((State)newValue);
@@ -380,8 +380,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			case FsmPackage.TRANSITION__GUARD:
 				setGuard(GUARD_EDEFAULT);
 				return;
-			case FsmPackage.TRANSITION__ACTION:
-				setAction(ACTION_EDEFAULT);
+			case FsmPackage.TRANSITION__EFFECT:
+				setEffect(EFFECT_EDEFAULT);
 				return;
 			case FsmPackage.TRANSITION__TARGET:
 				setTarget((State)null);
@@ -406,8 +406,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		switch (featureID) {
 			case FsmPackage.TRANSITION__GUARD:
 				return GUARD_EDEFAULT == null ? guard != null : !GUARD_EDEFAULT.equals(guard);
-			case FsmPackage.TRANSITION__ACTION:
-				return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
+			case FsmPackage.TRANSITION__EFFECT:
+				return EFFECT_EDEFAULT == null ? effect != null : !EFFECT_EDEFAULT.equals(effect);
 			case FsmPackage.TRANSITION__TARGET:
 				return target != null;
 			case FsmPackage.TRANSITION__SOURCE:
@@ -428,10 +428,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (guard: ");
+		result.append(" (Guard: ");
 		result.append(guard);
-		result.append(", action: ");
-		result.append(action);
+		result.append(", Effect: ");
+		result.append(effect);
 		result.append(')');
 		return result.toString();
 	}

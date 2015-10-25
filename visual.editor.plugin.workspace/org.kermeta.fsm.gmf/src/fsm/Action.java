@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link fsm.Action#getEntryLabel <em>Entry Label</em>}</li>
  * </ul>
+ * </p>
  *
  * @see fsm.FsmPackage#getAction()
  * @model

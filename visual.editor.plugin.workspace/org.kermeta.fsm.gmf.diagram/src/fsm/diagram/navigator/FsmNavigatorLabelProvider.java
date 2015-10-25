@@ -30,8 +30,8 @@ import fsm.diagram.edit.parts.SteadyStateEditPart;
 import fsm.diagram.edit.parts.SteadyStateNameEditPart;
 import fsm.diagram.edit.parts.TransientStateEditPart;
 import fsm.diagram.edit.parts.TransientStateNameEditPart;
-import fsm.diagram.edit.parts.TransitionActionGuardEditPart;
 import fsm.diagram.edit.parts.TransitionEditPart;
+import fsm.diagram.edit.parts.TransitionEffectGuardEditPart;
 import fsm.diagram.part.FsmDiagramEditorPlugin;
 import fsm.diagram.part.FsmVisualIDRegistry;
 import fsm.diagram.providers.FsmElementTypes;
@@ -338,7 +338,7 @@ public class FsmNavigatorLabelProvider extends LabelProvider implements
 				FsmElementTypes.Transition_4001,
 				view.getElement() != null ? view.getElement() : view,
 				FsmVisualIDRegistry
-						.getType(TransitionActionGuardEditPart.VISUAL_ID));
+						.getType(TransitionEffectGuardEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),

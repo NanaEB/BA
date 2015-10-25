@@ -74,8 +74,8 @@ public class FsmEditPartFactory implements EditPartFactory {
 			case TransitionEditPart.VISUAL_ID:
 				return new TransitionEditPart(view);
 
-			case TransitionActionGuardEditPart.VISUAL_ID:
-				return new TransitionActionGuardEditPart(view);
+			case TransitionEffectGuardEditPart.VISUAL_ID:
+				return new TransitionEffectGuardEditPart(view);
 
 			}
 		}
