@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="file:///C:/fsmEditor.site/">
+      site desc
+   </description>
+   <feature url="features/fsmEditor.feature_1.0.0.201510251254.jar" id="fsmEditor.feature" version="1.0.0.201510251254"/>
+</site>
