@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!-- Wurzelknoten. Enthaelt alle Zustaende (state, initalstate) als Kinderknoten -->
+  <fsm:FSM xmi:id="_HXV">
+  
+  
+  	 <!-- ModifyingMsg-Zustand vom Typ Steady -->
+     <state xmi:type="fsm:SteadyState" xmi:id="_r0X" name="ModifyingMsg">
+      <outTrans xmi:type="fsm:Transition" xmi:id="_MY4" Guard="msg == ticEvent" 
+				Effect="" target="_tKj" source="_r0X"/>
+      <entry xmi:type="fsm:Action" xmi:id="_F8h" 
+			 entryLabel="scheduleAt(simTime() + 1.0, ticEvent);"/>
+    </state>
+    
+    <!-- ReceivingMsg-Zustand vom Typ Transient -->
+    <state xmi:type="fsm:TransientState" xmi:id="_szm" name="ReceivingMsg">
+      <outTrans xmi:type="fsm:Transition" xmi:id="_B4m" target="_r0X" source="_szm"/>
+      <exit xmi:type="fsm:eAction" xmi:id="_NEf" exitLabel="tocMsg = msg;"/>
+    </state>
+    
+    <!-- SendingMsg-Zustand vom Typ Transient -->
+    <state xmi:type="fsm:TransientState" xmi:id="_tKj" name="SendingMsg">
+      <outTrans xmi:type="fsm:Transition" xmi:id="_ipM" target="_f8R" source="_tKj"/>
+      <exit xmi:type="fsm:eAction" xmi:id="_OiL" 
+			exitLabel=" send(ticMsg, &quot;out&quot;); ticMsg = NULL;"/>
+    </state>
+    
+    <!-- WaitingForMsg-Zustand vom Typ Steady -->
+    <state xmi:type="fsm:SteadyState" xmi:id="_f8R" name="WaitingForMsg">
+      <outTrans xmi:type="fsm:Transition" xmi:id="_mYD" 
+				Guard="strcmp(msf->getName(), &quot;transferredMsg&quot;) ==0" 
+				Effect="" target="_szm" source="_f8R"/>
+    </state>
+    
+    <!-- Initalzustand, zeigt auf dem Startzustand mit der ID "_r0X" (ModifyingMsg)-->
+    <intialState xmi:type="fsm:InitialState" xmi:id="_rWa">
+      <outTrans xmi:type="fsm:Transition" xmi:id="__Sb7" target="_r0X" source="_rWa"/>
+    </intialState>
+    
+  </fsm:FSM>
