@@ -133,7 +133,7 @@ public class TransitionEditPart extends ConnectionNodeEditPart implements
 
 			fFigureTransitionOutputLabel = new WrappingLabel();
 
-			fFigureTransitionOutputLabel.setText("");
+			fFigureTransitionOutputLabel.setText("[Guard] /Effect");
 
 			this.add(fFigureTransitionOutputLabel);
 

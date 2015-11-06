@@ -41,23 +41,16 @@
 
    <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
       <?gmfgen generated="true"?>
-      
-            <category 
-          id="org.eclipse.ui.omnetfsm" 
-          name="OMNeT++ FSM">
-      </category> 
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/FsmDiagramFile.gif"
-  	    category="org.eclipse.ui.omnetfsm"
+  	     category="org.eclipse.ui.Examples"
   	     class="fsm.diagram.part.FsmCreationWizard"
   	     id="fsm.diagram.part.FsmCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
    </extension>
 
-   
-   
    <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
       <?gmfgen generated="true"?>
       <objectContribution
@@ -600,6 +593,5 @@
          </newWizardShortcut>
       </perspectiveExtension>
    </extension>
-
    <!-- optionally, specify keybindings -->
 </plugin>

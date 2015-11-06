@@ -79,9 +79,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getAction_EntryLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("entry/ {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("entry/ {0}"); //$NON-NLS-1$
-			parser.setEditPattern("entry/ {0}"); //$NON-NLS-1$
+			parser.setViewPattern("entry/{0}"); //$NON-NLS-1$
+			parser.setEditorPattern("entry/{0}"); //$NON-NLS-1$
+			parser.setEditPattern("entry/{0}"); //$NON-NLS-1$
 			actionEntryLabel_5006Parser = parser;
 		}
 		return actionEntryLabel_5006Parser;
@@ -100,9 +100,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.geteAction_ExitLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("exit/ {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("exit/ {0}"); //$NON-NLS-1$
-			parser.setEditPattern("exit/ {0}"); //$NON-NLS-1$
+			parser.setViewPattern("exit/{0}"); //$NON-NLS-1$
+			parser.setEditorPattern("exit/{0}"); //$NON-NLS-1$
+			parser.setEditPattern("exit/{0}"); //$NON-NLS-1$
 			eActionExitLabel_5008Parser = parser;
 		}
 		return eActionExitLabel_5008Parser;
@@ -121,9 +121,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.getAction_EntryLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("entry/ {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("entry/ {0}"); //$NON-NLS-1$
-			parser.setEditPattern("entry/ {0}"); //$NON-NLS-1$
+			parser.setViewPattern("entry/{0}"); //$NON-NLS-1$
+			parser.setEditorPattern("entry/{0}"); //$NON-NLS-1$
+			parser.setEditPattern("entry/{0}"); //$NON-NLS-1$
 			actionEntryLabel_5007Parser = parser;
 		}
 		return actionEntryLabel_5007Parser;
@@ -142,9 +142,9 @@ public class FsmParserProvider extends AbstractProvider implements
 			EAttribute[] features = new EAttribute[] { FsmPackage.eINSTANCE
 					.geteAction_ExitLabel() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("exit/ {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("exit/ {0}"); //$NON-NLS-1$
-			parser.setEditPattern("exit/ {0}"); //$NON-NLS-1$
+			parser.setViewPattern("exit/{0}"); //$NON-NLS-1$
+			parser.setEditorPattern("exit/{0}"); //$NON-NLS-1$
+			parser.setEditPattern("exit/{0}"); //$NON-NLS-1$
 			eActionExitLabel_5009Parser = parser;
 		}
 		return eActionExitLabel_5009Parser;
@@ -168,9 +168,9 @@ public class FsmParserProvider extends AbstractProvider implements
 					FsmPackage.eINSTANCE.getTransition_Guard() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			parser.setViewPattern("[{1}] / {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("[{1}] / {0}"); //$NON-NLS-1$
-			parser.setEditPattern("[{1}] / {0}"); //$NON-NLS-1$
+			parser.setViewPattern("[{1}] /{0}"); //$NON-NLS-1$
+			parser.setEditorPattern("[{1}] /{0}"); //$NON-NLS-1$
+			parser.setEditPattern("[{1}] /{0}"); //$NON-NLS-1$
 			transitionEffectGuard_6001Parser = parser;
 		}
 		return transitionEffectGuard_6001Parser;

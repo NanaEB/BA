@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="file:///C:/omnetpp.fsm.site/">
+      site description
+   </description>
+   <feature url="features/omnetpp.fsm.feature_1.0.0.201511061515.jar" id="omnetpp.fsm.feature" version="1.0.0.201511061515"/>
+</site>

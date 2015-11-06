@@ -33,9 +33,9 @@
               href="fsm.ecore#//Action"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping"
-              viewPattern="entry/ {0}"
-              editorPattern="entry/ {0}"
-              editPattern="entry/ {0}">
+              viewPattern="entry/{0}"
+              editorPattern="entry/{0}"
+              editPattern="entry/{0}">
             <diagramLabel
                 href="fsm.gmfgraph#ActionLabel"/>
             <features
@@ -57,9 +57,9 @@
               href="fsm.ecore#//eAction"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping"
-              viewPattern="exit/ {0}"
-              editorPattern="exit/ {0}"
-              editPattern="exit/ {0}">
+              viewPattern="exit/{0}"
+              editorPattern="exit/{0}"
+              editPattern="exit/{0}">
             <diagramLabel
                 href="fsm.gmfgraph#eActionLabel"/>
             <features
@@ -106,9 +106,9 @@
               href="fsm.ecore#//Action"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping"
-              viewPattern="entry/ {0}"
-              editorPattern="entry/ {0}"
-              editPattern="entry/ {0}">
+              viewPattern="entry/{0}"
+              editorPattern="entry/{0}"
+              editPattern="entry/{0}">
             <diagramLabel
                 href="fsm.gmfgraph#ActionLabel"/>
             <features
@@ -130,9 +130,9 @@
               href="fsm.ecore#//eAction"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping"
-              viewPattern="exit/ {0}"
-              editorPattern="exit/ {0}"
-              editPattern="exit/ {0}">
+              viewPattern="exit/{0}"
+              editorPattern="exit/{0}"
+              editPattern="exit/{0}">
             <diagramLabel
                 href="fsm.gmfgraph#eActionLabel"/>
             <features
@@ -170,9 +170,9 @@
         href="fsm.ecore#//Transition"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping"
-        viewPattern="[{1}] / {0}"
-        editorPattern="[{1}] / {0}"
-        editPattern="[{1}] / {0}">
+        viewPattern="[{1}] /{0}"
+        editorPattern="[{1}] /{0}"
+        editPattern="[{1}] /{0}">
       <diagramLabel
           href="fsm.gmfgraph#TransitionOutput"/>
       <features
